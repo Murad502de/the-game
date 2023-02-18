@@ -1,0 +1,25 @@
+.navigation {
+    font-family: 'Inter';
+    color: #fff;
+    padding: 40px 60px 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navigationLinks {
+        display: flex;
+        column-gap: 50px;
+        font-size: 25px;
+
+        &__link {
+            cursor: pointer;
+        }
+
+        &__linkWithIcon {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            cursor: pointer;
+        }
+    }
+}
