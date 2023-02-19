@@ -28,7 +28,6 @@ const GamingSection = () => {
                     </div>
                 </main>
             </div>
-
         </div>
     )
 }
