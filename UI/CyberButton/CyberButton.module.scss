@@ -32,3 +32,16 @@
                 mask-composite: exclude;
     }
 }
+
+// colors
+
+.primary {
+    color: $titlePrimary-color;
+    height: 121px;
+    padding: 25px;
+    font-size: 32px;
+    &::before {
+        background: $titlePrimary-color;
+        padding: 1px;
+    }
+}

@@ -1,0 +1,60 @@
+@import "../../styles/vars";
+
+.gamingWrapper {
+    font-family: 'Inter';
+    padding-top: 596px;
+    padding-bottom: 200px;
+    position: relative;
+
+    &__image {
+        position: absolute;
+        top: -50.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        max-width: 1218px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .gamingInner {
+
+        &__title {
+            font-size: 32px;
+            color: $titlePrimary-color;
+            margin-bottom: 12px;
+        }
+
+        .gamingContent {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 292px;
+
+            .leftColumnContent {
+                display: flex;
+                flex-direction: column;
+                row-gap: 45px;
+                width: 40%;
+
+                &__title {
+                    color: $titlePrimary-color;
+                    font-size: 120px;
+                    font-family: 'Montserrat';
+                }
+            }
+
+            .rightColumnContent {
+                flex-basis: 37%;
+                &__paragraph {
+                    font-size: 32px;
+                    color:#fff;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,11 @@
+import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
 
 const Index = () => {
     return (
-        <div>
+        <div className="wrapper">
             <PrimarySection />
+            <GamingSection />
         </div>
     )
 }
