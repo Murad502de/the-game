@@ -1,15 +1,18 @@
 .navigation {
     font-family: 'Inter';
     color: #fff;
-    padding: 40px 60px 0px 60px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+
+    .navigationLogo {
+        padding-top: 40px;
+    }
 
     .navigationLinks {
         display: flex;
         column-gap: 50px;
         font-size: 25px;
+        padding: 132px 60px 0px 60px;
         
         &__link {
             cursor: pointer;
