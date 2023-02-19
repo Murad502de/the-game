@@ -1,4 +1,11 @@
 .swiperWrapper {
     color: #fff;
     margin-bottom: 50px;
+    overflow-x: hidden;
+  
+    .scrollElements {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 30px;
+    }
 }
