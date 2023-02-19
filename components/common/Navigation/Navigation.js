@@ -6,7 +6,9 @@ import menu from "../../../public/icons/menu.svg"
 import { useNavigation } from "./hooks/useNavigation";
 
 const Navigation = () => {
-    const {isMenuVisible, toggleMenuvisibility} = useNavigation();
+
+    const {isMenuVisible, toggleMenuVisibility, menuPopupRef} = useNavigation();
+
     return (
         <nav className={styles.navigation}>
             <ul className={styles.navigationLinks}>
@@ -22,11 +24,13 @@ const Navigation = () => {
             <ul className={styles.navigationLinks}>
                 <li className={styles.navigationLinks__link}>Up</li>
                 <li className={styles.navigationLinks__link}>Book</li>
-                <li onClick={toggleMenuvisibility} className={styles.navigationLinks__linkWithIcon}>
-                    <div>Menu</div>
-                    <Image src={menu} />
+                <li ref={menuPopupRef} className={styles.navigationMenu}>
+                    <div onClick={toggleMenuVisibility} className={styles.navigationMenu__linkWithIcon}>
+                        <div>Menu</div>
+                        <Image src={menu} />
+                    </div>
+                    <MenuPopup isVisible={isMenuVisible}  />
                 </li>
-                <MenuPopup isVisible={isMenuVisible} />
             </ul>
         </nav>
     )

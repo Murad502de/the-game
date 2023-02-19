@@ -9,6 +9,7 @@ import maps from "../../../public/icons/maps.svg";
 import CyberButton from "../../../UI/CyberButton/CyberButton";
 
 const MenuPopup = ({isVisible}) => {
+
     return (
         <div className={classNames(styles.menuPopupWrapper, {
             [styles.toVisiblePopupWrapper]: isVisible

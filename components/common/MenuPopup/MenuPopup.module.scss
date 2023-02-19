@@ -10,12 +10,12 @@
     padding: 50px;
     background-color: $primaryBg-color;
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(50px);
     transition: all .33s;
     pointer-events: none;
 
     .menuPopupInner {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         row-gap: 30px;
         margin-bottom: 35px;
@@ -30,6 +30,7 @@
             align-items: center;
             column-gap: 10px;
             cursor: pointer;
+            width: fit-content;
         }
     }
 }
@@ -38,4 +39,5 @@
     opacity: 1;
     transform: translateX(0);
     transition: all .33s;
+    pointer-events: all;
 }

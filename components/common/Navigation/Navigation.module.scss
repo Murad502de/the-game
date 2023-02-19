@@ -10,17 +10,21 @@
         display: flex;
         column-gap: 50px;
         font-size: 25px;
-        position: relative;
-
+        
         &__link {
             cursor: pointer;
         }
 
-        &__linkWithIcon {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            cursor: pointer;
+        .navigationMenu {
+            position: relative;
+
+            &__linkWithIcon {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                cursor: pointer;
+            }
         }
+        
     }
 }
