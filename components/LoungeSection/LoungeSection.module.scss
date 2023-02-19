@@ -1,0 +1,34 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.container {
+    @include container;
+}
+
+.loungeWrapper {
+    padding-bottom: 200px;
+
+    .loungeInner {
+        &__menu {
+            font-family: "Inter";
+            font-size: 32px;
+            color: $textLightPink-color;
+            margin-bottom: 11px;
+        }
+        &__title {
+            font-family: "Montserrat";
+            font-size: 120px;
+            color: transparent;
+            background-image: $titlePrimaryGradient-color;
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-family: "Inter";
+            font-size: 32px;
+            color: #fff;
+            max-width: 900px;
+        }
+    }
+}
