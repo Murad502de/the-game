@@ -17,23 +17,23 @@ const MenuPopup = ({isVisible}) => {
             <div className={styles.menuPopupInner}>
                 <div className={styles.menuPopupInner__title}>Contacts</div>
                 <div className={styles.menuPopupLink}>
-                    <Image src={phone} />
+                    <Image src={phone} alt="phone" />
                     <div>Phone</div>
                 </div>
                 <div className={styles.menuPopupLink}>
-                    <Image src={telegram} />
+                    <Image src={telegram} alt="telegram" />
                     <div>Telegram</div>
                 </div>
                 <div className={styles.menuPopupLink}>
-                    <Image src={whatsapp} />
+                    <Image src={whatsapp} alt="whatsapp" />
                     <div>Whatsapp</div>
                 </div>
                 <div className={styles.menuPopupLink}>
-                    <Image src={instagram} />
+                    <Image src={instagram} alt="instagram" />
                     <div>Instagram</div>
                 </div>
                 <div className={styles.menuPopupLink}>
-                    <Image src={maps} />
+                    <Image src={maps} alt="maps" />
                     <div>Maps</div>
                 </div>
             </div>

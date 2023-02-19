@@ -18,7 +18,7 @@ const Navigation = () => {
             </ul>
 
             <div className={styles.navigationLogo}>
-                <Image src={logo} />
+                <Image src={logo} alt="logo" />
             </div>
 
             <ul className={styles.navigationLinks}>
@@ -27,7 +27,7 @@ const Navigation = () => {
                 <li ref={menuPopupRef} className={styles.navigationMenu}>
                     <div onClick={toggleMenuVisibility} className={styles.navigationMenu__linkWithIcon}>
                         <div>Menu</div>
-                        <Image src={menu} />
+                        <Image src={menu} alt="menu" />
                     </div>
                     <MenuPopup isVisible={isMenuVisible}  />
                 </li>
