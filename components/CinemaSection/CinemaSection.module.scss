@@ -2,6 +2,8 @@
 @import "../../styles/vars";
 
 .cinemaWrapper {
+    padding-bottom: 200px;
+
     .container {
         @include container;
     }
@@ -38,6 +40,59 @@
             color: #D9D9D9;
             width: 832px;
             margin-top: 493px;
+        }
+    }
+
+    .meetingPlacesWrapper {
+        transform: translateY(-30px);
+
+        .meetingPlacesInner {
+
+            .placesPictures {
+                display: flex;
+                column-gap: 15px;
+                margin-bottom: 57px;
+    
+                .placesLeftColumn {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+                }
+            } 
+
+            &__highLightText {
+                text-align: center;
+                font-size: 60px;
+                font-family: "Montserrat";
+                color: transparent;
+                -webkit-text-stroke: $textYellow-color;
+                -webkit-text-stroke-width: 1px;
+                transition: all .5s;
+            }
+
+            &__textInViewport {
+                color: $textYellow-color;
+                transition: all .5s;
+                position: relative;
+
+                .blur {
+                    position: absolute;
+                    top: -50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 214px;
+                    height: 120px;
+                    background-color: $textYellow-color;
+                    filter: blur(125px);
+                    opacity: 0;
+                    transition: all .5s;
+                }
+
+                .blurActive {
+                    opacity: 1;
+                    transition: all .5s;
+                }
+            }
         }
     }
 }

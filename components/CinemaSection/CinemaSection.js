@@ -1,6 +1,14 @@
 import styles from "./CinemaSection.module.scss";
+import Image from "next/image";
+import {useIntersection} from "../../hooks/useIntersection";
+import classNames from "classnames";
+import first_grid from "../../public/images/first_grid.png";
+import second_grid from "../../public/images/second_grid.png";
+import third_grid from "../../public/images/third_grid.png";
 
 const CinemaSection = () => {
+    const {isIntersecting, nodeRef} = useIntersection();
+    
     return (
         <section className={styles.cinemaWrapper}>
             <div className={styles.container}>
@@ -18,6 +26,28 @@ const CinemaSection = () => {
                     </div>
                 </div>
             </main>
+
+            <div className={styles.meetingPlacesWrapper}>
+                <div className={styles.container}>
+                    <div className={styles.meetingPlacesInner}>
+                        <div className={styles.placesPictures}>
+                            <div className={styles.placesLeftColumn}>
+                                <Image src={first_grid} />
+                                <Image src={second_grid} />
+                            </div>
+                            <Image src={third_grid} />
+                        </div>
+                        <div ref={nodeRef} className={classNames(styles.meetingPlacesInner__highLightText, {
+                            [styles.meetingPlacesInner__textInViewport]: isIntersecting
+                        })}>
+                            <span className={classNames(styles.blur, {
+                                [styles.blurActive]: isIntersecting
+                            })}></span>
+                            Your meeting place
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }
