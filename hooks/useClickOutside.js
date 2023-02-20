@@ -4,16 +4,16 @@ export const useClickOutside = (handler) => {
     const domNode = useRef();
 
     useEffect(() => {
-        const clickOusideHandler = (event) => {
+        const clickOutsideHandler = (event) => {
             if(!domNode.current.contains(event.target)) {
                 handler();
             }
         }
 
-        document.addEventListener('mousedown', clickOusideHandler);
+        document.addEventListener('mousedown', clickOutsideHandler);
 
         return () => {
-            document.removeEventListener('mousedown', clickOusideHandler);
+            document.removeEventListener('mousedown', clickOutsideHandler);
         }
     }, [])
 
