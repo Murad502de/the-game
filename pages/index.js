@@ -2,6 +2,7 @@ import GamingSwiper from "../components/GamingSwiper/GamingSwiper";
 import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
 import LoungeSection from "../components/LoungeSection/LoungeSection";
+import CinemaSection from "../components/CinemaSection/CinemaSection";
 
 const Index = () => {
     return (
@@ -10,6 +11,7 @@ const Index = () => {
             <GamingSection />
             <GamingSwiper />
             <LoungeSection />
+            <CinemaSection />
         </div>
     )
 }
