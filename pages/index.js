@@ -1,9 +1,9 @@
+import { useRef } from "react";
 import GamingSwiper from "../components/GamingSwiper/GamingSwiper";
 import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
 import LoungeSection from "../components/LoungeSection/LoungeSection";
 import CinemaSection from "../components/CinemaSection/CinemaSection";
-import { useRef } from "react";
 
 const Index = () => {
     const gamingSectionRef = useRef();

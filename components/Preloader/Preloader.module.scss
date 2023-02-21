@@ -1,0 +1,120 @@
+@import "../../styles/vars";
+
+.loader .loaderInner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.loader span {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    animation: loading 2s ease infinite;
+    border: 5px solid $preloaderBorder-color;
+    background: transparent;
+
+    &:nth-child(2) {
+        transform: translate(80px, 0);
+        transition-delay: .5s;
+        animation: loading2 2s ease infinite;
+    }
+
+    &:nth-child(3) {
+        transform: translate(80px, 80px);
+        transition-delay: 2s;
+        animation: loading3 2s ease infinite;
+    }
+
+    &:nth-child(4) {
+        transform: translate(0px, 80px);
+        transition-delay: 4s;
+        animation: loading4 2s ease infinite;
+    }
+}
+
+@keyframes loading4 {
+    0%, 100% {
+        transform: translate(0px, 80px);
+    }
+
+    25% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(80px, 0px);
+    }
+
+    75% {
+        transform: translate(80px, 80px);
+    }
+}
+
+@keyframes loading3 {
+    0%, 100% {
+        transform: translate(80px, 80px);
+    }
+
+    25% {
+        transform: translate(0px, 80px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        transform: translate(80px, 0px);
+    }
+}
+
+@keyframes loading2 {
+    0%, 100% {
+        transform: translate(80px, 0);
+    }
+
+    25% {
+        transform: translate(80px, 80px);
+    }
+
+    50% {
+        transform: translate(0px, 80px);
+    }
+
+    75% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes loading {
+    0%, 100% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(80px);
+    }
+
+    50% {
+        transform: translate(80px, 80px);
+    }
+
+    75% {
+        transform: translate(0, 80px);
+    }
+}
+
+.loader.fadeOut {
+    animation: fadeOut 1s alternate;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
