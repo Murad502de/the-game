@@ -10,9 +10,18 @@ export const useNavigation = () => {
     
     const toggleMenuVisibility = () =>  setIsMenuVisible(prev => !prev);
 
+    const scrollToSection = (section) => {
+        window.scrollTo({
+            top: section.current.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return {
         isMenuVisible,
         toggleMenuVisibility,
-        menuPopupRef
+        menuPopupRef,
+        scrollToSection
     }
 }

@@ -1,10 +1,10 @@
 import Navigation from "../common/Navigation/Navigation";
 import styles from "./PrimarySection.module.scss";
 
-const PrimarySection = () => {
+const PrimarySection = ({gamingSectionRef, loungeSectionRef, cinemaSectionRef}) => {
     return (
         <div className={styles.primarySectionWrapper}>
-            <Navigation />
+            <Navigation gamingSectionRef={gamingSectionRef} loungeSectionRef={loungeSectionRef} cinemaSectionRef={cinemaSectionRef}  />
         </div>
     )
 }

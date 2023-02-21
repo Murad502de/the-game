@@ -5,12 +5,13 @@ import classNames from "classnames";
 import first_grid from "../../public/images/first_grid.png";
 import second_grid from "../../public/images/second_grid.png";
 import third_grid from "../../public/images/third_grid.png";
+import React from "react";
 
-const CinemaSection = () => {
+const CinemaSection = React.forwardRef((props, ref) => {
     const {isIntersecting, nodeRef} = useIntersection();
     
     return (
-        <section className={styles.cinemaWrapper}>
+        <section ref={ref} className={styles.cinemaWrapper}>
             <div className={styles.container}>
                 <div className={styles.cinemaWrapper__title}>Cinema</div>
             </div>
@@ -32,10 +33,10 @@ const CinemaSection = () => {
                     <div className={styles.meetingPlacesInner}>
                         <div className={styles.placesPictures}>
                             <div className={styles.placesLeftColumn}>
-                                <Image src={first_grid} />
-                                <Image src={second_grid} />
+                                <Image src={first_grid} alt="first_grid" />
+                                <Image src={second_grid} alt="second_grid" />
                             </div>
-                            <Image src={third_grid} />
+                            <Image src={third_grid} alt="third_grid" />
                         </div>
                         <div ref={nodeRef} className={classNames(styles.meetingPlacesInner__highLightText, {
                             [styles.meetingPlacesInner__textInViewport]: isIntersecting
@@ -50,6 +51,6 @@ const CinemaSection = () => {
             </div>
         </section>
     )
-}
+})
 
 export default CinemaSection;

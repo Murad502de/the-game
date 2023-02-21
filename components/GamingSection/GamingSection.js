@@ -1,11 +1,12 @@
+import React from "react";
 import styles from "./GamingSection.module.scss";
 import Image from "next/image";
 import gameZone from "../../public/images/game_zone.png";
 import CyberButton from "../../UI/CyberButton/CyberButton"
 
-const GamingSection = () => {
+const GamingSection = React.forwardRef((props, ref) => {
     return (
-        <div className={styles.gamingWrapper}>
+        <div ref={ref} className={styles.gamingWrapper}>
             <div className={styles.container}>
                 <Image src={gameZone} alt="game" className={styles.gamingWrapper__image} />
                 <main className={styles.gamingInner}>
@@ -30,6 +31,6 @@ const GamingSection = () => {
             </div>
         </div>
     )
-}
+})
 
 export default GamingSection;
