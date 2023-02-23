@@ -1,0 +1,90 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.sapWrapper {
+    padding-bottom: 200px;
+    overflow-x: hidden;
+    .sapInner {
+        .container {
+            @include container;
+        }
+
+        &__title {
+            font-family: "Montserrat";
+            color: transparent;
+            background-image: $titleSecondaryGradient-color;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 120px;
+            margin-bottom: 30px;
+        }
+
+        .sapContent {
+            width: 2588px;
+
+            height: 807px;
+            background: $secondaryBgGradient-color;
+            backdrop-filter: blur(7.49853px);
+            border-radius: 10px;
+            padding: 74px;
+            display: flex;
+            column-gap: 30px;
+        }
+
+        .sapBooking {
+            .sapBookingInner {
+                display: flex;
+                column-gap: 140px;
+
+                &__btn {
+                    button {
+                        text-transform: capitalize;
+                        width: 445px;
+                    }
+                }
+
+                .innerRightColumn {
+                    &__title {
+                        font-family: "Inter";
+                        font-size: 25px;
+                        color: #fff;
+                        margin-bottom: 10px;
+                    }
+
+                    .equipment {
+                        display: flex;
+                        align-items: flex-start;
+                        column-gap: 15px;
+
+                        .equipmentLeftColumn {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+
+                            &__img1 {
+                                margin-top: 14px;
+                                margin-bottom: 20px;
+                            }
+
+                            &__img2 {
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .equipmentRightColumn {
+                            display: flex;
+                            flex-direction: column;
+
+                            &__item {
+                                line-height: 40px;
+                                font-family: "Inter";
+                                font-size: 25px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

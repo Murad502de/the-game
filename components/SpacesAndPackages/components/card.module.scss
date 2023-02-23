@@ -1,0 +1,154 @@
+@import "../../../styles/vars";
+
+.cardWrapper {
+    height: 100%;
+    padding: 45px;
+    background-color: $primaryBg-color;
+    display: flex;
+    column-gap: 80px;
+    border-radius: 10px;
+    mix-blend-mode: screen; // ?
+    
+    .cardInner {
+        &__title {
+            font-family: "Montserrat";
+            font-size: 40px;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        &__subTitle {
+            font-family: "Inter";
+            font-size: 16px;
+            color: $subTitle-color;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        &__room {
+            font-family: "Inter";
+            font-size: 25px;
+            color: #fff;
+            line-height: 1.6;
+        }
+        &__descriptionRoom {
+            font-family: "Inter";
+            font-size: 25px;
+            color: $description-color;
+            margin-bottom: 50px;
+            line-height: 1.6;
+            height: 120px;
+        }
+
+        .cardMetrics {
+            display: flex;
+            column-gap: 35px;
+            font-family: "Inter";
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+
+            .metricsLeftColumn {
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+
+                &__item {
+                    color: $item-color;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        display: block;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .metricsRightColumn {
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+
+                &__item {
+                    color: #fff;
+                }
+            }
+        }
+
+        .metricsValues {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            font-family: "Inter";
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+
+            &__value {
+                color: #fff;
+                font-weight: 700;
+            }   
+        }
+
+        .cardCost {
+            display: flex;
+            column-gap: 35px;
+
+            .costLeftColumn {
+                display: flex;
+                flex-direction: column;
+                row-gap: 17.5px;
+
+                &__item {
+                    font-family: "Inter";
+                    font-size: 25px;
+                    color: #C4C9FF;
+                    font-weight: 700;
+
+                    span {
+                        font-weight: 400;
+                    }
+
+                }
+            }
+
+            .costRightColumn {
+                display: flex;
+                flex-direction: column;
+                row-gap: 17.5px;
+                color: #fff;
+                font-family: "Inter";
+                font-size: 25px;
+
+                .costRightTopRow {
+                    display: flex;
+                    column-gap: 46px;
+                }
+
+                .costRightBottomRow {
+                    display: flex;
+                    column-gap: 30px;
+                }
+            }
+        }
+
+        .costValues {
+            display: flex;
+            flex-direction: column;
+            row-gap: 17.5px;
+            color: #fff;
+            font-size: 25px;
+            font-family: "Inter";
+
+            .costValuesTopRow {
+                display: flex;
+                column-gap: 46px;
+            }
+            .costValuesBottomRow {
+                display: flex;
+                column-gap: 30px;
+            }
+        }
+    }
+}

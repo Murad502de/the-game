@@ -40,8 +40,20 @@
     height: 121px;
     padding: 25px;
     font-size: 32px;
+
     &::before {
         background: $titlePrimary-color;
+        padding: 1px;
+    }
+}
+
+.primary2 {
+    color: $btnPrimary-color;
+    height: 121px;
+    font-size: 32px;
+
+    &::before {
+        background: $btnPrimary-color;
         padding: 1px;
     }
 }
