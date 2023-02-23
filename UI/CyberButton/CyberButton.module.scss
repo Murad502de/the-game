@@ -1,6 +1,7 @@
 @import "../../styles/vars";
 
 .cyberBtn {
+    font-family: "Inter";
     position: relative;
     width: 100%;
     border: 2px solid transparent;
@@ -55,5 +56,17 @@
     &::before {
         background: $btnPrimary-color;
         padding: 1px;
+    }
+}
+
+.simple {
+    color: #fff;
+    height: 100px;
+    font-size: 25px;
+    padding: 30px 0;
+    &::before {
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
     }
 }

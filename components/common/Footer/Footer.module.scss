@@ -1,0 +1,103 @@
+@import "../../../styles/mixins";
+
+.footer {
+    .container {
+        @include container;
+    }
+
+    .footerInner {
+
+        .footerTopRow {
+            display: flex;
+            margin-bottom: 60px;
+
+            &__logo {
+                margin-right: 320px;
+            }
+
+            .explore {
+                &__text {
+                    @include text-25px;
+                    opacity: .4;
+                    height: 38px;
+                }
+
+                .exploreList {
+                    list-style: none;
+                    display: flex;
+                    column-gap: 30px;
+                    margin-right: 117px;
+
+                    &__item {
+                        @include text-25px;
+                    }
+                }
+            }
+
+            .instagram {
+                display: flex;
+                align-items: center;
+                column-gap: 9px;
+                align-self: flex-end;
+
+                &__text { 
+                    @include text-25px;
+                }
+            }
+        }
+
+        .footerBottomRow {
+            display: flex;
+            align-items: flex-end;
+            color: #B3B3B3;
+
+            .firstBottomColumn {
+                margin-right: 181px;
+                &__location {
+                    @include text-25px;
+                    height: 40px;
+                    color: #B3B3B3;
+                }
+
+                .maps {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 9px;
+                    line-height: 37.5px;
+                    &__text { 
+                        @include text-25px;
+                        color: #B3B3B3;
+                    }
+                }
+
+            }
+            .secondBottomColumn {
+                @include text-25px;
+                width: 386px;
+                color: #B3B3B3;
+                line-height: 40px;
+                margin-right: 26px;
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            .privacy {
+                display: flex;
+                column-gap: 30px;
+                line-height: 37.5px;
+
+                &__text {
+                    @include text-25px;
+                    color: #B3B3B3;
+
+                }
+                &__year {
+                    @include text-25px;
+                    color: #B3B3B3;
+                }
+            }
+        }
+    }
+}

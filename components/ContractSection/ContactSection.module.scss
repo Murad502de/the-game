@@ -1,0 +1,59 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.contactWrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 137px;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+
+    .leftImage {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        z-index: -1;
+    }
+
+    .rightImage {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        z-index: -1;
+    }
+
+    .contactInner {
+        padding-top: 150px;
+        .container {
+            @include container;
+        }
+
+        .booking {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 160px;
+
+            &__title {
+                font-family: "Montserrat";
+                font-size: 90px;
+                color: $titleLightPink-color;
+                margin-bottom: 30px;
+            }
+
+            &__btn {
+                margin-bottom: 30px;
+            }
+
+            &__text {
+                @include text-25px;
+                margin-bottom: 20px;
+            }
+
+            .bookingContactBtns {
+                display: flex;
+                column-gap: 20px;
+            }
+        }
+    }
+}
