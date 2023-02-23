@@ -5,6 +5,7 @@ import PrimarySection from "../components/PrimarySection/PrimarySection";
 import LoungeSection from "../components/LoungeSection/LoungeSection";
 import CinemaSection from "../components/CinemaSection/CinemaSection";
 import SpacesAndPackages from "../components/SpacesAndPackages/SpacesAndPackages";
+import StarsSection from "../components/StarsSection/StarsSection";
 
 const Index = () => {
     const gamingSectionRef = useRef();
@@ -23,6 +24,7 @@ const Index = () => {
             <LoungeSection ref={loungeSectionRef} />
             <CinemaSection ref={cinemaSectionRef} />
             <SpacesAndPackages />
+            <StarsSection />
         </div>
     )
 }
