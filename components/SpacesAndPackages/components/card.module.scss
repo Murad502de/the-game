@@ -152,3 +152,49 @@
         }
     }
 }
+
+@media screen and (max-width: $screen-lg) {
+    .cardWrapper {
+        .cardInner {
+            &__title,
+            &__subTitle,
+            &__room,
+            &__descriptionRoom,
+            .cardMetrics, 
+            .metricsValues,
+            .costValues,
+            .costRightColumn {
+                font-size: 18px;
+                line-height: 28.8px;
+            } 
+
+            &__descriptionRoom {
+                height: 60px;
+            }  
+            
+            .metricsLeftColumn__item,
+            .costLeftColumn__item {
+                width: 120px;
+            }
+
+            .cardCost {
+                .costLeftColumn {
+                    white-space: nowrap;
+                    &__item {
+                        font-size: 18px;
+                        line-height: 28.8px;
+                    }
+                }
+                .costRightColumn {
+                    font-size: 18px;
+                    line-height: 28.8px;
+                }
+            }
+        }
+    }
+
+    #extraSpan {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}

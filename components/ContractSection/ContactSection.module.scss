@@ -24,6 +24,7 @@
 
     .contactInner {
         padding-top: 150px;
+
         .container {
             @include container;
         }
@@ -42,7 +43,7 @@
             }
 
             &__btn {
-                margin-bottom: 30px;
+                margin-bottom: 50px;
             }
 
             &__text {
@@ -53,6 +54,95 @@
             .bookingContactBtns {
                 display: flex;
                 column-gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xl) {
+    .contactWrapper {
+        .leftImage {
+            position: absolute;
+            top: 280px;
+            left: -20px;
+            z-index: -1;
+            width: 422px;
+            height: 697px;
+        }
+
+        .rightImage {
+            position: absolute;
+            top: 270px;
+            right: -20px;
+            z-index: -1;
+            width: 422px;
+            height: 697px;
+        }
+
+        .contactInner {
+            .booking {
+                &__title {
+                    margin-bottom: 40px;
+                }
+                &__btn {
+                    margin-bottom: 60px;
+                    border-radius: 20px;
+                }
+                &__text {
+                    max-width: 290px;
+                    margin: 0 auto;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}   
+
+@media screen and (max-width: $screen-lg) {
+    .contactWrapper {
+        padding-bottom: 130px;
+        .leftImage {
+            top: 240px;
+            left: -130px;
+        }
+
+        .rightImage {
+            top: 240px;
+            right: -130px;
+        }
+        .contactInner {
+            .container {
+                @include container-lg;
+            }
+
+            .booking {
+                width: 569px;
+                margin: 0 auto;
+                text-align: center;
+                margin-bottom: 160px;
+    
+                &__title {
+                    font-size: 80px;
+                    margin-bottom: 40px;
+                }
+    
+                &__btn {
+                    margin-bottom: 40px;
+                    height: 110px;
+                }
+    
+                &__text {
+                    @include text-25px;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                }
+    
+                .bookingContactBtns {
+                    button {
+                        height: 100px;
+                    }
+                }
             }
         }
     }

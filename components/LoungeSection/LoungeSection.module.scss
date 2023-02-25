@@ -1,15 +1,14 @@
 @import "../../styles/mixins";
 @import "../../styles/vars";
 
-.container {
-    @include container;
-}
-
 .loungeWrapper {
     padding-bottom: 200px;
     overflow-x: hidden;
 
     .loungeInner {
+        .container {
+            @include container;
+        }
         &__menu {
             font-family: "Inter";
             font-size: 32px;
@@ -64,6 +63,71 @@
 
         .loungeText {
             @include text-32px;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .loungeWrapper {
+        .loungeInner {
+            .container {
+                @include container-lg;
+            }
+
+            &__menu {
+                font-size: $sectionText-font-sm;
+                margin-bottom: 10px;
+            }
+
+            &__title {
+                font-size: $sectionDeskription-font-md;
+                margin-bottom: 10px;
+            }
+
+            &__text {
+                font-size: $sectionText-font-sm;
+                width: 504px;
+                line-height: 29px;
+                margin-bottom: 146px;
+            }
+
+            .loungeImages {
+                margin-bottom: 20px;
+                &__image1 {
+                    transform: translateX(-450px);
+                    transition: all 1s;
+                }
+    
+                &__image1Active {
+                    transform: translateX(-200px);
+                    transition: all 1s;
+                }
+    
+                &__image2 {
+                    transform: translateX(-500px);
+                    transition: all 1s;
+                }
+    
+                &__image2Active {
+                    transform: translateX(-850px);
+                    transition: all 1s;
+                }
+            }
+
+            .loungeText {
+                font-size: $sectionText-font-sm;
+                line-height: 29px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .loungeWrapper {
+        .loungeInner {
+            .container {
+                @include container-md;
+            }
         }
     }
 }

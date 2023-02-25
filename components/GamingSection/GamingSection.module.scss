@@ -1,4 +1,5 @@
 @import "../../styles/vars";
+@import "../../styles/mixins";
 
 .gamingWrapper {
     font-family: 'Inter';
@@ -16,15 +17,13 @@
     }
 
     .container {
-        max-width: 1218px;
-        width: 100%;
-        margin: 0 auto;
+        @include container;
     }
 
     .gamingInner {
 
         &__title {
-            font-size: 32px;
+            font-size: $sectionTitle-font;
             color: $titlePrimary-color;
             margin-bottom: 12px;
         }
@@ -42,7 +41,7 @@
 
                 &__title {
                     color: $titlePrimary-color;
-                    font-size: 120px;
+                    font-size: $sectionDeskription-font;
                     font-family: 'Montserrat';
                 }
             }
@@ -50,11 +49,58 @@
             .rightColumnContent {
                 flex-basis: 37%;
                 &__paragraph {
-                    font-size: 32px;
+                    font-size: $sectionText-font;
                     color:#fff;
                     line-height: 1.5;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .gamingWrapper {
+        padding-top: 395px;
+        .container {
+            @include container-lg;
+        }
+
+        &__image {
+            top: -56.5%;
+            width: $screen-lg;
+            height: auto;
+        }
+
+        .gamingInner {
+            &__title {
+                font-size: $sectionTitle-font-sm;
+                margin-bottom: 10px;
+            }
+
+            .gamingContent {
+                .leftColumnContent {
+                    width: 328px;
+                    row-gap: 33px;
+                    &__title {
+                        font-size: $sectionDeskription-font-md;
+                    }
+                }
+                .rightColumnContent {
+                    width: 337px;
+                    &__paragraph {
+                        line-height: 30px;
+                        font-size: $sectionText-font-sm;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .gamingWrapper {
+        .container {
+            @include container-md;
         }
     }
 }

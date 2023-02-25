@@ -5,7 +5,7 @@ export const useGamingSwiper = () => {
 
     function scrollHandler() {
         const metrics = scrollableElementsRef.current.getBoundingClientRect();
-        scrollableElementsRef.current.style.transform = `translateX(${metrics.top + 300}px)`
+        scrollableElementsRef.current.style.transform = `translateX(${metrics.top - 250}px)`
     }
 
     useEffect(() => {

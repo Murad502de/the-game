@@ -8,7 +8,7 @@ const GamingSwiper = () => {
 
     return (
         <div className={styles.swiperWrapper}>
-            <div  ref={scrollableElementsRef} className={styles.scrollElements}>
+            <div ref={scrollableElementsRef} className={styles.scrollElements}>
                 {swiperImages.map(swiper => <Image draggable={false} src={swiper.url} alt={swiper.alt} />)}
             </div>
         </div>

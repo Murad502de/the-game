@@ -24,7 +24,7 @@ const VipCard = () => {
                 <div className={styles.cardCost}>
                     <div className={styles.costLeftColumn}>
                         <div className={styles.costLeftColumn__item}>Hours</div>
-                        <div className={styles.costLeftColumn__item}>Price <span>AED</span></div>
+                        <div className={styles.costLeftColumn__item}>Price <span id={styles.extraSpan}>AED</span></div>
                     </div>
                     
                     <div className={styles.costRightColumn}>

@@ -3,7 +3,8 @@
 
 .sapWrapper {
     padding-bottom: 200px;
-    overflow-x: hidden;
+    overflow: auto;
+
     .sapInner {
         .container {
             @include container;
@@ -19,8 +20,8 @@
             margin-bottom: 30px;
         }
 
-        .sapContent {
-            width: 2588px;
+        .sapContent {   
+            width: 2550px;
 
             height: 807px;
             background: $secondaryBgGradient-color;
@@ -84,6 +85,68 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .sapWrapper {
+        .sapInner {
+            .container {
+                @include container-lg;
+            }
+
+            &__title {
+                font-size: $sectionDeskription-font-md;
+            }
+
+            .sapBooking {
+                .sapBookingInner {
+                    column-gap: 90px;
+                    &__btn {
+                        button {
+                            height: 100px;
+                            width: 360px;
+                        }
+                    }
+
+                    .innerRightColumn {
+                        &__title {
+                            font-size: 18px;
+                            line-height: 29px;
+                        }
+
+                        .equipment {
+                            .equipmentLeftColumn {
+                                &__img1 {
+                                    margin-top: 5px;
+                                    margin-bottom: 11px;
+                                }
+                                &__img2 {
+                                    margin-bottom: 9px;
+                                }
+                            }
+                            .equipmentRightColumn {
+                                &__item {
+                                    font-size: 18px;
+                                    line-height: 29px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .sapWrapper {
+        .sapInner {
+            .container {
+                @include container-md;
             }
         }
     }

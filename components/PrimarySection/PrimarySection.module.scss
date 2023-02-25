@@ -1,4 +1,19 @@
+@import "../../styles/vars";
+
 .primarySectionWrapper {
     background-image: url("../../public/images/first_page.png");
     height: 1400px;
+}
+
+@media (max-width: $screen-xl) {
+    .primarySectionWrapper {
+        height: 1010px;
+    }
+}
+
+@media (max-width: $screen-lg) {
+    .primarySectionWrapper {
+        background-image: url("../../public/images/bg-screen-lg.png");
+        height: 1150px;
+    }
 }

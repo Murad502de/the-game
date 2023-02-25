@@ -169,3 +169,128 @@
         }
     }
 }
+
+@media screen and (max-width: $screen-lg) {
+    .starsWrapper {
+        .container {
+            @include container-lg;
+        }
+
+        .starsInner {
+            padding: 30px;
+    
+            .infoBlock {    
+                .topInfoBlock {
+                    display: flex;
+                    column-gap: 80px;
+    
+                    .infoCard {
+                        &__title {
+                            font-size: 25px;
+                            line-height: 35px;
+                            margin-bottom: 5px;
+                        }
+                        &__subTitle {
+                            @include subTitle-card;
+                            margin-bottom: 30px;
+                            line-height: 29px;
+                            font-size: 18px;
+                            height: 116px;
+                        }
+    
+                        .infoCardCapacity {
+                            margin-bottom: 30px;
+    
+                            &__title {
+                                font-size: 18px;
+                                line-height: 29px;
+                            }
+    
+                            &__value {
+                                @include text-25px;
+                                font-size: 18px;
+                                line-height: 29px;
+                            }
+                        }
+    
+                        &__maxCapacity {
+                            @include text-25px;
+                            margin-bottom: 30px;
+                            font-size: 18px;
+                            line-height: 29px;
+                        }
+    
+                        .cardCost {
+                            column-gap: 55px;
+                
+                            .costLeftColumn {
+                                &__item {
+                                    font-size: 18px;
+                                    line-height: 29px;
+                
+                                    span {
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                    }
+                
+                                }
+                            }
+                
+                            .costRightColumn {
+                                font-size: 18px;
+                                line-height: 29px;
+                            }
+                        }
+    
+                        .costValues {
+                            font-size: 18px;
+                            line-height: 29px;
+                        }
+                    }
+                }
+    
+                .cinemasEquipment {
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 85px;
+    
+                    .equipmentItem {
+                        display: flex;
+    
+                        &__title {
+                            width: 120px;
+                            font-size: 18px;
+                            line-height: 29px;
+                        }
+        
+                        &__description {
+                            @include text-25px;
+                            width: 198px;
+                            font-size: 18px;
+                            line-height: 29px;
+                        }
+                    }
+    
+                }
+            }
+    
+            &__btn {
+                max-width: 100%; 
+                margin-top: 35px;
+                
+                &::before {
+                    content: "";
+                    border-radius: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .starsWrapper {
+        .container {
+            @include container-md;
+        }
+    }
+}

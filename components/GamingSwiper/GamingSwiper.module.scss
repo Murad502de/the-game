@@ -1,3 +1,5 @@
+@import "../../styles/vars";
+
 .swiperWrapper {
     color: #fff;
     margin-bottom: 50px;
@@ -7,5 +9,17 @@
         display: flex;
         flex-wrap: nowrap;
         column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .swiperWrapper {
+        margin-bottom: 30px;
+        .scrollElements {
+            img {
+                width: 450px;
+                height: 650px;
+            }
+        }
     }
 }

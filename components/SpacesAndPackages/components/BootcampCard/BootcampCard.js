@@ -13,7 +13,7 @@ const BootcampCard = () => {
                     <div className={styles.metricsLeftColumn}>
                         <div className={styles.metricsLeftColumn__item}>Processor</div>
                         <div className={styles.metricsLeftColumn__item}>Video</div>
-                        <div className={styles.metricsLeftColumn__item}>Monitor <span>CS:GO Specials</span></div>
+                        <div className={styles.metricsLeftColumn__item}>Monitor <span id={styles.extraSpan}>CS:GO Specials</span></div>
                     </div>
                     <div className={styles.metricsRightColumn}>
                         <div className={styles.metricsRightColumn__item}>13600KF</div>
