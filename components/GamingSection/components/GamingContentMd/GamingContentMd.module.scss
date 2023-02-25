@@ -56,3 +56,44 @@
         display: block;
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .gamingInner {
+        .gamingDescription {
+            flex-direction: column;
+            align-items: stretch;
+
+            .leftColumn {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .gamingInner {
+        &__description {
+            font-size: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .gamingInner {
+        &__description {
+            font-size: 40px;
+            line-height: 44px;
+            margin-bottom: 10px;
+        }
+
+        .gamingDescription {
+            .leftColumn {
+                margin-bottom: 10px;
+            }
+            .rightColumn {
+                row-gap: 10px;
+            }
+        }
+    }
+}

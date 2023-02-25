@@ -16,7 +16,10 @@
         height: auto;
     }
 
-    &__imageMd {
+    &__imageMd,
+    &__imageSm,
+    &__imageXsm,
+    &__imageXxsm {
         display: none;
     }
 
@@ -57,6 +60,68 @@
             display: block;
             position: absolute;
             top: -67%;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    .gamingWrapper {
+        padding-top: 341px;
+        .container {
+            @include container-sm;
+        }
+
+        &__imageMd {
+            display: none;
+        }
+
+        &__imageSm {
+            display: block;
+            position: absolute;
+            top: -58%;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .gamingWrapper {
+        padding-top: 331px;
+        
+        .container {
+            @include container-xsm;
+        }
+
+        &__imageSm {
+            display: none;
+        }
+
+        &__imageXsm {
+            display: block;
+            position: absolute;
+            top: -57%;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .gamingWrapper {
+        padding-top: 147px;
+        
+        .container {
+            @include container-xxsm;
+        }
+
+        &__imageXsm {
+            display: none;
+        }
+
+        &__imageXxsm {
+            display: block;
+            position: absolute;
+            top: -64%;
             right: 0;
         }
     }

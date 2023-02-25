@@ -15,7 +15,6 @@ const GamingContentMd = () => {
                 <div className={styles.rightColumn}>
                     <CyberButton color="primary" btnClassName={styles.rightColumn__btn}>Book Your Seat</CyberButton>
                     <CyberButton color="primary" btnClassName={styles.rightColumn__btn}>Computers Specifications</CyberButton>
-
                 </div>
             </div>
         </div>
