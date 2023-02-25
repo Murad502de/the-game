@@ -78,3 +78,77 @@
         }
     }   
 }
+
+@media screen and (max-width: $screen-sm) {
+    .loungeImages {
+        height: 263px;
+        &__image1 {
+            transform: translateX(-200px);
+            width: 398px;
+            height: 233px;
+        }
+        &__image1Active {
+            transform: translateX(-100px);
+            transition: all 1s;
+        }
+        &__image2 {
+            transform: translateX(-150px);
+            width: 580px;
+            height: 409px;
+        }
+        &__image2Active {
+            transform: translateX(-400px);
+            transition: all 1s;
+        }
+    }   
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .loungeImages {
+        height: 190px;
+
+        &__image1 {
+            transform: translateX(-150px);
+            width: 287px;
+            height: 168px;
+        }
+        &__image1Active {
+            transform: translateX(-70px);
+            transition: all 1s;
+        }
+        &__image2 {
+            transform: translateX(-150px);
+            width: 418px;
+            height: 295px;
+        }
+        &__image2Active {
+            transform: translateX(-280px);
+            transition: all 1s;
+        }
+    }   
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .loungeImages {
+        height: 143px;
+
+        &__image1 {
+            transform: translateX(-130px);
+            width: 217px;
+            height: 127px;
+        }
+        &__image1Active {
+            transform: translateX(-50px);
+            transition: all 1s;
+        }
+        &__image2 {
+            transform: translateX(-150px);
+            width: 316px;
+            height: 222px;
+        }
+        &__image2Active {
+            transform: translateX(-220px);
+            transition: all 1s;
+        }
+    }   
+}

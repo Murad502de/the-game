@@ -112,8 +112,73 @@
                     transition: all 1s;
                 }
             }
+        }
+    }
+}
 
-            
+@media screen and (max-width: $screen-sm) {
+    .loungeWrapper {
+        .loungeInner {
+            .container {
+                @include container-sm;
+            }
+            &__text {
+                margin-bottom: 150px;
+            }
+
+            .loungeImages {
+                height: 263px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $screen-xsm) {
+    .loungeWrapper {
+        .loungeInner {
+            .container {
+                @include container-xsm;
+            }
+            &__title {
+                font-size: 50px;
+                line-height: 55px;
+            }
+            &__text {
+                margin-bottom: 142px;
+                width: 386px;
+            }
+            .loungeImages {
+                height: 190px;
+            }
+            .loungeText {
+                width: 386px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $screen-xxsm) {
+    .loungeWrapper {
+        .loungeInner {
+            .container {
+                @include container-xxsm;
+            }
+            &__title {
+                font-size: 40px;
+                line-height: 44px;
+            }
+            &__text {
+                margin-bottom: 80px;
+                width: 291px;
+            }
+            .loungeImages {
+                height: 144px;
+            }
+            .loungeText {
+                width: 291px;
+            }
         }
     }
 }
