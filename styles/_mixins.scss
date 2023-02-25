@@ -16,6 +16,24 @@
     width: 100%;
 }
 
+@mixin container-sm {
+    max-width: 534px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin container-xsm {
+    max-width: 385px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin container-xxsm {
+    max-width: 291px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 @mixin text-32px {
     font-size: 32px;
     font-family: 'Inter';

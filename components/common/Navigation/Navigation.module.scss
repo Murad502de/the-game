@@ -41,6 +41,11 @@
     }
 }
 
+.navigationLogo__xsm,
+.navigationLogo__xxsm {
+    display: none;
+}
+
 @media screen and (max-width: $screen-lg) {
     .navigation {
         .navigationLinks {
@@ -68,8 +73,73 @@
 
         .navigationLinks {
             flex-direction: column;
+            align-items: flex-end;
             row-gap: 30px;
             padding-top: 46px;
+
+            .linkUpOrder {
+                order: 2;
+            }
+
+            .linkBookOrder {
+                order: 3;
+            }
+
+            .linkMenuOrder {
+                order: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    .navigation {
+        .container {
+            @include container-sm;   
+        }
+    }
+}
+
+
+@media screen and (max-width: $screen-xsm) {
+    .navigation {
+        .container {
+            @include container-xsm;   
+        }
+        .navigationInner {
+            .navigationLogo {
+                display: none;
+            }
+            .navigationLogo__xsm {
+                display: block;
+                padding-top: 50px;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: $screen-xxsm) {
+    .navigation {
+        .container {
+            @include container-xxsm;   
+        }
+
+        .navigationInner {
+            .navigationLogo,
+            .navigationLogo__xsm {
+                display: none;
+            }
+
+            .navigationLogo__xxsm {
+                display: inline-block;
+                padding-top: 58px;
+            }
+
+            .navigationLinks {
+                padding-top: 30px;
+            }
         }
     }
 }

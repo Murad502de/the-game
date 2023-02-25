@@ -2,8 +2,12 @@ import styles from "./Navigation.module.scss";
 import Image from "next/image";
 import MenuPopup from "../MenuPopup/MenuPopup";
 import logo from "../../../public/images/logo-light.svg";
-import menu from "../../../public/icons/menu.svg"
+import menu from "../../../public/icons/menu.svg";
+import logo_xsm from "../../../public/icons/logo-xsm.svg";
+import logo_xxsm from "../../../public/icons/logo-xxsm.svg";
+
 import { useNavigation } from "./hooks/useNavigation";
+import classNames from "classnames";
 
 const Navigation = ({gamingSectionRef, loungeSectionRef, cinemaSectionRef}) => {
 
@@ -23,10 +27,18 @@ const Navigation = ({gamingSectionRef, loungeSectionRef, cinemaSectionRef}) => {
                         <Image src={logo} alt="logo" />
                     </div>
 
+                    <div className={styles.navigationLogo__xsm}>
+                        <Image src={logo_xsm} alt="logo" />
+                    </div>
+
+                    <div className={styles.navigationLogo__xxsm}>
+                        <Image src={logo_xxsm} alt="logo" />
+                    </div>
+
                     <ul className={styles.navigationLinks}>
-                        <li className={styles.navigationLinks__link}>Up</li>
-                        <li className={styles.navigationLinks__link}>Book</li>
-                        <li ref={menuPopupRef} className={styles.navigationMenu}>
+                        <li className={classNames(styles.navigationLinks__link, styles.linkUpOrder)}>Up</li>
+                        <li className={classNames(styles.navigationLinks__link, styles.linkBookOrder)}>Book</li>
+                        <li ref={menuPopupRef} className={classNames(styles.navigationMenu, styles.linkMenuOrder)}>
                             <div onClick={toggleMenuVisibility} className={styles.navigationMenu__linkWithIcon}>
                                 <div>Menu</div>
                                 <Image src={menu} alt="menu" />
