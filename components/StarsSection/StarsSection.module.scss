@@ -292,5 +292,15 @@
         .container {
             @include container-md;
         }
+
+        .starsInner {
+            .infoBlock {
+                .cinemasEquipment {
+                    .equipmentItem {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
     }
 }

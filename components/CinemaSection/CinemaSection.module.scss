@@ -97,6 +97,14 @@
     }
 }
 
+.cinemaText__md {
+    display: none;
+}
+
+.placesLeftColumn__img_md {
+    display: none;
+}
+
 @media screen and (max-width: $screen-lg) {
     .cinemaWrapper {
         .container {
@@ -163,6 +171,65 @@
     .cinemaWrapper {
         .container {
             @include container-md;
+        }
+        .cinemaContent {
+            height: 660px;
+            background-image: url("../../public/images/bg-cinema-md.png");
+            margin-bottom: 20px;
+
+            &__title {
+                font-size: 60px;
+                margin-bottom: 30px;
+            }
+
+            &__subTitle:nth-child(3) {
+                display: none;
+            }
+            &__text {
+                display: none;
+            }
+        }
+
+        .cinemaText__md {
+            display: block;
+            width: 708px;
+            margin: 0 auto;
+            color: #D9D9D9;
+            font-family: "Inter";
+            line-height: 29px;
+            margin-bottom: 20px;
+        }
+
+        .meetingPlacesWrapper {
+            margin-top: 100px;
+
+            .meetingPlacesInner {
+                .placesPictures {
+                    .placesLeftColumn {
+                        flex-direction: row;
+                        column-gap: 20px;
+
+                        &__img {
+                            display: none;
+                        }
+
+                        &__img_md {
+                            display: inline-block;
+                            width: 346px;
+                        }
+                    }
+                }
+
+                &__highLightText {
+                    margin-bottom: 68px;
+                    span {
+                        z-index: -1;
+                    }
+                }
+            }
+            .third_grid {
+                display: none;
+            }
         }
     }
 }

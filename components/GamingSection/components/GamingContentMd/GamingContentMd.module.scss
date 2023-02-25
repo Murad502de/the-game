@@ -1,0 +1,58 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.gamingInner {
+    display: none;
+
+    &__title {
+        font-family: "Inter";
+        font-size: $sectionTitle-font-sm;
+        color: $titlePrimary-color;
+        margin-bottom: 10px;
+        line-height: 29px;
+    }
+
+    &__description {
+        font-size: 70px;
+        font-family: "Montserrat";
+        color: $titlePrimary-color;
+        line-height: 77px;
+        margin-bottom: 20px;
+    }
+
+    .gamingDescription {
+        display: flex;
+        column-gap: 93px;
+        align-items: flex-end;
+
+        .leftColumn {
+            width: 271px;
+            font-family: "Inter";
+            color: #D9D9D9;
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .rightColumn {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            flex-grow: 1;
+
+            &__btn {
+                height: 110px;
+
+                &::before {
+                    content: '';
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .gamingInner {
+        display: block;
+    }
+}

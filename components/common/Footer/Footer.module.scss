@@ -111,7 +111,7 @@
     .footerMobileLogo {
         display: flex;
         align-items: center;
-        column-gap:252px;;
+        column-gap: 252px;
         margin-bottom: 30px;
 
         .logoInstagram {
@@ -211,5 +211,29 @@
 @media screen and (max-width: $screen-lg) {
     .footer {
         display: none;
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .footerMobile {
+        .container {
+            @include container-md;
+        }
+
+        .footerMobileLogo {
+            column-gap: 166px;
+        }
+
+        .footerMobileExplore {
+            column-gap: 120px;
+        }
+
+        .footerMobileRoots {
+            column-gap: 20px;
+
+            .rootsLeftColumn {
+                width: 344px;
+            }
+        }
     }
 }

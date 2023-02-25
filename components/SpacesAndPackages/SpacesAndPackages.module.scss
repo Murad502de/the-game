@@ -23,7 +23,6 @@
         .sapContent {   
             width: 2550px;
 
-            height: 807px;
             background: $secondaryBgGradient-color;
             backdrop-filter: blur(7.49853px);
             border-radius: 10px;
@@ -144,9 +143,42 @@
 
 @media screen and (max-width: $screen-md) {
     .sapWrapper {
+        padding-bottom: 50px;
         .sapInner {
             .container {
                 @include container-md;
+            }
+
+            &__title {
+                font-size: 60px;
+            }
+
+            .sapContent {
+                padding: 30px 30px 60px 30px;
+            }
+
+            .sapBooking {
+                .sapBookingInner {
+                    flex-direction: column-reverse;
+
+                    &__btn {
+                        button {
+                            width: 100%;
+
+                            &::before {
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+
+                    .innerRightColumn {
+                        .equipment {
+                            .equipmentRightColumn {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

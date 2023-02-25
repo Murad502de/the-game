@@ -102,6 +102,7 @@
 @media screen and (max-width: $screen-lg) {
     .contactWrapper {
         padding-bottom: 130px;
+
         .leftImage {
             top: 240px;
             left: -130px;
@@ -142,6 +143,41 @@
                     button {
                         height: 100px;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .contactWrapper {
+        padding-bottom: 60px;
+        .leftImage {
+            top: 150px;
+            left: -80px;
+        }
+
+        .rightImage {
+            top: 150px;
+            right: -80px;
+        }
+
+        .contactInner {
+            .container {
+                @include container-md;
+            }
+            .booking {
+                margin-top: 637px;
+
+                &__btn {
+                    height: 110px;
+                    &::before {
+                        border-radius: 10px;
+                    }
+                }
+
+                &__title {
+                    font-size: 60px;
                 }
             }
         }

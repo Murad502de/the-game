@@ -71,6 +71,17 @@
     }
 }
 
+.red {
+    color: #BB6B75;
+    padding: 35px 0;
+    height: 99px !important;
+
+    &::before {
+        background: #BB6B75;
+        border-radius: 10px;
+    }
+}
+
 @media screen and (max-width: $screen-lg) {
     .cyberBtn {
         font-size: 18px;

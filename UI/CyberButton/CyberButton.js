@@ -6,7 +6,8 @@ const CyberButton = ({children, color, btnClassName, ...props}) => {
         <button className={classNames(styles.cyberBtn, btnClassName, {
             [styles.primary]: color === 'primary',
             [styles.primary2]: color === 'primary-2',
-            [styles.simple]: color === "simple"
+            [styles.simple]: color === "simple",
+            [styles.red]: color === "red"
         })} {...props}>{children}</button>
     )
 }

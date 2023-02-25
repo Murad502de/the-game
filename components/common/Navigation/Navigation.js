@@ -11,27 +11,31 @@ const Navigation = ({gamingSectionRef, loungeSectionRef, cinemaSectionRef}) => {
 
     return (
         <nav className={styles.navigation}>
-            <ul className={styles.navigationLinks}>
-                <li onClick={() => scrollToSection(gamingSectionRef)} className={styles.navigationLinks__link}>Gaming</li>
-                <li onClick={() => scrollToSection(loungeSectionRef)} className={styles.navigationLinks__link}>Lounge</li>
-                <li onClick={() => scrollToSection(cinemaSectionRef)} className={styles.navigationLinks__link}>Cinema</li>
-            </ul>
+            <div className={styles.container}>
+                <div className={styles.navigationInner}>
+                    <ul className={styles.navigationLinks}>
+                        <li onClick={() => scrollToSection(gamingSectionRef)} className={styles.navigationLinks__link}>Gaming</li>
+                        <li onClick={() => scrollToSection(loungeSectionRef)} className={styles.navigationLinks__link}>Lounge</li>
+                        <li onClick={() => scrollToSection(cinemaSectionRef)} className={styles.navigationLinks__link}>Cinema</li>
+                    </ul>
 
-            <div className={styles.navigationLogo}>
-                <Image src={logo} alt="logo" />
-            </div>
-
-            <ul className={styles.navigationLinks}>
-                <li className={styles.navigationLinks__link}>Up</li>
-                <li className={styles.navigationLinks__link}>Book</li>
-                <li ref={menuPopupRef} className={styles.navigationMenu}>
-                    <div onClick={toggleMenuVisibility} className={styles.navigationMenu__linkWithIcon}>
-                        <div>Menu</div>
-                        <Image src={menu} alt="menu" />
+                    <div className={styles.navigationLogo}>
+                        <Image src={logo} alt="logo" />
                     </div>
-                    <MenuPopup isVisible={isMenuVisible}  />
-                </li>
-            </ul>
+
+                    <ul className={styles.navigationLinks}>
+                        <li className={styles.navigationLinks__link}>Up</li>
+                        <li className={styles.navigationLinks__link}>Book</li>
+                        <li ref={menuPopupRef} className={styles.navigationMenu}>
+                            <div onClick={toggleMenuVisibility} className={styles.navigationMenu__linkWithIcon}>
+                                <div>Menu</div>
+                                <Image src={menu} alt="menu" />
+                            </div>
+                            <MenuPopup isVisible={isMenuVisible}  />
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     )
 }
