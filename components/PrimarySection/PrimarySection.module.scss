@@ -17,3 +17,27 @@
         height: 1150px;
     }
 }
+
+@media (max-width: $screen-sm) {
+    .primarySectionWrapper {
+        background-image: url("../../public/images/bg-primary-sm.png");
+        background-position: 0 60px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: $screen-xsm) {
+    .primarySectionWrapper {
+        background-image: url("../../public/images/bg-primary-xsm.png");
+        background-position: 0 64px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: $screen-xxsm) {
+    .primarySectionWrapper {
+        background-image: url("../../public/images/bg-primary-xxsm.png");
+        background-position: 0 14px;
+        background-repeat: no-repeat;
+    }
+}
