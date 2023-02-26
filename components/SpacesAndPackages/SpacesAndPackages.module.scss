@@ -193,7 +193,7 @@
             }
 
             .sapContent {
-                padding: 10px;
+                padding: 30px;
             }
         }
     }
@@ -204,6 +204,10 @@
         .sapInner {
             .container {
                 @include container-xsm;
+            }
+
+            .sapContent {
+                padding: 10px;
             }
 
             .sapBooking {

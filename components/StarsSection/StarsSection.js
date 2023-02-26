@@ -35,6 +35,22 @@ const StarsSection = () => {
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div className={styles.mobileCardCost}>
+                                    <div className={styles.leftColumn}>
+                                        <div className={styles.leftColumn__title}>Hours</div>
+                                        <div className={styles.leftColumn__text}>1</div>
+                                        <div className={styles.leftColumn__text}>3</div>
+                                        <div className={styles.leftColumn__text}>5</div>
+                                    </div>
+                                    <div className={styles.rightColumn}>
+                                        <div className={styles.rightColumn__title}>AED</div>
+                                        <div className={styles.rightColumn__text}>199</div>
+                                        <div className={styles.rightColumn__text}>499</div>
+                                        <div className={styles.rightColumn__text}>699</div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className={styles.infoCard}>
@@ -51,6 +67,45 @@ const StarsSection = () => {
                                         <div className={styles.costValuesBottomRow__item}>249</div>
                                         <div className={styles.costValuesBottomRow__item}>599</div>
                                         <div className={styles.costValuesBottomRow__item}>899</div>
+                                    </div>
+                                </div>
+
+                                <div id={styles.forSmall} className={styles.infoCardCapacity}>
+                                    <div className={styles.infoCardCapacity__title}>Capacity</div>
+                                    <div className={styles.infoCardCapacity__value}>up to 8 people</div>
+                                </div>
+
+                                <div id={styles.forSmall} className={styles.cardCost}>
+                                
+                                    <div className={styles.costLeftColumn}>
+                                        <div className={styles.costLeftColumn__item}>Hours</div>
+                                        <div className={styles.costLeftColumn__item}>Price <span>AED</span></div>
+                                    </div>
+                                    
+                                    <div className={styles.costRightColumn}>
+                                        <div className={styles.costRightTopRow}>
+                                            <div className={styles.costRightTopRow__item}>1</div>
+                                            <div className={styles.costRightTopRow__item}>3</div>
+                                            <div className={styles.costRightTopRow__item}>5</div>
+                                        </div>
+                                        <div className={styles.costRightBottomRow}>
+                                            <div className={styles.costRightBottomRow__item}>249</div>
+                                            <div className={styles.costRightBottomRow__item}>899</div>
+                                            <div className={styles.costRightBottomRow__item}>599</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.mobileCostValues}>
+                                    <div className={styles.leftColumn}>
+                                        <div className={styles.leftColumn__item}>1</div>
+                                        <div className={styles.leftColumn__item}>3</div>
+                                        <div className={styles.leftColumn__item}>5</div>
+                                    </div>
+                                    <div className={styles.rightColumn}>
+                                        <div className={styles.rightColumn__item}>249</div>
+                                        <div className={styles.rightColumn__item}>599</div>
+                                        <div className={styles.rightColumn__item}>899</div>
                                     </div>
                                 </div>
                             </div>
