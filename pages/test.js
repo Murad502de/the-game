@@ -1,23 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import { starsAnimation } from "../utils/starsAnimation";
 
 const Test = () => {
 
-    const container = useRef();
-
     useEffect(() => {
-        if(container.current) {
-            container.current.addEventListener('wheel', (event) => {
-                event.preventDefault();
-                container.current.scrollLeft += event.deltaY;
-            })
-        }
+        starsAnimation();
     }, [])
+    
     return (
-        <main ref={container}>
-            <section>
-                <h1>Beep</h1>
-            </section>
-        </main>
+        <></>
     )
 }
 
