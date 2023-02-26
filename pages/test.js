@@ -1,14 +1,11 @@
-import { useEffect } from "react";
-import { starsAnimation } from "../utils/starsAnimation";
+import marker from "../public/images/marker.png";
+import Image from "next/image";
 
 const Test = () => {
-
-    useEffect(() => {
-        starsAnimation();
-    }, [])
-    
     return (
-        <></>
+        <div>
+            <Image src={marker} />
+        </div>
     )
 }
 

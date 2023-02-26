@@ -7,6 +7,7 @@ import CinemaSection from "../components/CinemaSection/CinemaSection";
 import SpacesAndPackages from "../components/SpacesAndPackages/SpacesAndPackages";
 import StarsSection from "../components/StarsSection/StarsSection";
 import ContactSection from "../components/ContractSection/ContactSection";
+import GoogleMaps from "../components/GoogleMaps/GoogleMaps";
 
 const Index = () => {
     const gamingSectionRef = useRef();
@@ -26,6 +27,7 @@ const Index = () => {
             <CinemaSection ref={cinemaSectionRef} />
             <SpacesAndPackages />
             <StarsSection />
+            <GoogleMaps />
             <ContactSection />
         </div>
     )
