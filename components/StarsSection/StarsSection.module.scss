@@ -33,6 +33,7 @@
 
             .topInfoBlock {
                 display: flex;
+                flex-direction: row;
                 column-gap: 177px;
 
                 .infoCard {
@@ -448,7 +449,7 @@
             padding: 10px;
             .infoBlock {
                 .topInfoBlock {
-                    flex-direction: column;
+                    flex-direction: column !important;
                     row-gap: 30px;
 
                     .infoCard {

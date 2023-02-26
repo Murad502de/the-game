@@ -1,6 +1,18 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
+@mixin dark-grey-text {
+    font-size: 18px;
+    font-family: "Inter";
+    color: #B3B3B3;
+}
+
+@mixin flex-maps {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
 .footer {
     .container {
         @include container;
@@ -104,6 +116,7 @@
 }
 
 .footerMobile {
+    display: none;
     .container {
         @include container-lg;
     }
@@ -208,9 +221,148 @@
     }
 }
 
+.smFooter {
+    display: none;
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    .smLocation {
+        margin-bottom: 50px;
+        &__text {
+            @include dark-grey-text;
+            line-height: 35px;
+        }
+
+        .smMaps {
+            @include flex-maps;
+
+            &__text {
+                @include dark-grey-text;
+            }
+        }
+    }
+
+    .smExplore {
+        @include dark-grey-text;
+        margin-bottom: 20px;
+    }
+
+    .smList {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        margin-bottom: 20px;
+
+        .smItem {
+            @include dark-grey-text;
+            color: #fff;
+        }
+    }
+
+    .smInst {
+        @include flex-maps;
+        margin-bottom: 50px;
+
+        &__text {
+            @include dark-grey-text;
+            color: #fff;
+        }
+    }
+
+    .smDesigned,
+    .smDesigned2 {
+        @include dark-grey-text;
+        margin-bottom: 20px;
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    .smDesigned2 {
+        display: none;
+    }
+
+    .smPolicy {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+        @include dark-grey-text;
+
+        &__leftText {
+            text-decoration: underline;
+        }
+    }
+}
+
+.xxsmFooter {
+    display: none;
+    .xxsmLocation {
+        @include dark-grey-text();
+        line-height: 29px;
+        margin-top: 30px;
+    }
+    .xxsmMaps {
+        @include flex-maps();
+        &__text {
+            @include dark-grey-text();
+            line-height: 27px;
+        }
+        margin-bottom: 40px;
+    }
+    .footerXxsmData {
+        margin-bottom: 50px;
+        display: flex;
+        column-gap: 69px;
+
+        .leftColumn {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            
+            &__explore {
+                line-height: 27px;
+                @include dark-grey-text();
+            }
+
+            &__item {
+                @include dark-grey-text();
+                color: #fff;
+                line-height: 27px;
+            }
+        }
+
+        .rightColumn {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            @include dark-grey-text();
+            line-height: 27px;
+            
+            .rightColumnInst {
+                line-height: 27px;
+                @include flex-maps();
+            }
+
+            .xxsmDesigned {
+                line-height: 29px;
+                span {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+}
+
 @media screen and (max-width: $screen-lg) {
     .footer {
         display: none;
+    }
+
+    .footerMobile {
+        display: block;
     }
 }
 
@@ -234,6 +386,50 @@
             .rootsLeftColumn {
                 width: 344px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    .footerMobile {
+        display: none;
+    }
+
+    .smFooter {
+        display: block;
+        .container {
+            @include container-sm;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .smFooter {
+        .container {
+            @include container-xsm;
+        }
+
+        .smDesigned2 {
+            display: block;
+            line-height: 29px;
+        }
+
+        .smDesigned {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .smFooter {
+        display: none;
+    }
+
+    .xxsmFooter {
+        display: block;
+
+        .container {
+            @include container-xxsm;
         }
     }
 }

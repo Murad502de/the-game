@@ -183,3 +183,82 @@
         }
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .contactWrapper {
+        padding-bottom: 0px;
+
+        .leftImage {
+            top: 150px;
+            left: -150px;
+        }
+
+        .rightImage {
+            top: 150px;
+            right: -150px;
+        }
+
+        .contactInner {
+            @include container-sm;
+
+            .booking {
+                width: 100%;
+                margin-bottom: 80px;
+
+                &__title {
+                    font-size: 60px;
+                }
+
+                &__btn {
+                    height: 110px;
+                    &::before {
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .contactWrapper {
+        .contactInner {
+            @include container-xsm;
+
+            .booking__title {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .contactWrapper {
+        .contactInner {
+            @include container-xxsm;
+
+            .booking__title {
+                font-size: 40px;
+            }
+
+            .booking {
+                margin-bottom: 65px;
+
+                .bookingContactBtns {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    column-gap: 20px;
+                    row-gap: 20px;
+
+                    .fullWidth {
+                        width: 100%;
+                    }
+                    button {
+                        width: 46%;
+                    }
+                }
+            }
+
+        }
+    }
+}
