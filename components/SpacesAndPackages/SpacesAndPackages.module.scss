@@ -191,6 +191,10 @@
             .container {
                 @include container-sm;
             }
+
+            .sapContent {
+                padding: 10px;
+            }
         }
     }
 }

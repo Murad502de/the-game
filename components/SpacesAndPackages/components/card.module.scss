@@ -202,3 +202,9 @@
         white-space: nowrap;
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .cardWrapper {
+        padding: 30px;
+    }
+}
