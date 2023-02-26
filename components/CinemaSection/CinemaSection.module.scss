@@ -97,7 +97,9 @@
     }
 }
 
-.cinemaText__md {
+.cinemaText__md,
+.redBookSeat,
+.grid3_md {
     display: none;
 }
 
@@ -197,6 +199,9 @@
             line-height: 29px;
             margin-bottom: 20px;
         }
+        .redBookSeat {
+            display: block;
+        }
 
         .meetingPlacesWrapper {
             margin-top: 100px;
@@ -284,6 +289,7 @@
                 }
 
                 .grid3_md {
+                    display: inline-block;
                     width: 536px;
                     height: 807px;
                 }

@@ -36,7 +36,7 @@ const CinemaSection = React.forwardRef((props, ref) => {
                 <div className={styles.cinemaText__md}>
                     The entire cinema is at your service. Whether it's a date for two or inviting a large group, any movie will be even more comfortable in our state-of-the-art cinema.
                 </div>
-                <CyberButton color="red">Book Your Seat</CyberButton>
+                <CyberButton btnClassName={styles.redBookSeat} color="red">Book Your Seat</CyberButton>
             </div>
 
             <div className={styles.meetingPlacesWrapper}>
