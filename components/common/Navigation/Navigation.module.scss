@@ -3,7 +3,9 @@
 
 .navigation {
     .container {
-        @include container;
+        max-width: 1800px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .navigationInner {
@@ -45,6 +47,14 @@
 .navigationLogo__xsm,
 .navigationLogo__xxsm {
     display: none;
+}
+
+@media screen and (max-width: $screen-xl) {
+    .navigation {
+        .container {
+            @include container;
+        }
+    }
 }
 
 @media screen and (max-width: $screen-lg) {

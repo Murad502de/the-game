@@ -2,7 +2,9 @@
 
 .primarySectionWrapper {
     background-image: url("../../public/images/first_page.png");
+    background-position: -30px 0;
     height: 1400px;
+    overflow: hidden;
 }
 
 @media (max-width: $screen-xl) {
