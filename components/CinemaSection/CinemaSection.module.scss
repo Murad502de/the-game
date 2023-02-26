@@ -192,8 +192,6 @@
 
         .cinemaText__md {
             display: block;
-            width: 708px;
-            margin: 0 auto;
             color: #D9D9D9;
             font-family: "Inter";
             line-height: 29px;
@@ -222,13 +220,194 @@
 
                 &__highLightText {
                     margin-bottom: 68px;
-                    span {
-                        z-index: -1;
+                }
+                &__textInViewport {    
+                    .blur {
+                        top: 10%;
                     }
                 }
             }
             .third_grid {
                 display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    .cinemaWrapper {
+        .container {
+            @include container-sm;
+        }
+
+        .cinemaContent {
+            height: 535px;
+            background-image: url("../../public/images/bg-cinema-md.png");
+            background-position: center top;
+            &__title {
+                width: 270px;
+                line-height: 66px;
+            }
+
+            &__subTitle:nth-child(3) {
+                display: none;
+            }
+            &__text {
+                display: none;
+            }
+
+        }
+        .cinemaText__md {
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .meetingPlacesWrapper {
+            margin-top: 100px;
+
+            .meetingPlacesInner {
+                .placesPictures {
+                    .placesLeftColumn {
+                        column-gap: 27px;
+                        &__img_md {
+                            width: 254px;
+                            height: 282px;
+                        }
+                    }
+                }
+
+                &__highLightText {
+                    font-size: 60px;
+                    width: 354px;
+                    margin: 0 auto;
+                    margin-bottom: 30px;
+                }
+
+                .grid3_md {
+                    width: 536px;
+                    height: 807px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .cinemaWrapper {
+        &__title {
+            margin-bottom: 0;
+        }
+        .container {
+            @include container-xsm;
+        }
+
+        .cinemaContent {
+            height: 397px;
+            background-image: url("../../public/images/cinema-xsm.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0px 30px;
+
+            &__title {
+                width: 339px;
+                font-size: 50px;
+                line-height: 55px;
+            }
+
+
+        }
+        .cinemaText__md {
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .meetingPlacesWrapper {
+            margin-top: 100px;
+
+            .meetingPlacesInner {
+                .placesPictures {
+                    .placesLeftColumn {
+                        column-gap: 20px;
+                        &__img_md {
+                            width: 183px;
+                            height: 203px;
+                        }
+                    }
+                }
+
+                &__highLightText {
+                    font-size: 40px;
+                    width: 255px;
+                    margin-bottom: 20px;
+                }
+
+                .grid3_md {
+                    width: 386px;
+                    height: 581px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .cinemaWrapper {
+        .container {
+            @include container-xxsm;
+        }
+
+        .cinemaContent {
+            background-image: url("../../public/images/cinema-xsm.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            &__title {
+                width: 224px;
+                font-size: 40px;
+                line-height: 44px;
+                margin-bottom: 10px;
+            }
+
+            &__subTitle {
+                width: 124px;
+                line-height: 29px;
+            }
+        }
+
+        .meetingPlacesWrapper {
+            .meetingPlacesInner {
+                .placesPictures {
+                    margin-bottom: 15px;
+                    .placesLeftColumn {
+                        column-gap: 15px;
+                        &__img_md {
+                            width: 138px;
+                            height: 153px;
+                        }
+                    }
+                }
+                &__highLightText {
+                    font-size: 30px;
+                    width: 192px;
+                    margin-bottom: 15px;
+                }
+
+                &__textInViewport {
+                    color: $textYellow-color;
+                    transition: all .5s;
+                    position: relative;
+    
+                    .blur {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+
+                .grid3_md {
+                    width: 291px;
+                    height: 438px;
+                }
             }
         }
     }

@@ -61,7 +61,7 @@ const CinemaSection = React.forwardRef((props, ref) => {
                             Your meeting place
                         </div>
 
-                        <Image src={grid_md} alt="grid_md" />
+                        <Image className={styles.grid3_md} src={grid_md} alt="grid_md" />
                     </div>
                 </div>
             </div>
