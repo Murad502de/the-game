@@ -183,3 +183,64 @@
         }
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .sapWrapper {
+        padding-bottom: 20px;
+        .sapInner {
+            .container {
+                @include container-sm;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xsm) {
+    .sapWrapper {
+        .sapInner {
+            .container {
+                @include container-xsm;
+            }
+
+            .sapBooking {
+                .sapBookingInner {
+                    .innerRightColumn {
+                        .equipment {
+                            .equipmentLeftColumn {
+                                &__img1 {
+                                    margin-top: 8px;
+                                    margin-bottom: 38px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxsm) {
+    .sapWrapper {
+        .sapInner {
+            .container {
+                @include container-xxsm;
+            }
+
+            .sapBooking {
+                .sapBookingInner {
+                    .innerRightColumn {
+                        .equipment {
+                            .equipmentLeftColumn {
+                                &__img1 {
+                                    margin-top: 8px;
+                                    margin-bottom: 38px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
