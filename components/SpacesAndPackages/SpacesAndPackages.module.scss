@@ -20,16 +20,29 @@
             margin-bottom: 30px;
         }
 
-        .sapContent {   
-            width: 2550px;
+        .sapContentWrapper {
+            overflow-x: hidden;
+            position: relative;
+            left: 600px;
+            transition: 0.3s;
+            // transform: translateX(25%);
 
-            background: $secondaryBgGradient-color;
-            backdrop-filter: blur(7.49853px);
-            border-radius: 10px;
-            padding: 74px;
-            display: flex;
-            column-gap: 30px;
+
+            .sapContent {   
+                background: $secondaryBgGradient-color;
+                backdrop-filter: blur(7.49853px);
+                border-radius: 10px;
+                padding: 74px;
+                display: flex;
+                column-gap: 30px;
+                transition: 0.3s;
+
+                // position: relative;
+                // right: -25%;
         }
+        }
+
+        
 
         .sapBooking {
             .sapBookingInner {

@@ -8,11 +8,19 @@ import SpacesAndPackages from "../components/SpacesAndPackages/SpacesAndPackages
 import StarsSection from "../components/StarsSection/StarsSection";
 import ContactSection from "../components/ContractSection/ContactSection";
 import GoogleMaps from "../components/GoogleMaps/GoogleMaps";
+import { usePreloader } from "../components/common/Preloader/hooks/usePreloader";
+import Preloader from "../components/common/Preloader/Preloader";
 
 const Index = () => {
+    const {isLoaded, preloaderPercentage} = usePreloader();
+
     const gamingSectionRef = useRef();
     const loungeSectionRef = useRef();
     const cinemaSectionRef = useRef(); 
+
+    if(isLoaded) {
+        // return <Preloader preloaderPercentage={preloaderPercentage} />
+    }
 
     return (
         <div className="wrapper">
