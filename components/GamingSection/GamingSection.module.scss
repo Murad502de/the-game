@@ -6,7 +6,9 @@
     padding-top: 596px;
     padding-bottom: 200px;
     position: relative;
-
+    padding-left: 10px;
+    padding-right: 10px;
+    
     &__image {
         position: absolute;
         top: -50.5%;
@@ -31,6 +33,8 @@
 @media screen and (max-width: $screen-lg) {
     .gamingWrapper {
         padding-top: 395px;
+        padding-left: 10px;
+        padding-right: 10px;
         .container {
             @include container-lg;
         }

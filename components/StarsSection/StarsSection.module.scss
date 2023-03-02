@@ -3,7 +3,10 @@
 
 .starsWrapper {
     padding: 200px 0;
-overflow: hidden;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    
     .container {
         @include container;   
     }

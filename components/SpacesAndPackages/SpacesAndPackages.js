@@ -17,18 +17,22 @@ const SpacesAndPackages = () => {
       <div className={styles.spacesScroll}>
         <section className={styles.sapWrapper}>
           <div className={styles.sapInner}>
-            <div className={styles.container}>
-              <div className={styles.sapInner__title}>
-                Spaces <br /> and Packages
+            <div className={styles.scroll}>
+              <div className={styles.containerWrapper}>
+                <div className={styles.container}>
+                  <div className={styles.containerWrapper__title}>
+                    Spaces <br /> and Packages
+                  </div>
+                </div>
+                  <main className={styles.sapContentWrapper}>
+                      <div ref={contentRef} className={styles.sapContent}>
+                          <PremiumCard />
+                          <BootcampCard />
+                          <VipCard />
+                      </div>
+                  </main>
               </div>
             </div>
-            <main id="scroll-ref" ref={contentRef} className={styles.sapContentWrapper}>
-              <div className={styles.sapContent}>
-                <PremiumCard />
-                <BootcampCard />
-                <VipCard />
-              </div>
-            </main>
 
             <div className={styles.sapBooking}>
               <div className={styles.container}>

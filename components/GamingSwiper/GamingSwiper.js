@@ -1,6 +1,6 @@
 import styles from "./GamingSwiper.module.scss";
 import Image from "next/image";
-import { swiperImages } from "../../__mocks__/swiperImages";
+import { swiperImages } from "../../mocks/swiperImages";
 import { useGamingSwiper } from "./hooks/useGamingSwiper";
 
 const GamingSwiper = () => {

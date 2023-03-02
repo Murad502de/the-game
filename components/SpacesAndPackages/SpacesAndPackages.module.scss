@@ -3,48 +3,66 @@
 
 .sapWrapper {
     padding-bottom: 200px;
-    overflow: hidden;
-
+    .container {
+        @include container;
+    }
     .sapInner {
-        .container {
-            @include container;
-        }
 
-        &__title {
-            font-family: "Montserrat";
-            color: transparent;
-            background-image: $titleSecondaryGradient-color;
-            -webkit-background-clip: text;
-            background-clip: text;
-            font-size: 120px;
-            margin-bottom: 30px;
-        }
-
-        .sapContentWrapper {
-            overflow-x: hidden;
+        .scroll {
             position: relative;
-            left: 600px;
-            transition: 0.3s;
-            // transform: translateX(25%);
+            height: 300vh;
 
-
-            .sapContent {   
-                background: $secondaryBgGradient-color;
-                backdrop-filter: blur(7.49853px);
-                border-radius: 10px;
-                padding: 74px;
+            .containerWrapper {
+                height: calc(100vh + 200px);
                 display: flex;
-                column-gap: 30px;
-                transition: 0.3s;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                width: 100%;
+                position: -webkit-sticky;
+                position: sticky;
+                top: -130px;
 
-                // position: relative;
-                // right: -25%;
-        }
+                
+
+                &__title {
+                    font-family: "Montserrat";
+                    color: transparent;
+                    background-image: $titleSecondaryGradient-color;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    font-size: 120px;
+                    // margin-bottom: 30px;
+                }
+
+                .sapContentWrapper {
+                    transition: 0.3s;
+                    position: relative;
+                    width: 1200px;
+                    height: 100%;
+
+                    .sapContent {   
+                        width: max-content;
+                        background: $secondaryBgGradient-color;
+                        backdrop-filter: blur(7.49853px);
+                        border-radius: 10px;
+                        padding: 74px;
+                        display: flex;
+                        column-gap: 30px;
+                        position: absolute;
+                    }
+                }
+            }
         }
 
         
 
         .sapBooking {
+            margin-top: 5rem !important;
+            @include container;
+
             .sapBookingInner {
                 display: flex;
                 column-gap: 140px;

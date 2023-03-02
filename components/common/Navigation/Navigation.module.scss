@@ -49,16 +49,24 @@
     display: none;
 }
 
-@media screen and (max-width: $screen-xl) {
+@media screen and (max-width: $screen-xxl) {
     .navigation {
         .container {
             @include container;
+        }
+
+        .navigationLinks {
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 }
 
 @media screen and (max-width: $screen-lg) {
     .navigation {
+        .container {
+            @include container-lg;
+        }
         .navigationLinks {
             font-size: 18px;
         }

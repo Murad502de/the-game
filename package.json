@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Murad502de/the-game#readme",
   "dependencies": {
+    "@pixi/basis": "^7.1.4",
     "@react-google-maps/api": "^2.18.1",
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.5",
@@ -27,6 +28,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.58.2",
     "swiper": "^9.0.5",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "tweakpane": "^3.1.6"
   }
 }
