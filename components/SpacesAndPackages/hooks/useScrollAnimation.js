@@ -1,22 +1,29 @@
 import { useEffect, useRef } from "react";
 
 export const useScrollAnimation = () => {
-    const contentRef = useRef();
+
+    const wrap = useRef();
+    const computers = useRef();
+    const scroll = useRef();
+    const spaces = useRef();
 
     useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => endScroll();
-    }, [contentRef]);
-
-    const endScroll = () => {
-        window.removeEventListener("scroll", handleScroll);
-    }
-
-    const handleScroll = () => {
-        if (window.scrollY > 7300 && window.scrollY < 9800) {
-          contentRef.current.style.left = `-${(window.scrollY - 7800)}px`;
+        let difference = computers.current.offsetWidth - spaces.current.offsetWidth;
+        function getTween(b, e, i) {
+            return b + ((i/99) * (e-b));
         }
-    };
+        let tick;
+        window.addEventListener("scroll", () => {
+            tick = wrap.current.offsetTop
+            let currentPos = tick * 99 / (scroll.current.offsetHeight - wrap.current.offsetHeight)
+            computers.current.style.left = `-${getTween(0, difference, currentPos)}px`;
+        });
+    }, [wrap, computers, scroll, spaces]);
 
-    return {contentRef};
+    return {
+      wrap,
+      computers,
+      scroll,
+      spaces
+    };
 }  

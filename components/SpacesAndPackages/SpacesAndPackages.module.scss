@@ -8,11 +8,11 @@
     }
     .sapInner {
 
-        .scroll {
+        .scroll { // spaces-scroll
             position: relative;
             height: 300vh;
 
-            .containerWrapper {
+            .containerWrapper { // wrap_spaces
                 height: calc(100vh + 200px);
                 display: flex;
                 flex-direction: column;
@@ -24,6 +24,7 @@
                 position: -webkit-sticky;
                 position: sticky;
                 top: -130px;
+                overflow-x: hidden;
 
                 
 
@@ -37,13 +38,13 @@
                     // margin-bottom: 30px;
                 }
 
-                .sapContentWrapper {
+                .sapContentWrapper { // spaces
                     transition: 0.3s;
                     position: relative;
                     width: 1200px;
                     height: 100%;
 
-                    .sapContent {   
+                    .sapContent {   // computers
                         width: max-content;
                         background: $secondaryBgGradient-color;
                         backdrop-filter: blur(7.49853px);
@@ -120,7 +121,7 @@
     }
 }
 
-@media screen and (max-width: $screen-lg) {
+@media screen and (max-width: $screen-lg) { // 768
     .sapWrapper {
         .sapInner {
             .container {
@@ -130,7 +131,7 @@
             &__title {
                 font-size: $sectionDeskription-font-md;
             }
-
+            
             .sapBooking {
                 .sapBookingInner {
                     column-gap: 90px;

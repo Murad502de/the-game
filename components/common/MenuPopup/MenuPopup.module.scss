@@ -3,7 +3,7 @@
 .menuPopupWrapper {
     font-family: "Inter";
     position: absolute;
-    top: 100%;
+    top: 120%;
     right: 0;
     width: 361px;
     border-radius: 20px;
@@ -31,6 +31,9 @@
             column-gap: 10px;
             cursor: pointer;
             width: fit-content;
+            font-size: 25px;
+            color: #fff;
+            
         }
     }
 }

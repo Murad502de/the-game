@@ -11,21 +11,24 @@ import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 const SpacesAndPackages = () => {
 
-    const {contentRef} = useScrollAnimation()
+    const {
+      wrap,
+      computers,
+      scroll,
+      spaces
+    } = useScrollAnimation()
 
     return (
-      <div className={styles.spacesScroll}>
+      <div  className={styles.spacesScroll}>
         <section className={styles.sapWrapper}>
           <div className={styles.sapInner}>
-            <div className={styles.scroll}>
-              <div className={styles.containerWrapper}>
+            <div ref={scroll} className={styles.scroll}>
+              <div ref={wrap} className={styles.containerWrapper}>
                 <div className={styles.container}>
-                  <div className={styles.containerWrapper__title}>
-                    Spaces <br /> and Packages
-                  </div>
+                  <div className={styles.containerWrapper__title}>Spaces <br /> and Packages</div>
                 </div>
-                  <main className={styles.sapContentWrapper}>
-                      <div ref={contentRef} className={styles.sapContent}>
+                  <main ref={spaces} className={styles.sapContentWrapper}>
+                      <div ref={computers} className={styles.sapContent}>
                           <PremiumCard />
                           <BootcampCard />
                           <VipCard />

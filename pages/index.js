@@ -9,6 +9,7 @@ import StarsSection from "../components/StarsSection/StarsSection";
 import ContactSection from "../components/ContractSection/ContactSection";
 import GoogleMaps from "../components/GoogleMaps/GoogleMaps";
 import Preloader from "../components/common/Preloader/Preloader";
+import Sphere from "../components/Sphere/Sphere";
 
 const Index = () => {
     const gamingSectionRef = useRef();
@@ -19,17 +20,32 @@ const Index = () => {
      на сервере сгенерируется статичекская страница и она все равно
      подгрузилась бы быстро без прелоадера */
     const [loading, setLoading] = useState(true);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-      const timeOutId = setTimeout(() => setLoading(false), 1000)
+      const timeOutId = setTimeout(() => setLoading(false), 0)
       return () => clearTimeout(timeOutId)
     }, []);
+
+    useEffect(() => {
+        document.addEventListener('wheel', (event) => {
+            if(event.deltaY > 0) {
+                setIsScrolled(true);
+            }
+        })
+        return () => {
+            if(isScrolled) {
+                document.removeEventListener('scroll')
+            }
+        }
+    }, [])
 
     if (loading) return <Preloader />
 
     return (
       <Suspense fallback={<Preloader />}>
-        <div className="wrapper">
+        <div className={!isScrolled && "wrapper"}>
+          <Sphere />
           <PrimarySection
             gamingSectionRef={gamingSectionRef}
             loungeSectionRef={loungeSectionRef}
