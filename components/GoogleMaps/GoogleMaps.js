@@ -3,6 +3,8 @@ import styles from "./GoogleMaps.module.scss";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import customMarker from "../../public/images/marker.png";
 import { mapStyles } from "./theme";
+import CyberButton from "../../UI/CyberButton/CyberButton";
+import Image from "next/image";
 
 const defaultOptions = {
     panControl: false,
@@ -14,8 +16,9 @@ const defaultOptions = {
     scrollwheel: false,
     keyboardShortcuts: false,
     disableDoubleClickZoom: false,
-    fuulscreenControl: false,
-    styles: mapStyles
+    fullscreenControl: false,
+    styles: mapStyles,
+    streetViewControl: false
 }
 
 const center = {lat: 25.077097631716903, lng: 55.13445435061175}
@@ -48,7 +51,15 @@ const GoogleMaps = () => {
             onLoad={onLoad}
             onUnmount={onUnmount}
         >
-            <Marker position={center} />
+            <Marker position={center} icon={'../../public/images/marker.png'} />
+
+            <div className={styles.wrapper}>
+                <div className={styles.container}>
+                    <div className={styles.text1}>DUBAI</div>
+                    <div className={styles.text2}>JBR, Bahar 2</div>
+                    <CyberButton btnClassName={styles.btn} color="simple">Open in Google Maps</CyberButton>
+                </div>
+            </div>
         </GoogleMap>
     )
 }

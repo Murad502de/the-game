@@ -10,9 +10,7 @@ export const useIntersection = () => {
             const observer = new IntersectionObserver((entries) => {
                 if(entries[0].isIntersecting) {
                     setIsIntersecting(true);
-                } else {
-                    setIsIntersecting(false);
-                }
+                } 
             }, {
                 threshold: 0.5
             })

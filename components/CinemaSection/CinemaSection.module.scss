@@ -2,440 +2,513 @@
 @import "../../styles/vars";
 
 .cinemaWrapper {
-    padding-bottom: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
-    .container {
-        @include container;
-    }
+  padding-bottom: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  .container {
+    @include container;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-family: "Inter";
+    color: $textLightPink-color;
+    margin-bottom: 11px;
+  }
+
+  .cinemaContent {
+    width: 100%;
+    height: 1197px;
+    background-image: url("../../public/images/cinema.png");
+    background-repeat: no-repeat;
 
     &__title {
-        font-size: 32px;
-        font-family: "Inter";
-        color: $textLightPink-color;
-        margin-bottom: 11px;
+      font-family: "Montserrat";
+      font-size: 120px;
+      color: $titleLightPink-color;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
-    .cinemaContent {
-        width: 100%;
-        height: 1197px;
-        background-image: url("../../public/images/cinema.png");
-        background-repeat: no-repeat;
-
-        &__title {
-            font-family: "Montserrat";
-            font-size: 120px;
-            color: $titleLightPink-color;
-            margin-bottom: 20px;
-        }
-
-        &__subTitle {
-            font-family: "Inter";
-            font-size: 32px;
-            color: $textSecondaryDark-color;
-            text-decoration: underline;
-            margin-bottom: 10px;
-        }
-
-        &__text {
-            @include text-32px;
-            color: #D9D9D9;
-            width: 832px;
-            margin-top: 493px;
-        }
+    &__subTitle {
+      font-family: "Inter";
+      font-size: 32px;
+      color: $textSecondaryDark-color;
+      text-decoration: underline;
+      margin-bottom: 10px;
     }
 
-    .meetingPlacesWrapper {
-        transform: translateY(-30px);
-
-        .meetingPlacesInner {
-
-            .placesPictures {
-                display: flex;
-                column-gap: 15px;
-                margin-bottom: 57px;
-    
-                .placesLeftColumn {
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 30px;
-                }
-            } 
-
-            &__highLightText {
-                text-align: center;
-                font-size: 60px;
-                font-family: "Montserrat";
-                color: transparent;
-                -webkit-text-stroke: $textYellow-color;
-                -webkit-text-stroke-width: 1px;
-                transition: all .5s;
-            }
-
-            &__textInViewport {
-                color: $textYellow-color;
-                transition: all .5s;
-                position: relative;
-
-                .blur {
-                    position: absolute;
-                    top: -50%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 214px;
-                    height: 120px;
-                    background-color: $textYellow-color;
-                    filter: blur(125px);
-                    opacity: 0;
-                    transition: all .5s;
-                }
-
-                .blurActive {
-                    opacity: 1;
-                    transition: all .5s;
-                }
-            }
-        }
+    &__text {
+      @include text-32px;
+      color: #d9d9d9;
+      width: 832px;
+      margin-top: 493px;
     }
+  }
+
+  .meetingPlacesWrapper {
+    transform: translateY(-30px);
+
+    .meetingPlacesInner {
+      .placesPictures {
+        display: flex;
+        column-gap: 15px;
+        margin-bottom: 57px;
+
+        .placesLeftColumn {
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px;
+        }
+      }
+
+      &__highLightText {
+        text-align: center;
+        font-size: 60px;
+        font-family: "Montserrat";
+        color: transparent;
+        -webkit-text-stroke: $textYellow-color;
+        -webkit-text-stroke-width: 1px;
+        transition: all 0.5s;
+        font-weight: 700;
+      }
+
+      &__textInViewport {
+        color: $textYellow-color;
+        transition: all 0.5s;
+        position: relative;
+
+        .blur {
+          position: absolute;
+          top: -50%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 214px;
+          height: 120px;
+          background-color: $textYellow-color;
+          filter: blur(125px);
+          opacity: 0;
+          transition: all 0.5s;
+        }
+
+        .blurActive {
+          opacity: 1;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
 }
 
 .cinemaText__md,
 .redBookSeat,
 .grid3_md {
-    display: none;
+  display: none;
 }
 
 .placesLeftColumn__img_md {
-    display: none;
+  display: none;
 }
 
-@media screen and (max-width: $screen-lg) {
-    .cinemaWrapper {
-        .container {
-            @include container-lg;
+@media screen and (min-width: $screen-lg) and (max-width: 1220px) {
+  .cinemaWrapper {
+    img {
+      max-width: 450px;
+      width: 100%;
+    }
+    .container {
+      @include container-lg;
+    }
+
+    &__title {
+      font-size: $sectionText-font-sm;
+      margin-bottom: 10px;
+    }
+
+    .cinemaContent {
+      width: 100%;
+      height: 622px;
+      background-image: url("../../public/images/bg-cinema-lg.png");
+      margin-bottom: 23px;
+
+      &__title {
+        font-size: $sectionDeskription-font-md;
+        width: 445px;
+      }
+
+      &__subTitle {
+        font-family: "Inter";
+        font-size: $sectionText-font-sm;
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        font-size: $sectionText-font-sm;
+        line-height: 29px;
+        color: #d9d9d9;
+        width: 470px;
+        margin-top: 223px;
+      }
+    }
+
+    .meetingPlacesWrapper {
+      transform: translateY(0px);
+
+      .meetingPlacesInner {
+        .meetingPlacesInner {
+          .placesPictures {
+            .placesLeftColumn {
+              flex-direction: row;
+              justify-content: space-between;
+              max-width: 100%;
+            }
+          }
+
+          &__highLightText {
+            margin-bottom: 68px;
+          }
+          &__textInViewport {
+            .blur {
+              top: 10%;
+            }
+          }
         }
-        &__title {
-            font-size: $sectionText-font-sm;
-            margin-bottom: 10px;
+        .placesPictures {
+          column-gap: 30px;
+          margin-bottom: 33px;
         }
-    
-        .cinemaContent {
+
+        &__highLightText {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+  .cinemaWrapper {
+    .container {
+      @include container-md;
+    }
+    .cinemaContent {
+      height: 660px;
+      background-image: url("../../public/images/bg-cinema-md.png");
+      margin-bottom: 20px;
+
+      &__title {
+        font-size: 60px;
+        margin-bottom: 30px;
+      }
+
+      &__subTitle:nth-child(3) {
+        display: none;
+      }
+      &__text {
+        display: none;
+      }
+    }
+
+    .meetingPlacesWrapper {
+      margin-top: 100px;
+
+      .meetingPlacesInner {
+        .placesPictures {
+          .placesLeftColumn {
+            flex-direction: row;
+            justify-content: space-between;
             width: 100%;
-            height: 622px;
-            background-image: url("../../public/images/bg-cinema-lg.png");
-            margin-bottom: 23px;
-    
-            &__title {
-                font-size: $sectionDeskription-font-md;
-                width: 445px;
+            &__img {
+              display: none;
             }
-    
-            &__subTitle {
-                font-family: "Inter";
-                font-size: $sectionText-font-sm;
-                margin-bottom: 20px;
+
+            &__img_md {
+              display: inline-block;
+              flex-basis: 45%;
             }
-    
-            &__text {
-                font-size: $sectionText-font-sm;
-                line-height: 29px;
-                color: #D9D9D9;
-                width: 470px;
-                margin-top: 223px;
-            }
+          }
         }
 
-        .meetingPlacesWrapper {
-            transform: translateY(0px);
-
-            .meetingPlacesInner {
-                .meetingPlacesInner {
-                    .placesPictures {
-                        .placesLeftColumn {
-                            flex-direction: row;
-                            // column-gap: 20px;
-                            justify-content: space-between;
-                            max-width: 100%;
-    
-                            &__img {
-                                display: none;
-                            }
-    
-                            &__img_md {
-                                display: inline-block;
-                                flex-basis: 49%;
-                            }
-                        }
-                    }
-    
-                    &__highLightText {
-                        margin-bottom: 68px;
-                    }
-                    &__textInViewport {    
-                        .blur {
-                            top: 10%;
-                        }
-                    }
-                }
-                .placesPictures {
-                    column-gap: 30px;
-                    margin-bottom: 33px;
-                } 
-    
-                &__highLightText {
-                    font-size: 50px;
-                }
-            }
+        &__highLightText {
+          margin-bottom: 68px;
         }
-    
+        &__textInViewport {
+          .blur {
+            top: 10%;
+          }
+        }
+      }
+      .third_grid {
+        display: none;
+      }
+      .grid3_md {
+        display: inline-block;
+      }
     }
+  }
 }
 
-@media screen and (max-width: $screen-md) {
-    .cinemaWrapper {
-        .container {
-            @include container-md;
-        }
-        .cinemaContent {
-            height: 660px;
-            background-image: url("../../public/images/bg-cinema-md.png");
-            margin-bottom: 20px;
-
-            &__title {
-                font-size: 60px;
-                margin-bottom: 30px;
-            }
-
-            &__subTitle:nth-child(3) {
-                display: none;
-            }
-            &__text {
-                display: none;
-            }
-        }
-
-        .cinemaText__md {
-            display: block;
-            color: #D9D9D9;
-            font-family: "Inter";
-            line-height: 29px;
-            margin-bottom: 20px;
-        }
-        .redBookSeat {
-            display: block;
-        }
-
-        .meetingPlacesWrapper {
-            margin-top: 100px;
-
-            .meetingPlacesInner {
-                .placesPictures {
-                    .placesLeftColumn {
-                        flex-direction: row;
-                        // column-gap: 20px;
-                        justify-content: space-between;
-                        max-width: 100%;
-
-                        &__img {
-                            display: none;
-                        }
-
-                        &__img_md {
-                            display: inline-block;
-                            flex-basis: 49%;
-                        }
-                    }
-                }
-
-                &__highLightText {
-                    margin-bottom: 68px;
-                }
-                &__textInViewport {    
-                    .blur {
-                        top: 10%;
-                    }
-                }
-            }
-            .third_grid {
-                display: none;
-            }
-        }
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+  .cinemaWrapper {
+    img {
+      width: 254px;
+      height: 282px;
     }
+    .container {
+      @include container-sm;
+    }
+
+    .cinemaContent {
+      height: 535px;
+      background-image: url("../../public/images/bg-cinema-md.png");
+      background-position: center top;
+      &__title {
+        width: 270px;
+        line-height: 66px;
+        font-size: 60px;
+      }
+
+      &__subTitle:nth-child(3) {
+        display: none;
+      }
+      &__text {
+        display: none;
+      }
+    }
+    .cinemaText__md {
+      font-size: 25px;
+      line-height: 40px;
+    }
+
+    .meetingPlacesWrapper {
+      margin-top: 100px;
+
+      .meetingPlacesInner {
+        .placesPictures {
+          .placesLeftColumn {
+            column-gap: 27px;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+            &__img_md {
+              height: 282px;
+            }
+          }
+        }
+
+        &__highLightText {
+          font-size: 60px;
+          width: 354px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+
+        .grid3_md {
+          display: inline-block;
+          width: 100%;
+          height: 807px;
+        }
+      }
+    }
+  }
+
+  .third_grid {
+    display: none;
+  }
 }
 
-@media screen and (max-width: $screen-sm) {
-    .cinemaWrapper {
-        .container {
-            @include container-sm;
-        }
-
-        .cinemaContent {
-            height: 535px;
-            background-image: url("../../public/images/bg-cinema-md.png");
-            background-position: center top;
-            &__title {
-                width: 270px;
-                line-height: 66px;
-            }
-
-            &__subTitle:nth-child(3) {
-                display: none;
-            }
-            &__text {
-                display: none;
-            }
-
-        }
-        .cinemaText__md {
-            font-size: 25px;
-            line-height: 40px;
-        }
-
-        .meetingPlacesWrapper {
-            margin-top: 100px;
-
-            .meetingPlacesInner {
-                .placesPictures {
-                    .placesLeftColumn {
-                        column-gap: 27px;
-                        &__img_md {
-                            height: 282px;
-                        }
-                    }
-                }
-
-                &__highLightText {
-                    font-size: 60px;
-                    width: 354px;
-                    margin: 0 auto;
-                    margin-bottom: 30px;
-                }
-
-                .grid3_md {
-                    display: inline-block;
-                    width: 100%;
-                    height: 807px;
-                }
-            }
-        }
+@media screen and (min-width: $screen-xsm) and (max-width: $screen-sm) {
+  .cinemaWrapper {
+    img {
+      width: 183px;
+      height: 203px;
     }
+    &__title {
+      margin-bottom: 0;
+    }
+    .container {
+      @include container-xsm;
+    }
+
+    .cinemaContent {
+      height: 397px;
+      background-image: url("../../public/images/cinema-xsm.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px 30px;
+
+      &__title {
+        width: 339px;
+        font-size: 50px;
+        line-height: 55px;
+      }
+    }
+    .cinemaText__md {
+      font-size: 18px;
+      line-height: 29px;
+    }
+
+    .meetingPlacesWrapper {
+      margin-top: 100px;
+
+      .meetingPlacesInner {
+        .placesPictures {
+          .placesLeftColumn {
+            column-gap: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+            &__img_md {
+              height: 203px;
+            }
+          }
+        }
+
+        &__highLightText {
+          font-size: 40px;
+          width: 255px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+
+        .grid3_md {
+          display: inline-block;
+          width: 100%;
+          height: 581px;
+        }
+      }
+    }
+
+    .third_grid {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: $screen-xsm) {
-    .cinemaWrapper {
-        &__title {
-            margin-bottom: 0;
-        }
-        .container {
-            @include container-xsm;
-        }
-
-        .cinemaContent {
-            height: 397px;
-            background-image: url("../../public/images/cinema-xsm.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0px 30px;
-
-            &__title {
-                width: 339px;
-                font-size: 50px;
-                line-height: 55px;
-            }
-
-
-        }
-        .cinemaText__md {
-            font-size: 18px;
-            line-height: 29px;
-        }
-
-        .meetingPlacesWrapper {
-            margin-top: 100px;
-
-            .meetingPlacesInner {
-                .placesPictures {
-                    .placesLeftColumn {
-                        column-gap: 20px;
-                        &__img_md {
-                            height: 203px;
-                        }
-                    }
-                }
-
-                &__highLightText {
-                    font-size: 40px;
-                    width: 255px;
-                    margin-bottom: 20px;
-                }
-
-                .grid3_md {
-                    width: 100%;
-                    height: 581px;
-                }
-            }
-        }
+  .cinemaWrapper {
+    .container {
+      @include container-xxsm;
     }
+
+    .cinemaContent {
+      background-image: url("../../public/images/cinema-xsm.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      &__title {
+        width: 224px;
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 10px;
+      }
+
+      &__subTitle {
+        width: 124px;
+        line-height: 29px;
+      }
+    }
+
+    .meetingPlacesWrapper {
+      .meetingPlacesInner {
+        .placesPictures {
+          margin-bottom: 15px;
+          .placesLeftColumn {
+            column-gap: 15px;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+            &__img {
+              width: 48%;
+              height: auto;
+            }
+          }
+        }
+
+        &__textInViewport {
+          color: $textYellow-color;
+          transition: all 0.5s;
+          position: relative;
+
+          .blur {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        &__highLightText {
+          font-size: 40px;
+          width: 255px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+
+        .grid3_md {
+          display: inline-flex;
+          width: 100%;
+          height: 438px;
+        }
+      }
+    }
+
+    .third_grid {
+      display: none;
+    }
+  }
+}
+
+// text
+
+@media screen and (max-width: $screen-lg) {
+  .cinemaWrapper {
+    &__title {
+      font-size: 18px;
+    }
+
+    .cinemaContent {
+      &__subTitle {
+        font-size: 18px;
+      }
+      &__text {
+        display: none;
+      }
+    }
+
+    .cinemaText__md {
+      display: block;
+      color: #d9d9d9;
+      font-family: "Inter";
+      line-height: 29px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .redBookSeat {
+      display: block;
+    }
+  }
+
+  .meetingPlacesWrapper {
+    transform: translateY(0px) !important;
+    margin-top: 100px;
+
+    .meetingPlacesInner {
+      &__highLightText {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+}
+
+@media screen and (max-width: $screen-sm) {
+}
+
+@media screen and (max-width: $screen-xsm) {
 }
 
 @media screen and (max-width: $screen-xxsm) {
-    .cinemaWrapper {
-        .container {
-            @include container-xxsm;
-        }
-
-        .cinemaContent {
-            background-image: url("../../public/images/cinema-xsm.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-
-            &__title {
-                width: 224px;
-                font-size: 40px;
-                line-height: 44px;
-                margin-bottom: 10px;
-            }
-
-            &__subTitle {
-                width: 124px;
-                line-height: 29px;
-            }
-        }
-
-        .meetingPlacesWrapper {
-            .meetingPlacesInner {
-                .placesPictures {
-                    margin-bottom: 15px;
-                    .placesLeftColumn {
-                        column-gap: 15px;
-                        &__img_md {
-                            height: 153px;
-                        }
-                    }
-                }
-                &__highLightText {
-                    font-size: 30px;
-                    width: 192px;
-                    margin-bottom: 15px;
-                }
-
-                &__textInViewport {
-                    color: $textYellow-color;
-                    transition: all .5s;
-                    position: relative;
-    
-                    .blur {
-                        width: 100px;
-                        height: 100px;
-                    }
-                }
-
-                .grid3_md {
-                    width: 100%;
-                    height: 438px;
-                }
-            }
-        }
-    }
 }

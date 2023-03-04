@@ -2,131 +2,137 @@
 @import "../../styles/mixins";
 
 .gamingWrapper {
-    font-family: 'Inter';
-    padding-top: 596px;
-    padding-bottom: 200px;
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    
-    &__image {
-        position: absolute;
-        top: -50.5%;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 100%;
-        height: auto;
-    }
+  font-family: "Inter";
+  padding-top: 596px;
+  padding-bottom: 200px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
 
-    &__imageMd,
-    &__imageSm,
-    &__imageXsm,
-    &__imageXxsm {
-        display: none;
-    }
+  &__image {
+    position: absolute;
+    top: -50.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+  }
 
-    .container {
-        @include container;
-    }
+  &__imageMd,
+  &__imageSm,
+  &__imageXsm,
+  &__imageXxsm {
+    display: none;
+  }
+
+  .container {
+    @include container;
+  }
 }
 
 @media screen and (max-width: $screen-lg) {
-    .gamingWrapper {
-        padding-top: 395px;
-        padding-left: 10px;
-        padding-right: 10px;
-        .container {
-            @include container-lg;
-        }
-
-        &__image {
-            top: -56.5%;
-            width: $screen-lg;
-            height: auto;
-        }
-    }
+  .gamingWrapper .gamingWrapper__image {
+    display: none;
+  }
 }
 
-@media screen and (max-width: $screen-md) {
-    .gamingWrapper {
-        padding-top: 295px;
-        padding-bottom: 95px;
-        
-        .container {
-            @include container-md;
-        }
-
-        &__image {
-            display: none;
-        }
-
-        &__imageMd {
-            display: block;
-            position: absolute;
-            top: -67%;
-            right: 0;
-        }
+@media screen and (min-width: $screen-lg) and (max-width: 1220px) {
+  .gamingWrapper {
+    padding-top: 395px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .container {
+      @include container-lg;
     }
+
+    &__image {
+      top: -43%;
+      width: $screen-lg;
+      height: auto;
+    }
+  }
 }
 
-@media screen and (max-width: $screen-sm) {
-    .gamingWrapper {
-        padding-top: 341px;
-        .container {
-            @include container-sm;
-        }
+@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+  .gamingWrapper {
+    padding-top: 295px;
+    padding-bottom: 95px;
 
-        &__imageMd {
-            display: none;
-        }
-
-        &__imageSm {
-            display: block;
-            position: absolute;
-            top: -58%;
-            right: 0;
-        }
+    .container {
+      @include container-md;
     }
+
+    &__image {
+      display: none;
+    }
+
+    &__imageMd {
+      display: block;
+      position: absolute;
+      top: -70%;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+  .gamingWrapper {
+    padding-top: 341px;
+    .container {
+      @include container-sm;
+    }
+
+    &__imageMd {
+      display: none;
+    }
+
+    &__imageSm {
+      display: block;
+      position: absolute;
+      top: -58%;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xsm) and (max-width: $screen-sm) {
+  .gamingWrapper {
+    padding-top: 331px;
+
+    .container {
+      @include container-xsm;
+    }
+
+    &__imageSm {
+      display: none;
+    }
+
+    &__imageXsm {
+      display: block;
+      position: absolute;
+      top: -57%;
+      right: 0;
+    }
+  }
 }
 
 @media screen and (max-width: $screen-xsm) {
-    .gamingWrapper {
-        padding-top: 331px;
-        
-        .container {
-            @include container-xsm;
-        }
+  .gamingWrapper {
+    padding-top: 147px;
 
-        &__imageSm {
-            display: none;
-        }
-
-        &__imageXsm {
-            display: block;
-            position: absolute;
-            top: -57%;
-            right: 0;
-        }
+    .container {
+      @include container-xxsm;
     }
-}
 
-@media screen and (max-width: $screen-xxsm) {
-    .gamingWrapper {
-        padding-top: 147px;
-        
-        .container {
-            @include container-xxsm;
-        }
-
-        &__imageXsm {
-            display: none;
-        }
-
-        &__imageXxsm {
-            display: block;
-            position: absolute;
-            top: -64%;
-            right: 0;
-        }
+    &__imageXsm {
+      display: none;
     }
+
+    &__imageXxsm {
+      display: block;
+      position: absolute;
+      top: -64%;
+      right: 0;
+    }
+  }
 }

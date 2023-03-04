@@ -1,4 +1,34 @@
+@import "../../styles/mixins";
+
 .mapsWrapper {
     width: 100%;
     height: 100vh;
+    padding-top: 150px;
+}
+
+.wrapper {
+    font-family: "Montserrat";
+    font-size: 60px;
+    line-height: 90px;
+    letter-spacing: 30%;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    left: 123px;
+    max-width: 400px;
+    .text1 {
+        font-weight: 700;
+        width: 380px;
+    }
+
+    .text2 {
+        font-weight: 400;
+        width: 380px;
+
+        margin-bottom: 35px;
+    }
+
+    .btn {
+        width: 445px;
+    }
 }

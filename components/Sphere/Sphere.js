@@ -9,42 +9,46 @@ import sand from "../../public/images/first_plan_element.png";
 import MenuPopup from "../common/MenuPopup/MenuPopup";
 
 const Sphere = () => {
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-    const menuPopupRef = useClickOutside(() => {
-        setIsVisible(false);
-    })
-    
-    const toggleMenuVisibility = () =>  setIsVisible(prev => !prev);
+  const menuPopupRef = useClickOutside(() => {
+    setIsVisible(false);
+  });
 
-    return (
-        <div className={styles.sphereWrapper}>
-            <div className={styles.container}>
-                <header className={styles.sphereHeader}>
-                    <div className={styles.sphereHeader__text}>Book Your Seat</div>
-                    <Image src={logo} alt="dark-logo" />
-                    <div ref={menuPopupRef} className={styles.sphereHeaderMenu}>
-                        <div onClick={toggleMenuVisibility} className={styles.menuLink}>
-                            <div className={styles.menuLink__text}>Menu</div>
-                            <Image src={menu} alt="menu" />
-                        </div>
-                        <MenuPopup isVisible={isVisible} />
-                    </div>
-                </header>
+  const toggleMenuVisibility = () => setIsVisible((prev) => !prev);
 
-                <main className={styles.sphereMainContent}>
-                    <div className={styles.sphereMainContent__text}>Let’s find another place</div>
-                    <div className={styles.sphereMainContent__text}>Place for relaxed pastime</div>
-                </main>
-
-                <footer className={styles.sphereFooter}>
-                    <Image src={mouse} alt="mouse" />
-                    <div className={styles.sphereFooter__text}>Scroll to Start</div>
-                </footer>
+  return (
+    <div className={styles.sphereWrapper}>
+      <div className={styles.container}>
+        <header className={styles.sphereHeader}>
+          <div className={styles.sphereHeader__text}>Book Your Seat</div>
+          <Image src={logo} alt="dark-logo" />
+          <div ref={menuPopupRef} className={styles.sphereHeaderMenu}>
+            <div onClick={toggleMenuVisibility} className={styles.menuLink}>
+              <div className={styles.menuLink__text}>Menu</div>
+              <Image src={menu} alt="menu" />
             </div>
-            <Image className={styles.sandElement} src={sand} alt="sand" />
-        </div>
-    )
-}
+            <MenuPopup isVisible={isVisible} />
+          </div>
+        </header>
+
+        <main className={styles.sphereMainContent}>
+          <div className={styles.sphereMainContent__text}>
+            Let’s find another place
+          </div>
+          <div className={styles.sphereMainContent__text}>
+            Place for relaxed pastime
+          </div>
+        </main>
+
+        <footer className={styles.sphereFooter}>
+          <Image src={mouse} alt="mouse" />
+          <div className={styles.sphereFooter__text}>Scroll to Start</div>
+        </footer>
+      </div>
+      <Image className={styles.sandElement} src={sand} alt="sand" />
+    </div>
+  );
+};
 
 export default Sphere;

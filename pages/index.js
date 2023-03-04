@@ -12,56 +12,56 @@ import Preloader from "../components/common/Preloader/Preloader";
 import Sphere from "../components/Sphere/Sphere";
 
 const Index = () => {
-    const gamingSectionRef = useRef();
-    const loungeSectionRef = useRef();
-    const cinemaSectionRef = useRef(); 
+  const gamingSectionRef = useRef();
+  const loungeSectionRef = useRef();
+  const cinemaSectionRef = useRef();
 
-    /* Создаем стейт для лоадера т.к. при деплое НЕКСТ приложения
+  /* Создаем стейт для лоадера т.к. при деплое НЕКСТ приложения
      на сервере сгенерируется статичекская страница и она все равно
      подгрузилась бы быстро без прелоадера */
-    const [loading, setLoading] = useState(true);
-    const [isScrolled, setIsScrolled] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-      const timeOutId = setTimeout(() => setLoading(false), 0)
-      return () => clearTimeout(timeOutId)
-    }, []);
+  useEffect(() => {
+    const timeOutId = setTimeout(() => setLoading(false), 0);
+    return () => clearTimeout(timeOutId);
+  }, []);
 
-    useEffect(() => {
-        document.addEventListener('wheel', (event) => {
-            if(event.deltaY > 0) {
-                setIsScrolled(true);
-            }
-        })
-        return () => {
-            if(isScrolled) {
-                document.removeEventListener('scroll')
-            }
-        }
-    }, [])
+  useEffect(() => {
+    document.addEventListener("wheel", (event) => {
+      if (event.deltaY > 0) {
+        setIsScrolled(true);
+      }
+    });
+    return () => {
+      if (isScrolled) {
+        document.removeEventListener("scroll");
+      }
+    };
+  }, []);
 
-    if (loading) return <Preloader />
+  if (loading) return <Preloader />;
 
-    return (
-      <Suspense fallback={<Preloader />}>
-        <div className={!isScrolled && "wrapper"}>
-          <Sphere />
-          <PrimarySection
-            gamingSectionRef={gamingSectionRef}
-            loungeSectionRef={loungeSectionRef}
-            cinemaSectionRef={cinemaSectionRef}
-          />
-          <GamingSection ref={gamingSectionRef} />
-          <GamingSwiper />
-          <LoungeSection ref={loungeSectionRef} />
-          <CinemaSection ref={cinemaSectionRef} />
-          <SpacesAndPackages />
-          <StarsSection />
-          <GoogleMaps />
-          <ContactSection />
-        </div>
-      </Suspense>
-    );
-}
+  return (
+    <Suspense fallback={<Preloader />}>
+      <div className={!isScrolled && "wrapper"}>
+        {/* <Sphere /> */}
+        <PrimarySection
+          gamingSectionRef={gamingSectionRef}
+          loungeSectionRef={loungeSectionRef}
+          cinemaSectionRef={cinemaSectionRef}
+        />
+        <GamingSection ref={gamingSectionRef} />
+        <GamingSwiper />
+        <LoungeSection ref={loungeSectionRef} />
+        <CinemaSection ref={cinemaSectionRef} />
+        <SpacesAndPackages />
+        <StarsSection />
+        <GoogleMaps />
+        <ContactSection />
+      </div>
+    </Suspense>
+  );
+};
 
 export default Index;
