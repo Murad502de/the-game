@@ -1,4 +1,4 @@
-import { Suspense, useRef, useEffect, useState } from "react";
+import { Suspense } from "react";
 import GamingSwiper from "../components/GamingSwiper/GamingSwiper";
 import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
@@ -9,36 +9,16 @@ import StarsSection from "../components/StarsSection/StarsSection";
 import ContactSection from "../components/ContractSection/ContactSection";
 import GoogleMaps from "../components/GoogleMaps/GoogleMaps";
 import Preloader from "../components/common/Preloader/Preloader";
-import Sphere from "../components/Sphere/Sphere";
+import { useHome } from "../hooks/useHome";
 
 const Index = () => {
-  const gamingSectionRef = useRef();
-  const loungeSectionRef = useRef();
-  const cinemaSectionRef = useRef();
-
-  /* Создаем стейт для лоадера т.к. при деплое НЕКСТ приложения
-     на сервере сгенерируется статичекская страница и она все равно
-     подгрузилась бы быстро без прелоадера */
-  const [loading, setLoading] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const timeOutId = setTimeout(() => setLoading(false), 0);
-    return () => clearTimeout(timeOutId);
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener("wheel", (event) => {
-      if (event.deltaY > 0) {
-        setIsScrolled(true);
-      }
-    });
-    return () => {
-      if (isScrolled) {
-        document.removeEventListener("scroll");
-      }
-    };
-  }, []);
+  const {
+    gamingSectionRef,
+    loungeSectionRef,
+    cinemaSectionRef,
+    loading,
+    isScrolled,
+  } = useHome();
 
   if (loading) return <Preloader />;
 
