@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useClickOutside } from "../../hooks/useClickOutside";
 import styles from "./Sphere.module.scss";
-import Image from "next/image";
 import logo from "../../public/images/logo-dark.svg";
 import menu from "../../public/icons/menu.svg";
 import mouse from "../../public/icons/mouse-white.svg";
 import sand from "../../public/images/first_plan_element.png";
 import MenuPopup from "../common/MenuPopup/MenuPopup";
+import counter from "../../store/index";
+import Image from "next/image";
 
 const Sphere = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,11 +23,21 @@ const Sphere = () => {
       <div className={styles.container}>
         <header className={styles.sphereHeader}>
           <div className={styles.sphereHeader__text}>Book Your Seat</div>
-          <Image src={logo} alt="dark-logo" />
+          <Image
+            onLoad={() => counter.increment()}
+            src={logo}
+            alt="dark-logo"
+            priority
+          />
           <div ref={menuPopupRef} className={styles.sphereHeaderMenu}>
             <div onClick={toggleMenuVisibility} className={styles.menuLink}>
               <div className={styles.menuLink__text}>Menu</div>
-              <Image src={menu} alt="menu" />
+              <Image
+                onLoad={() => counter.increment()}
+                src={menu}
+                alt="menu"
+                priority
+              />
             </div>
             <MenuPopup isVisible={isVisible} />
           </div>
@@ -42,11 +53,22 @@ const Sphere = () => {
         </main>
 
         <footer className={styles.sphereFooter}>
-          <Image src={mouse} alt="mouse" />
+          <Image
+            onLoad={() => counter.increment()}
+            src={mouse}
+            alt="mouse"
+            priority
+          />
           <div className={styles.sphereFooter__text}>Scroll to Start</div>
         </footer>
       </div>
-      <Image className={styles.sandElement} src={sand} alt="sand" />
+      <Image
+        onLoad={() => counter.increment()}
+        className={styles.sandElement}
+        src={sand}
+        alt="sand"
+        priority
+      />
     </div>
   );
 };

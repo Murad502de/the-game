@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React from "react";
 import GamingSwiper from "../components/GamingSwiper/GamingSwiper";
 import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
@@ -10,38 +10,32 @@ import ContactSection from "../components/ContractSection/ContactSection";
 import GoogleMaps from "../components/GoogleMaps/GoogleMaps";
 import Preloader from "../components/common/Preloader/Preloader";
 import { useHome } from "../hooks/useHome";
+import counter from "../store/index";
+import { observer } from "mobx-react-lite";
 
 const Index = () => {
-  const {
-    gamingSectionRef,
-    loungeSectionRef,
-    cinemaSectionRef,
-    loading,
-    isScrolled,
-  } = useHome();
-
-  if (loading) return <Preloader />;
+  const { gamingSectionRef, loungeSectionRef, cinemaSectionRef, isScrolled } =
+    useHome();
 
   return (
-    <Suspense fallback={<Preloader />}>
-      <div className={!isScrolled && "wrapper"}>
-        {/* <Sphere /> */}
-        <PrimarySection
-          gamingSectionRef={gamingSectionRef}
-          loungeSectionRef={loungeSectionRef}
-          cinemaSectionRef={cinemaSectionRef}
-        />
-        <GamingSection ref={gamingSectionRef} />
-        <GamingSwiper />
-        <LoungeSection ref={loungeSectionRef} />
-        <CinemaSection ref={cinemaSectionRef} />
-        <SpacesAndPackages />
-        <StarsSection />
-        <GoogleMaps />
-        <ContactSection />
-      </div>
-    </Suspense>
+    <div className={!isScrolled && "wrapper"}>
+      {counter.isLoading && <Preloader />}
+      {/* <Sphere /> */}
+      <PrimarySection
+        gamingSectionRef={gamingSectionRef}
+        loungeSectionRef={loungeSectionRef}
+        cinemaSectionRef={cinemaSectionRef}
+      />
+      <GamingSection ref={gamingSectionRef} />
+      <GamingSwiper />
+      <LoungeSection ref={loungeSectionRef} />
+      <CinemaSection ref={cinemaSectionRef} />
+      <SpacesAndPackages />
+      <StarsSection />
+      <GoogleMaps />
+      <ContactSection />
+    </div>
   );
 };
 
-export default Index;
+export default observer(Index);

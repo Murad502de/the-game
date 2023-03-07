@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./CinemaSection.module.scss";
-import Image from "next/image";
 import { useIntersection } from "../../hooks/useIntersection";
 import classNames from "classnames";
 import first_grid from "../../public/images/first_grid.png";
@@ -8,6 +7,9 @@ import second_grid from "../../public/images/second_grid.png";
 import third_grid from "../../public/images/third_grid.png";
 import grid_md from "../../public/images/grid3.png";
 import CyberButton from "../../UI/CyberButton/CyberButton";
+import counter from "../../store/index";
+import { observer } from "mobx-react-lite";
+import Image from "next/image";
 
 const CinemaSection = React.forwardRef((props, ref) => {
   const { isIntersecting, nodeRef } = useIntersection();
@@ -55,17 +57,23 @@ const CinemaSection = React.forwardRef((props, ref) => {
                   className={styles.placesLeftColumn__img}
                   src={first_grid}
                   alt="first_grid"
+                  onLoad={() => counter.increment()}
+                  priority
                 />
                 <Image
                   className={styles.placesLeftColumn__img}
                   src={second_grid}
                   alt="second_grid"
+                  onLoad={() => counter.increment()}
+                  priority
                 />
               </div>
               <Image
                 src={third_grid}
                 alt="third_grid"
                 className={styles.third_grid}
+                onLoad={() => counter.increment()}
+                priority
               />
             </div>
             <div
@@ -82,7 +90,13 @@ const CinemaSection = React.forwardRef((props, ref) => {
               Your meeting place
             </div>
 
-            <Image className={styles.grid3_md} src={grid_md} alt="grid_md" />
+            <Image
+              onLoad={() => counter.increment()}
+              className={styles.grid3_md}
+              src={grid_md}
+              alt="grid_md"
+              priority
+            />
           </div>
         </div>
       </div>
@@ -90,4 +104,4 @@ const CinemaSection = React.forwardRef((props, ref) => {
   );
 });
 
-export default CinemaSection;
+export default observer(CinemaSection);

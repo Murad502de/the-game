@@ -1,51 +1,70 @@
 import styles from "./Footer.module.scss";
-import Image from "next/image";
 import footerLogo from "../../../public/images/footer_logo.svg";
 import maps from "../../../public/icons/maps.svg";
 import instagram from "../../../public/icons/instagram.svg";
+import counter from "../../../store/index";
+import Image from "next/image";
 
 const Footer = () => {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <div className={styles.footerInner}>
-                    <div className={styles.footerTopRow}>
-                        <Image src={footerLogo} className={styles.footerTopRow__logo} alt="footerLogo" />
-                        <div className={styles.explore}>
-                            <div className={styles.explore__text}>Explore</div>
-                            <ul className={styles.exploreList}>
-                                <li className={styles.exploreList__item}>Gaming</li>
-                                <li className={styles.exploreList__item}>Lounge</li>
-                                <li className={styles.exploreList__item}>Cinema</li>
-                                <li className={styles.exploreList__item}>Prices</li>
-                            </ul>
-                        </div>
-                        <div className={styles.instagram}>
-                            <Image src={instagram} alt="instagram" />
-                            <div className={styles.instagram__text}>Instagram</div>
-                        </div>
-                    </div>
-
-                    <div className={styles.footerBottomRow}>
-                        <div className={styles.firstBottomColumn}>
-                            <div className={styles.firstBottomColumn__location}>The Game LLC, JBR, Bahar 2</div>
-                            <div className={styles.maps}>
-                                <Image src={maps} alt="maps" />
-                                <div className={styles.maps__text}>Open in maps</div>
-                            </div>
-                        </div>
-                        <div className={styles.secondBottomColumn}>
-                            Website design and development by <span>Acorn</span>
-                        </div>
-                        <div className={styles.privacy}>
-                            <div className={styles.privacy__text}>Privacy Policy</div>
-                            <div className={styles.privacy__year}>© 2023</div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.footerInner}>
+          <div className={styles.footerTopRow}>
+            <Image
+              onLoad={() => counter.increment()}
+              src={footerLogo}
+              className={styles.footerTopRow__logo}
+              alt="footerLogo"
+              priority
+            />
+            <div className={styles.explore}>
+              <div className={styles.explore__text}>Explore</div>
+              <ul className={styles.exploreList}>
+                <li className={styles.exploreList__item}>Gaming</li>
+                <li className={styles.exploreList__item}>Lounge</li>
+                <li className={styles.exploreList__item}>Cinema</li>
+                <li className={styles.exploreList__item}>Prices</li>
+              </ul>
             </div>
-        </footer>
-    )
-}
+            <div className={styles.instagram}>
+              <Image
+                onLoad={() => counter.increment()}
+                src={instagram}
+                alt="instagram"
+                priority
+              />
+              <div className={styles.instagram__text}>Instagram</div>
+            </div>
+          </div>
+
+          <div className={styles.footerBottomRow}>
+            <div className={styles.firstBottomColumn}>
+              <div className={styles.firstBottomColumn__location}>
+                The Game LLC, JBR, Bahar 2
+              </div>
+              <div className={styles.maps}>
+                <Image
+                  onLoad={() => counter.increment()}
+                  src={maps}
+                  alt="maps"
+                  priority
+                />
+                <div className={styles.maps__text}>Open in maps</div>
+              </div>
+            </div>
+            <div className={styles.secondBottomColumn}>
+              Website design and development by <span>Acorn</span>
+            </div>
+            <div className={styles.privacy}>
+              <div className={styles.privacy__text}>Privacy Policy</div>
+              <div className={styles.privacy__year}>© 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

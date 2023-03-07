@@ -1,57 +1,57 @@
 @import "../../styles/vars";
 
 .swiperWrapper {
-    color: #fff;
-    margin-bottom: 50px;
-    overflow-x: hidden;
-  
-    .scrollElements {
-        display: flex;
-        flex-wrap: nowrap;
-        column-gap: 30px;
-    }
+  color: #fff;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+
+  .scrollElements {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 30px;
+  }
 }
 
 @media screen and (max-width: $screen-lg) {
-    .swiperWrapper {
-        .scrollElements {
-            img {
-                width: 450px;
-                height: 650px;
-            }
-        }
+  .swiperWrapper {
+    .scrollElements {
+      img {
+        width: 450px;
+        height: 650px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: $screen-md) {
-    .swiperWrapper {
-        .scrollElements {
-            img {
-                width: 300px;
-                height: 450px;
-            }
-        }
+  .swiperWrapper {
+    .scrollElements {
+      img {
+        width: 300px;
+        height: 450px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: $screen-xsm) {
-    .swiperWrapper {
-        .scrollElements {
-            img {
-                width: 260px;
-                height: 410px;
-            }
-        }
+  .swiperWrapper {
+    .scrollElements {
+      img {
+        width: 260px;
+        height: 410px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: $screen-xxsm) {
-    .swiperWrapper {
-        .scrollElements {
-            img {
-                width: 190px;
-                height: 300px;
-            }
-        }
+  .swiperWrapper {
+    .scrollElements {
+      img {
+        width: 190px;
+        height: 300px;
+      }
     }
+  }
 }
