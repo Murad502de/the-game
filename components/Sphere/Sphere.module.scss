@@ -1,4 +1,5 @@
 @import "../../styles/mixins";
+@import "../../styles/vars";
 
 .sphere {
   transform-origin: bottom;
@@ -124,6 +125,56 @@
       color: #fff;
       font-size: 25px;
       margin-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .sphereHeader {
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1900px) and (min-width: 1220px) {
+  .overlayWrapper {
+    padding: 0 20px;
+
+    .sphereMainContent {
+      margin-top: 120px;
+      &__text {
+        font-size: 70px;
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) and (min-width: $screen-lg) {
+  .overlayWrapper {
+    padding: 0 20px;
+
+    .sphereMainContent {
+      margin-top: 100px;
+      &__text {
+        font-size: 50px;
+        width: 275px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+  .overlayWrapper {
+    padding: 0 20px;
+
+    .sphereMainContent {
+      margin-top: 90px;
+      &__text {
+        font-size: 40px;
+        width: 215px;
+      }
     }
   }
 }
