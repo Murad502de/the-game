@@ -78,6 +78,7 @@
 
     .sphereHeaderMenu {
       position: relative;
+      z-index: 100000;
 
       .menuLink {
         display: flex;
