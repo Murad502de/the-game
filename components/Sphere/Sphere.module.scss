@@ -1,5 +1,47 @@
 @import "../../styles/mixins";
 
+.sphere {
+  transform-origin: bottom;
+  transition: transform 350ms;
+  transform: scale(1);
+}
+
+.cnv {
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  top: 0;
+  z-index: 4;
+  width: 100vw;
+}
+
+.overlay {
+  width: 100vw;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.overlayWrapper {
+  max-width: 1800px;
+  width: 100%;
+
+}
+
 .sphereWrapper {
   width: 100%;
   height: 100vh;
@@ -7,27 +49,21 @@
   background-image: url("../../public/images/firstPlan-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: static;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
 
   .sandElement {
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: -1;
-    width: 100%;
-  }
-
-  .container {
-    max-width: 1800px;
-    margin: 0 auto;
+    z-index: 2;
     width: 100%;
   }
 
   .sphereHeader {
+    padding-top: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     color: #fff;
 

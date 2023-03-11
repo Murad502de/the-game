@@ -4,7 +4,7 @@ import CyberButton from "../../../../UI/CyberButton/CyberButton";
 const GamingContent = () => {
     return (
         <main className={styles.gamingInner}>
-            <div className={styles.gamingInner__title}>Gaming</div>
+            <div id="about" className={styles.gamingInner__title}>Gaming</div>
             <div className={styles.gamingContent}>
                 <div className={styles.leftColumnContent}>
                     <div className={styles.leftColumnContent__title}>Place for You</div>

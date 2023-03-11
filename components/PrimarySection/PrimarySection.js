@@ -7,7 +7,7 @@ const PrimarySection = ({
   cinemaSectionRef,
 }) => {
   return (
-    <div className={styles.primarySectionWrapper}>
+    <div id="second" className={styles.primarySectionWrapper}>
       <Navigation
         gamingSectionRef={gamingSectionRef}
         loungeSectionRef={loungeSectionRef}
