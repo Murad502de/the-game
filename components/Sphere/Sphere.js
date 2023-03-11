@@ -41,6 +41,7 @@ const Sphere = () => {
                 </div>
                 <Image
                   onLoad={() => counter.increment()}
+                  className={styles.sphereHeader__logo}
                   src={logo}
                   alt="dark-logo"
                   priority
@@ -64,10 +65,10 @@ const Sphere = () => {
 
               <main className={styles.sphereMainContent}>
                 <div className={styles.sphereMainContent__text}>
-                  Let’s find another place
+                  Let’s find another <br /> place
                 </div>
                 <div className={styles.sphereMainContent__text}>
-                  Place for relaxed pastime
+                  Place for <br /> relaxed pastime
                 </div>
               </main>
             </div>

@@ -2,163 +2,154 @@
 @import "../../../styles/mixins";
 
 .navigation {
-    .container {
-        max-width: 1800px;
-        margin: 0 auto;
-        width: 100%;
+  .navigationInner {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter";
+    color: #fff;
+    padding: 0 60px;
+  }
+
+  .navigationLogo {
+    padding-top: 40px;
+  }
+
+  .navigationLinks {
+    display: flex;
+    column-gap: 50px;
+    font-size: 25px;
+    padding-top: 129px;
+
+    &__link {
+      cursor: pointer;
+      line-height: 27px;
     }
 
-    .navigationInner {
+    .navigationMenu {
+      position: relative;
+
+      &__linkWithIcon {
         display: flex;
-        justify-content: space-between;
-        font-family: 'Inter';
-        color: #fff;
+        align-items: center;
+        column-gap: 10px;
+        cursor: pointer;
+      }
     }
-
-    .navigationLogo {
-        padding-top: 40px;
-    }
-
-    .navigationLinks {
-        display: flex;
-        column-gap: 50px;
-        font-size: 25px;
-        padding-top: 129px;
-        
-        &__link {
-            cursor: pointer;
-            line-height: 27px;
-        }
-
-        .navigationMenu {
-            position: relative;
-
-            &__linkWithIcon {
-                display: flex;
-                align-items: center;
-                column-gap: 10px;
-                cursor: pointer;
-            }
-        }
-        
-    }
+  }
 }
 
 .navigationLogo__xsm,
 .navigationLogo__xxsm {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: $screen-xxl) {
-    .navigation {
-        .container {
-            @include container;
-        }
-
-        .navigationLinks {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+  .navigation {
+    .container {
+      @include container;
     }
+
+    .navigationLinks {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }
 
 @media screen and (max-width: $screen-lg) {
-    .navigation {
-        .container {
-            @include container-lg;
-        }
-        .navigationLinks {
-            font-size: 18px;
-        }
-
-        .navigationLinks {
-            .navigationMenu__linkWithIcon {
-                img {
-                    width: 11px;
-                    height: 5px;
-                }
-            }
-        }
+  .navigation {
+    .container {
+      @include container-lg;
     }
+    .navigationLinks {
+      font-size: 18px;
+    }
+
+    .navigationLinks {
+      .navigationMenu__linkWithIcon {
+        img {
+          width: 11px;
+          height: 5px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $screen-md) {
-    .navigation {
-        overflow: hidden;
+  .navigation {
+    overflow: hidden;
 
-        .container {
-            @include container-md;
-        }
-
-        .navigationLinks {
-            flex-direction: column;
-            align-items: flex-end;
-            row-gap: 30px;
-            padding-top: 46px;
-
-            .linkUpOrder {
-                order: 2;
-            }
-
-            .linkBookOrder {
-                order: 3;
-            }
-
-            .linkMenuOrder {
-                order: 1;
-            }
-        }
+    .container {
+      @include container-md;
     }
+
+    .navigationLinks {
+      flex-direction: column;
+      align-items: flex-end;
+      row-gap: 30px;
+      padding-top: 46px;
+
+      .linkUpOrder {
+        order: 2;
+      }
+
+      .linkBookOrder {
+        order: 3;
+      }
+
+      .linkMenuOrder {
+        order: 1;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $screen-sm) {
-    .navigation {
-        .container {
-            @include container-sm;   
-        }
+  .navigation {
+    .container {
+      @include container-sm;
     }
+  }
 }
-
 
 @media screen and (max-width: $screen-xsm) {
-    .navigation {
-        .container {
-            @include container-xsm;   
-        }
-        .navigationInner {
-            .navigationLogo {
-                display: none;
-            }
-            .navigationLogo__xsm {
-                display: block;
-                padding-top: 50px;
-            }
-        }
-
+  .navigation {
+    .container {
+      @include container-xsm;
     }
+    .navigationInner {
+      .navigationLogo {
+        display: none;
+      }
+      .navigationLogo__xsm {
+        display: block;
+        padding-top: 50px;
+      }
+    }
+  }
 }
 
-
 @media screen and (max-width: $screen-xxsm) {
-    .navigation {
-        .container {
-            @include container-xxsm;   
-        }
-
-        .navigationInner {
-            .navigationLogo,
-            .navigationLogo__xsm {
-                display: none;
-            }
-
-            .navigationLogo__xxsm {
-                display: inline-block;
-                padding-top: 58px;
-            }
-
-            .navigationLinks {
-                padding-top: 30px;
-            }
-        }
+  .navigation {
+    .container {
+      @include container-xxsm;
     }
+
+    .navigationInner {
+      .navigationLogo,
+      .navigationLogo__xsm {
+        display: none;
+      }
+
+      .navigationLogo__xxsm {
+        display: inline-block;
+        padding-top: 58px;
+      }
+
+      .navigationLinks {
+        padding-top: 30px;
+      }
+    }
+  }
 }

@@ -24,7 +24,7 @@ const center = { lat: 25.077097631716903, lng: 55.13445435061175 };
 
 const GoogleMaps = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: "AIzaSyBGqJqbeNEbz-E95Y3fhSzeACToSWiZ9B8",
   });
 
   const mapRef = useRef(null);
