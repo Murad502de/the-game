@@ -21,6 +21,7 @@
     height: 1197px;
     background-image: url("../../public/images/cinema.png");
     background-repeat: no-repeat;
+    background-position: center center;
 
     &__title {
       font-family: "Montserrat";
@@ -130,6 +131,7 @@
       height: 622px;
       background-image: url("../../public/images/bg-cinema-lg.png");
       margin-bottom: 23px;
+      background-position: center center;
 
       &__title {
         font-size: $sectionDeskription-font-md;
@@ -195,6 +197,7 @@
       height: 660px;
       background-image: url("../../public/images/bg-cinema-md.png");
       margin-bottom: 20px;
+      background-position: center center;
 
       &__title {
         font-size: 60px;
@@ -261,7 +264,7 @@
     .cinemaContent {
       height: 535px;
       background-image: url("../../public/images/bg-cinema-md.png");
-      background-position: center top;
+      background-position: center center;
       &__title {
         width: 270px;
         line-height: 66px;
@@ -335,7 +338,7 @@
       background-image: url("../../public/images/cinema-xsm.png");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: 0px 30px;
+      background-position: center center;
 
       &__title {
         width: 339px;

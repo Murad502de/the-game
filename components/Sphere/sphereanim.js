@@ -11,7 +11,7 @@ import {
 import getVertexShader from "./vertexShader.js";
 import getFragmentShader from "./fragmentShader.js";
 import gsap from "gsap";
-import photo from './sphere/images/first_page.png'
+import photo from "./sphere/images/first_page.png";
 
 export const run = () => {
   const canvas = document.querySelector("#canvas");
@@ -118,10 +118,10 @@ export const run = () => {
           z: 1.15,
           ease: "power3.inOut",
           onComplete: () => {
-            document.querySelector("#first").style.display = "none"
-            let second = document.querySelector("#second")
-            document.body.classList.remove("preview")
-            second.style.transform = "scale(1)"
+            document.querySelector("#first").style.display = "none";
+            let second = document.querySelector("#second");
+            document.body.classList.remove("preview");
+            second.style.transform = "scale(1)";
             second.scrollIntoView({ behavior: "smooth", block: "center" });
           },
         });

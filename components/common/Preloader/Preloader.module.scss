@@ -57,12 +57,12 @@
 
 .progressBar {
   background-color: #544239;
-  width: 100px;
+  width: 120px;
   height: 5px;
   border-radius: 50px;
   position: absolute;
-  bottom: calc(50% - 180px);
-  left: 51%;
+  top: calc(50% + 120px);
+  left: calc(50% + 10px);
   transform: translateX(-50%);
 }
 
