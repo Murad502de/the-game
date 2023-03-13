@@ -15,8 +15,14 @@ import counter from "../store/index";
 import { observer } from "mobx-react-lite";
 
 const Index = () => {
-  const { gamingSectionRef, loungeSectionRef, cinemaSectionRef, isScrolled } =
-    useHome();
+  const {
+    gamingSectionRef,
+    loungeSectionRef,
+    cinemaSectionRef,
+    isScrolled,
+    starSectionRef,
+    sapSectionRef,
+  } = useHome();
 
   useEffect(() => {
     document.body.classList.add("preview");
@@ -34,11 +40,15 @@ const Index = () => {
       <GamingSection ref={gamingSectionRef} />
       <GamingSwiper />
       <LoungeSection ref={loungeSectionRef} />
-      <CinemaSection ref={cinemaSectionRef} />
-      <SpacesAndPackages />
-      <StarsSection />
+      <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} />
+      <SpacesAndPackages ref={sapSectionRef} />
+      <StarsSection ref={starSectionRef} />
       <GoogleMaps />
-      <ContactSection />
+      <ContactSection
+        lounge={loungeSectionRef}
+        cinema={cinemaSectionRef}
+        sap={sapSectionRef}
+      />
     </div>
   );
 };

@@ -5,7 +5,12 @@ import maps from "../../../public/icons/maps.svg";
 import counter from "../../../store/index";
 import Image from "next/image";
 
-const FooterMobile = () => {
+const FooterMobile = ({
+  scrollToTop,
+  scrollToLounge,
+  scrollToCinema,
+  scrollToSap,
+}) => {
   return (
     <footer className={styles.footerMobile}>
       <div className={styles.container}>
@@ -46,10 +51,18 @@ const FooterMobile = () => {
           <div className={styles.exploreRightColumn}>
             <div className={styles.exploreRightColumn__text}>Explore</div>
             <ul className={styles.exploreList}>
-              <li className={styles.exploreList__item}>Gaming</li>
-              <li className={styles.exploreList__item}>Lounge</li>
-              <li className={styles.exploreList__item}>Cinema</li>
-              <li className={styles.exploreList__item}>Prices</li>
+              <li onClick={scrollToTop} className={styles.exploreList__item}>
+                Gaming
+              </li>
+              <li onClick={scrollToLounge} className={styles.exploreList__item}>
+                Lounge
+              </li>
+              <li onClick={scrollToCinema} className={styles.exploreList__item}>
+                Cinema
+              </li>
+              <li onClick={scrollToSap} className={styles.exploreList__item}>
+                Prices
+              </li>
             </ul>
           </div>
         </div>

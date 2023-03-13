@@ -11,8 +11,16 @@ import counter from "../../store/index";
 import { observer } from "mobx-react-lite";
 import Image from "next/image";
 
-const CinemaSection = React.forwardRef((props, ref) => {
+const CinemaSection = React.forwardRef(({ starSectionRef }, ref) => {
   const { isIntersecting, nodeRef } = useIntersection();
+
+  const scrollToStar = () => {
+    window.scrollTo({
+      top: starSectionRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section ref={ref} className={styles.cinemaWrapper}>
@@ -25,7 +33,10 @@ const CinemaSection = React.forwardRef((props, ref) => {
           <div className={styles.cinemaContent__title}>
             .. and for Your Lover
           </div>
-          <div className={styles.cinemaContent__subTitle}>
+          <div
+            onClick={scrollToStar}
+            className={styles.cinemaContent__subTitle}
+          >
             Сinemas Specifications
           </div>
           <div className={styles.cinemaContent__subTitle}>Reserve</div>

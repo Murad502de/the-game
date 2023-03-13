@@ -5,7 +5,12 @@ import instagram from "../../../public/icons/instagram.svg";
 import counter from "../../../store/index";
 import Image from "next/image";
 
-const FooterSm = () => {
+const FooterSm = ({
+  scrollToTop,
+  scrollToLounge,
+  scrollToCinema,
+  scrollToSap,
+}) => {
   return (
     <footer className={styles.smFooter}>
       <div className={styles.container}>
@@ -34,10 +39,18 @@ const FooterSm = () => {
         <div className={styles.smExplore}>Explore</div>
 
         <ul className={styles.smList}>
-          <li className={styles.smItem}>Gaming</li>
-          <li className={styles.smItem}>Lounge</li>
-          <li className={styles.smItem}>Cinema</li>
-          <li className={styles.smItem}>Prices</li>
+          <li onClick={scrollToTop} className={styles.smItem}>
+            Gaming
+          </li>
+          <li onClick={scrollToLounge} className={styles.smItem}>
+            Lounge
+          </li>
+          <li onClick={scrollToCinema} className={styles.smItem}>
+            Cinema
+          </li>
+          <li onClick={scrollToSap} className={styles.smItem}>
+            Prices
+          </li>
         </ul>
 
         <div className={styles.smInst}>

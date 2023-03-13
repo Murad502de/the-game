@@ -14,6 +14,13 @@
     padding-top: 40px;
   }
 
+  .flexMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65px;
+  }
+
   .navigationLinks {
     display: flex;
     column-gap: 50px;
@@ -48,6 +55,10 @@
     .navigationInner {
       padding: 0;
     }
+    .navigationLinks {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 
@@ -55,11 +66,6 @@
   .navigation {
     .container {
       @include container;
-    }
-
-    .navigationLinks {
-      padding-left: 10px;
-      padding-right: 10px;
     }
   }
 }

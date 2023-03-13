@@ -9,7 +9,36 @@ import FooterXxsm from "../common/Footer/Footer-xxsm";
 import counter from "../../store/index";
 import Image from "next/image";
 
-const ContactSection = () => {
+const ContactSection = ({ lounge, cinema, sap }) => {
+  const scrollToTop = () =>
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+  const scrollToLounge = () => {
+    window.scrollTo({
+      top: lounge.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const scrollToCinema = () => {
+    window.scrollTo({
+      top: cinema.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToSap = () => {
+    window.scrollTo({
+      top: sap.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <section className={styles.contactWrapper}>
       <Image
@@ -49,10 +78,30 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <Footer />
-        <FooterMobile />
-        <FooterSm />
-        <FooterXxsm />
+        <Footer
+          scrollToTop={scrollToTop}
+          scrollToLounge={scrollToLounge}
+          scrollToCinema={scrollToCinema}
+          scrollToSap={scrollToSap}
+        />
+        <FooterMobile
+          scrollToTop={scrollToTop}
+          scrollToLounge={scrollToLounge}
+          scrollToCinema={scrollToCinema}
+          scrollToSap={scrollToSap}
+        />
+        <FooterSm
+          scrollToTop={scrollToTop}
+          scrollToLounge={scrollToLounge}
+          scrollToCinema={scrollToCinema}
+          scrollToSap={scrollToSap}
+        />
+        <FooterXxsm
+          scrollToTop={scrollToTop}
+          scrollToLounge={scrollToLounge}
+          scrollToCinema={scrollToCinema}
+          scrollToSap={scrollToSap}
+        />
       </div>
     </section>
   );

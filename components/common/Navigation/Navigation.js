@@ -8,6 +8,7 @@ import { useNavigation } from "./hooks/useNavigation";
 import classNames from "classnames";
 import counter from "../../../store/index";
 import Image from "next/image";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const Navigation = ({
   gamingSectionRef,
@@ -74,7 +75,10 @@ const Navigation = ({
               styles.linkUpOrder
             )}
           >
-            Up
+            <div className={styles.flexMenu}>
+              <AiOutlineArrowUp />
+              <div>Up</div>
+            </div>
           </li>
           <li
             className={classNames(

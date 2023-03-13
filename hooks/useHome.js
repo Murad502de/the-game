@@ -4,6 +4,8 @@ export const useHome = () => {
   const gamingSectionRef = useRef();
   const loungeSectionRef = useRef();
   const cinemaSectionRef = useRef();
+  const starSectionRef = useRef();
+  const sapSectionRef = useRef();
 
   const [loading, setLoading] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,5 +34,7 @@ export const useHome = () => {
     cinemaSectionRef,
     loading,
     isScrolled,
+    starSectionRef,
+    sapSectionRef,
   };
 };

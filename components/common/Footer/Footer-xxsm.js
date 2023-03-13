@@ -5,7 +5,12 @@ import instagram from "../../../public/icons/instagram.svg";
 import counter from "../../../store/index";
 import Image from "next/image";
 
-const FooterXxsm = () => {
+const FooterXxsm = ({
+  scrollToTop,
+  scrollToLounge,
+  scrollToCinema,
+  scrollToSap,
+}) => {
   return (
     <footer className={styles.xxsmFooter}>
       <div className={styles.container}>
@@ -28,10 +33,18 @@ const FooterXxsm = () => {
         <div className={styles.footerXxsmData}>
           <div className={styles.leftColumn}>
             <div className={styles.leftColumn__explore}>Explore</div>
-            <div className={styles.leftColumn__item}>Gaming</div>
-            <div className={styles.leftColumn__item}>Lounge</div>
-            <div className={styles.leftColumn__item}>Cinema</div>
-            <div className={styles.leftColumn__item}>Prices</div>
+            <div onClick={scrollToTop} className={styles.leftColumn__item}>
+              Gaming
+            </div>
+            <div onClick={scrollToLounge} className={styles.leftColumn__item}>
+              Lounge
+            </div>
+            <div onClick={scrollToCinema} className={styles.leftColumn__item}>
+              Cinema
+            </div>
+            <div onClick={scrollToSap} className={styles.leftColumn__item}>
+              Prices
+            </div>
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.rightColumnInst}>

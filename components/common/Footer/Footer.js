@@ -5,7 +5,12 @@ import instagram from "../../../public/icons/instagram.svg";
 import counter from "../../../store/index";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({
+  scrollToTop,
+  scrollToLounge,
+  scrollToCinema,
+  scrollToSap,
+}) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -21,10 +26,24 @@ const Footer = () => {
             <div className={styles.explore}>
               <div className={styles.explore__text}>Explore</div>
               <ul className={styles.exploreList}>
-                <li className={styles.exploreList__item}>Gaming</li>
-                <li className={styles.exploreList__item}>Lounge</li>
-                <li className={styles.exploreList__item}>Cinema</li>
-                <li className={styles.exploreList__item}>Prices</li>
+                <li onClick={scrollToTop} className={styles.exploreList__item}>
+                  Gaming
+                </li>
+                <li
+                  onClick={scrollToLounge}
+                  className={styles.exploreList__item}
+                >
+                  Lounge
+                </li>
+                <li
+                  onClick={scrollToCinema}
+                  className={styles.exploreList__item}
+                >
+                  Cinema
+                </li>
+                <li onClick={scrollToSap} className={styles.exploreList__item}>
+                  Prices
+                </li>
               </ul>
             </div>
             <div className={styles.instagram}>

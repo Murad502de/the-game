@@ -9,12 +9,13 @@ import micro from "../../public/icons/micro.svg";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import counter from "../../store/index";
 import Image from "next/image";
+import React from "react";
 
-const SpacesAndPackages = () => {
+const SpacesAndPackages = React.forwardRef((props, ref) => {
   const { wrap, computers, scroll, spaces } = useScrollAnimation();
 
   return (
-    <div className={styles.spacesScroll}>
+    <div ref={ref} className={styles.spacesScroll}>
       <section className={styles.sapWrapper}>
         <div className={styles.sapInner}>
           <div ref={scroll} className={styles.scroll}>
@@ -87,6 +88,6 @@ const SpacesAndPackages = () => {
       </section>
     </div>
   );
-};
+});
 
 export default SpacesAndPackages;
