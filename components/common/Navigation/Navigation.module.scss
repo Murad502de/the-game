@@ -43,6 +43,14 @@
   display: none;
 }
 
+@media screen and (max-width: 1220px) {
+  .navigation {
+    .navigationInner {
+      padding: 0;
+    }
+  }
+}
+
 @media screen and (max-width: $screen-xxl) {
   .navigation {
     .container {
