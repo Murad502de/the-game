@@ -29,7 +29,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className={!isScrolled && "wrapper"}>
+    <div>
       {counter.isLoading && <Preloader />}
       <Sphere />
       <PrimarySection
