@@ -38,7 +38,7 @@ export const run = () => {
       window.innerWidth > 1920 ? 3200 : window.innerWidth > 768 ? 1920 : 1e3;
 
     let { width: width, height: height } = {
-      width: displayWidth,
+      width: window.innerWidth,
       height: window.innerHeight,
     };
 
@@ -48,10 +48,6 @@ export const run = () => {
     texture = textureLoader.load("/images/first_page.png");
     textureLoader.setCrossOrigin("anonymous");
     geometry = new SphereGeometry(1, 280, 280);
-
-    console.log(texture);
-    console.log(photo);
-
     uniforms = {
       uTime: { value: time },
       uDistortionFrequency: { value: 1 },
@@ -90,11 +86,13 @@ export const run = () => {
     renderer.setSize(width, height);
     window.addEventListener("resize", () => {
       (height = window.innerHeight),
+        (width = window.innerHeight),
         (camera.aspect = width / height),
         camera.updateProjectionMatrix(),
         camera.updateMatrixWorld(),
         camera.updateWorldMatrix(),
         renderer.setSize(width, height);
+      console.log(width, height);
     });
   }
 

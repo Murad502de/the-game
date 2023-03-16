@@ -78,7 +78,9 @@ const Sphere = () => {
             </div>
           </div>
 
-          <canvas id="canvas" className={styles.cnv}></canvas>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <canvas id="canvas" className={styles.cnv}></canvas>
+          </div>
 
           <footer className={styles.sphereFooter}>
             <Image
@@ -90,13 +92,13 @@ const Sphere = () => {
             <div className={styles.sphereFooter__text}>Scroll to Start</div>
           </footer>
         </div>
-        <Image
+        {/* <Image
           onLoad={() => counter.increment()}
           className={styles.sandElement}
           src={sand}
           alt="sand"
           priority
-        />
+        /> */}
       </div>
     </>
   );
