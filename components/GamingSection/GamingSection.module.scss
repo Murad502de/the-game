@@ -11,7 +11,7 @@
 
   &__image {
     position: absolute;
-    top: -50.5%;
+    top: -52.5%;
     left: 50%;
     transform: translateX(-50%);
     max-width: 100%;
@@ -41,12 +41,9 @@
     padding-top: 395px;
     padding-left: 10px;
     padding-right: 10px;
-    .container {
-      @include container-lg;
-    }
 
     &__image {
-      top: -43%;
+      top: -40%;
       width: $screen-lg;
       height: auto;
     }
@@ -59,7 +56,7 @@
     padding-bottom: 95px;
 
     .container {
-      @include container-md;
+      @include container-lg;
     }
 
     &__image {
@@ -69,7 +66,7 @@
     &__imageMd {
       display: block;
       position: absolute;
-      top: -70%;
+      top: -73%;
       right: 0;
     }
   }
@@ -77,9 +74,9 @@
 
 @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
   .gamingWrapper {
-    padding-top: 341px;
+    padding-top: 295px;
     .container {
-      @include container-sm;
+      @include container-md;
     }
 
     &__imageMd {
@@ -89,7 +86,7 @@
     &__imageSm {
       display: block;
       position: absolute;
-      top: -58%;
+      top: -63%;
       right: 0;
     }
   }
@@ -100,7 +97,7 @@
     padding-top: 331px;
 
     .container {
-      @include container-xsm;
+      @include container-sm;
     }
 
     &__imageSm {
@@ -110,13 +107,40 @@
     &__imageXsm {
       display: block;
       position: absolute;
-      top: -57%;
+      top: -53%;
       right: 0;
     }
   }
 }
 
+@media screen and (max-width: 768px) {
+  .gamingWrapper {
+    padding-bottom: 100px;
+  }
+}
+
 @media screen and (max-width: $screen-xsm) {
+  .gamingWrapper {
+    padding-top: 147px;
+
+    .container {
+      @include container-xsm;
+    }
+
+    &__imageXsm {
+      display: none;
+    }
+
+    &__imageXxsm {
+      display: block;
+      position: absolute;
+      top: -49%;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xxsm) {
   .gamingWrapper {
     padding-top: 147px;
 
@@ -131,8 +155,7 @@
     &__imageXxsm {
       display: block;
       position: absolute;
-      top: -64%;
-      right: 0;
+      top: -54.5%;
     }
   }
 }

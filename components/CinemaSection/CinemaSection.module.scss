@@ -118,7 +118,7 @@
       width: 100%;
     }
     .container {
-      @include container-lg;
+      @include container;
     }
 
     &__title {
@@ -191,7 +191,7 @@
 @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
   .cinemaWrapper {
     .container {
-      @include container-md;
+      @include container-lg;
     }
     .cinemaContent {
       height: 660px;
@@ -258,7 +258,7 @@
       height: 282px;
     }
     .container {
-      @include container-sm;
+      @include container-md;
     }
 
     .cinemaContent {
@@ -330,7 +330,7 @@
       margin-bottom: 0;
     }
     .container {
-      @include container-xsm;
+      @include container-sm;
     }
 
     .cinemaContent {
@@ -391,10 +391,12 @@
 @media screen and (max-width: $screen-xsm) {
   .cinemaWrapper {
     .container {
-      @include container-xxsm;
+      @include container-xsm;
     }
 
     .cinemaContent {
+      height: 397px;
+
       background-image: url("../../public/images/cinema-xsm.png");
       background-repeat: no-repeat;
       background-size: cover;
