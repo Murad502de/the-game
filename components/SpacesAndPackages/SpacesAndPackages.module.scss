@@ -19,7 +19,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 200px;
         padding-bottom: 100px;
         width: 100%;
         position: -webkit-sticky;
@@ -35,7 +35,7 @@
           background-clip: text;
           font-size: 120px;
           font-weight: 700;
-          // margin-bottom: 30px;
+          margin-bottom: 30px;
         }
 
         .sapContentWrapper {
@@ -127,6 +127,12 @@
     .sapInner {
       .container {
         @include container-lg;
+      }
+
+      .scroll {
+        .containerWrapper {
+          padding-top: 100px;
+        }
       }
 
       &__title {
@@ -289,7 +295,7 @@
   .sapWrapper {
     .sapInner {
       .container {
-        @include container-lg;
+        @include container;
       }
 
       .scroll {
@@ -307,7 +313,7 @@
   .sapWrapper {
     .sapInner {
       .container {
-        @include container-md;
+        @include container-lg;
       }
 
       .scroll {
@@ -325,7 +331,7 @@
   .sapWrapper {
     .sapInner {
       .container {
-        @include container-sm;
+        @include container-md;
       }
       .scroll {
         .containerWrapper {
@@ -342,7 +348,7 @@
   .sapWrapper {
     .sapInner {
       .container {
-        @include container-xsm;
+        @include container-sm;
       }
       .scroll {
         .containerWrapper {
@@ -359,7 +365,7 @@
   .sapWrapper {
     .sapInner {
       .container {
-        @include container-xxsm;
+        @include container-xsm;
       }
       .scroll {
         .containerWrapper {

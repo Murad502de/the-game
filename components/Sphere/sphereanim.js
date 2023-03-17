@@ -32,6 +32,20 @@ export const run = () => {
 
   time = 0.2;
 
+  function resize() {
+    let { width: width, height: height } = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+    (height = window.innerHeight),
+    (width = window.innerHeight),
+    (camera.aspect = width / height),
+    camera.updateProjectionMatrix(),
+    camera.updateMatrixWorld(),
+    camera.updateWorldMatrix(),
+    renderer.setSize(Math.min(window.innerWidth / 0.7, width), Math.min(window.innerWidth / 0.7, height));
+  }
+
   function init() {
     scene = new Scene();
     displayWidth =
@@ -85,15 +99,9 @@ export const run = () => {
 
     renderer.setSize(width, height);
     window.addEventListener("resize", () => {
-      (height = window.innerHeight),
-        (width = window.innerHeight),
-        (camera.aspect = width / height),
-        camera.updateProjectionMatrix(),
-        camera.updateMatrixWorld(),
-        camera.updateWorldMatrix(),
-        renderer.setSize(width, height);
-      console.log(width, height);
+        resize();
     });
+    resize()
   }
 
   const loop = () => {

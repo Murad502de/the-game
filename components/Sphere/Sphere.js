@@ -41,7 +41,7 @@ const Sphere = () => {
             <div className={styles.overlayWrapper}>
               <header className={styles.sphereHeader}>
                 <div id="scroll-to-book" className={styles.sphereHeader__text}>
-                  Book Your Seat
+                  Book <div className={styles.extra}>Your Seat</div>
                 </div>
                 <Image
                   onLoad={() => counter.increment()}
@@ -91,6 +91,16 @@ const Sphere = () => {
             />
             <div className={styles.sphereFooter__text}>Scroll to Start</div>
           </footer>
+        </div>
+        <div className={styles.sandElement}>
+            <div className={styles.textWrapper}>
+              <div className={styles.textWrapper__text}>
+                Let’s find another <br /> place
+              </div>
+              <div className={styles.textWrapper__text}>
+                Place for <br /> relaxed pastime
+              </div>
+            </div>
         </div>
         {/* <Image
           onLoad={() => counter.increment()}
