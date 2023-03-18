@@ -92,8 +92,6 @@
 
 @media screen and (max-width: $screen-md) {
   .navigation {
-    overflow: hidden;
-
     .container {
       @include container-md;
     }
