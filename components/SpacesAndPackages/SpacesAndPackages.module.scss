@@ -19,12 +19,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 200px;
+        padding-top: 100px;
         padding-bottom: 100px;
         width: 100%;
         position: -webkit-sticky;
         position: sticky;
-        top: -130px;
+        top: -100px;
         overflow-x: hidden;
 
         &__title {
@@ -121,6 +121,19 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .scroll {
+    // height: 3000px !important;
+  }
+  .sapContentWrapper {
+    width: 726px !important;
+  }
+
+  .containerWrapper {
+    top: 0 !important;
+    height: 100vh !important;
+  }
+}
 @media screen and (max-width: $screen-lg) {
   // 768
   .sapWrapper {
@@ -180,6 +193,13 @@
 }
 
 @media screen and (max-width: $screen-md) {
+  .scroll {
+    height: 3500px !important;
+  }
+  .sapContentWrapper {
+    width: 380px !important;
+  }
+
   .sapWrapper {
     padding-bottom: 50px;
     .sapInner {
