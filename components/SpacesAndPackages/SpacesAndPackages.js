@@ -25,6 +25,7 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
                   Spaces <br /> and Packages
                 </div>
               </div>
+
               <main ref={spaces} className={styles.sapContentWrapper}>
                 <div ref={computers} className={styles.sapContent}>
                   <PremiumCard />
