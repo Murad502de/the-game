@@ -24,13 +24,13 @@ const Index = () => {
   } = useHome();
 
   useEffect(() => {
-    document.body.classList.add("preview");
+    // document.body.classList.add("preview");
   }, []);
 
   return (
     <div>
-      {counter.isLoading && <Preloader />}
-      <Sphere />
+      {/* {counter.isLoading && <Preloader />} */}
+      {/* <Sphere /> */}
       <PrimarySection
         gamingSectionRef={gamingSectionRef}
         loungeSectionRef={loungeSectionRef}

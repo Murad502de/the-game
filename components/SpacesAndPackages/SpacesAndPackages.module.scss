@@ -1,413 +1,133 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
+@import "./styles/vars";
 
-.sapWrapper {
-  padding-bottom: 200px;
+.SpacesAndPackages {
+  overflow: hidden;
+
   .container {
     @include container;
   }
-  .sapInner {
-    .scroll {
-      // spaces-scroll
-      position: relative;
-      height: 300vh;
 
-      .containerWrapper {
-        // wrap_spaces
-        height: calc(100vh + 200px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-        padding-bottom: 100px;
-        width: 100%;
-        position: -webkit-sticky;
-        position: sticky;
-        top: -100px;
-        overflow-x: hidden;
-
-        &__title {
-          font-family: "Montserrat";
-          color: transparent;
-          background-image: $titleSecondaryGradient-color;
-          -webkit-background-clip: text;
-          background-clip: text;
-          font-size: 120px;
-          font-weight: 700;
-          margin-bottom: 30px;
-        }
-
-        .sapContentWrapper {
-          // spaces
-          transition: 0.3s;
-          position: relative;
-          width: 1200px;
-          height: 100%;
-
-          .sapContent {
-            // computers
-            width: max-content;
-            background: $secondaryBgGradient-color;
-            backdrop-filter: blur(7.49853px);
-            border-radius: 10px;
-            padding: 74px;
-            display: flex;
-            column-gap: 30px;
-            position: absolute;
-          }
-        }
-      }
-    }
-
-    .sapBooking {
-      margin-top: 5rem !important;
-      @include container;
-
-      .sapBookingInner {
-        display: flex;
-        column-gap: 140px;
-
-        &__btn {
-          button {
-            text-transform: capitalize;
-            width: 445px;
-          }
-        }
-
-        .innerRightColumn {
-          &__title {
-            font-family: "Inter";
-            font-size: 25px;
-            color: #fff;
-            margin-bottom: 10px;
-          }
-
-          .equipment {
-            display: flex;
-            align-items: flex-start;
-            column-gap: 15px;
-
-            .equipmentLeftColumn {
-              display: flex;
-              align-items: center;
-              flex-direction: column;
-
-              &__img1 {
-                margin-top: 14px;
-                margin-bottom: 20px;
-              }
-
-              &__img2 {
-                margin-bottom: 20px;
-              }
-            }
-
-            .equipmentRightColumn {
-              display: flex;
-              flex-direction: column;
-
-              &__item {
-                line-height: 40px;
-                font-family: "Inter";
-                font-size: 25px;
-                color: #fff;
-              }
-            }
-          }
-        }
-      }
+  .header {
+    &__title {
+      font-family: "Montserrat";
+      color: transparent;
+      background-image: $titleSecondaryGradient-color;
+      font-size: $sectionTitleFontSize-xxl;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-weight: 700;
+      margin-bottom: 30px;
     }
   }
-}
 
-@media screen and (max-width: 991px) {
-  .scroll {
-    // height: 3000px !important;
+  .main {
+    box-sizing: border-box;
+    width: max-content;
+    background: $secondaryBgGradient-color;
+    backdrop-filter: blur(7.49853px);
+    border-radius: 10px;
+    padding: $mainPadding-xxl;
+    display: flex;
+    column-gap: 30px;
   }
-  .sapContentWrapper {
-    width: 726px !important;
-  }
 
-  .containerWrapper {
-    top: 0 !important;
-    height: 100vh !important;
-  }
-}
-@media screen and (max-width: $screen-lg) {
-  // 768
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-lg;
-      }
+  .footer {}
 
-      .scroll {
-        .containerWrapper {
-          padding-top: 100px;
-        }
-      }
-
+  @media screen and (max-width: $screen-xxl) {
+    .header {
       &__title {
-        font-size: $sectionDeskription-font-md;
-      }
-
-      .sapBooking {
-        .sapBookingInner {
-          column-gap: 90px;
-          &__btn {
-            button {
-              height: 100px;
-              width: 360px;
-            }
-          }
-
-          .innerRightColumn {
-            &__title {
-              font-size: 18px;
-              line-height: 29px;
-            }
-
-            .equipment {
-              .equipmentLeftColumn {
-                &__img1 {
-                  margin-top: 5px;
-                  margin-bottom: 11px;
-                }
-                &__img2 {
-                  margin-bottom: 9px;
-                }
-              }
-              .equipmentRightColumn {
-                &__item {
-                  font-size: 18px;
-                  line-height: 29px;
-                }
-              }
-            }
-          }
-        }
+        font-size: $sectionTitleFontSize-xxl;
       }
     }
   }
-}
 
-@media screen and (max-width: $screen-md) {
-  .scroll {
-    height: 3500px !important;
-  }
-  .sapContentWrapper {
-    width: 380px !important;
-  }
-
-  .sapWrapper {
-    padding-bottom: 50px;
-    .sapInner {
-      .container {
-        @include container-md;
-      }
-
+  @media screen and (max-width: $screen-xl) {
+    .header {
       &__title {
-        font-size: 60px;
-      }
-
-      .sapContent {
-        padding: 30px 30px 60px 30px;
-      }
-
-      .sapBooking {
-        .sapBookingInner {
-          flex-direction: column-reverse;
-
-          &__btn {
-            button {
-              width: 100%;
-
-              &::before {
-                border-radius: 10px;
-              }
-            }
-          }
-
-          .innerRightColumn {
-            .equipment {
-              .equipmentRightColumn {
-                margin-bottom: 30px;
-              }
-            }
-          }
-        }
+        font-size: $sectionTitleFontSize-xl;
       }
     }
   }
-}
 
-@media screen and (max-width: $screen-sm) {
-  .sapWrapper {
-    padding-bottom: 20px;
-    .sapInner {
-      .container {
-        @include container-sm;
-      }
+  @media screen and (max-width: $screen-lg) {
+    .container {
+      @include container-lg;
+    }
 
-      .sapContent {
-        padding: 30px;
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-lg;
       }
     }
-  }
-}
 
-@media screen and (max-width: $screen-xsm) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-xsm;
-      }
-
-      .sapContent {
-        padding: 10px;
-      }
-
-      .sapBooking {
-        .sapBookingInner {
-          .innerRightColumn {
-            .equipment {
-              .equipmentLeftColumn {
-                &__img1 {
-                  margin-top: 8px;
-                  margin-bottom: 38px;
-                }
-              }
-            }
-          }
-        }
-      }
+    .main {
+      padding: $mainPadding-lg;
     }
   }
-}
 
-@media screen and (max-width: $screen-xxsm) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-xxsm;
-      }
+  @media screen and (max-width: $screen-md) {
+    .container {
+      @include container-md;
+    }
 
-      .sapBooking {
-        .sapBookingInner {
-          .innerRightColumn {
-            .equipment {
-              .equipmentLeftColumn {
-                &__img1 {
-                  margin-top: 8px;
-                  margin-bottom: 38px;
-                }
-              }
-            }
-          }
-        }
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-md;
       }
     }
-  }
-}
 
-@media screen and (max-width: 1220px) and (min-width: $screen-lg) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container;
-      }
-
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 110px;
-          }
-        }
-      }
+    .main {
+      padding: $mainPadding-md;
     }
   }
-}
 
-@media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-lg;
-      }
+  @media screen and (max-width: $screen-sm) {
+    .container {
+      @include container-sm;
+    }
 
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 80px;
-          }
-        }
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-sm;
       }
     }
-  }
-}
 
-@media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-md;
-      }
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 60px;
-          }
-        }
-      }
+    .main {
+      padding: $mainPadding-sm;
     }
   }
-}
 
-@media screen and (max-width: $screen-sm) and (min-width: $screen-xsm) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-sm;
-      }
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 60px;
-          }
-        }
+  @media screen and (max-width: $screen-xsm) {
+    .container {
+      @include container-xsm;
+    }
+
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-xsm;
       }
     }
-  }
-}
 
-@media screen and (max-width: $screen-xsm) {
-  .sapWrapper {
-    .sapInner {
-      .container {
-        @include container-xsm;
-      }
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 50px;
-          }
-        }
-      }
+    .main {
+      padding: $mainPadding-xsm;
     }
   }
-}
 
-@media screen and (max-width: $screen-xxsm) {
-  .sapWrapper {
-    .sapInner {
-      .scroll {
-        .containerWrapper {
-          &__title {
-            font-size: 40px;
-          }
-        }
+  @media screen and (max-width: $screen-xxsm) {
+    .container {
+      @include container-xxsm;
+    }
+
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-xxsm;
       }
+    }
+
+    .main {
+      padding: $mainPadding-xxsm;
     }
   }
 }

@@ -383,10 +383,10 @@
   "resolved" "https://registry.npmjs.org/glsl-noise/-/glsl-noise-0.0.0.tgz"
   "version" "0.0.0"
 
-"gsap@^3.11.4":
-  "integrity" "sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA=="
-  "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.11.4.tgz"
-  "version" "3.11.4"
+"gsap@^3.9.1":
+  "integrity" "sha512-JSGVYoC6da4pIjdF/yxFU6Rz8OojOIDkbooveZlfNg0+JIoFoRruyfWAEi6R/gUeNcuOiTqUIb0gi1nCNrHf8w=="
+  "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.9.1.tgz"
+  "version" "3.9.1"
 
 "immutable@^4.0.0":
   "integrity" "sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg=="

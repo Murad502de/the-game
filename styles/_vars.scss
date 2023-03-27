@@ -45,11 +45,20 @@ $sectionText-font: 32px;
 $sectionText-font-md: 22px;
 $sectionText-font-sm: 18px;
 
-// медиазапросы
-$screen-xxsm: 320px;
-$screen-xsm: 438px;
-$screen-sm: 576px;
-$screen-md: 768px;
+// breakpoints
+$screen-xxl: 1400px;
+$screen-xl: 1200px;
 $screen-lg: 992px;
-$screen-xl: 1290px;
-$screen-xxl: 1920px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xsm: 428px;
+$screen-xxsm: 320px;
+
+//section-title-font-sizes
+$sectionTitleFontSize-xxl: 120px;
+$sectionTitleFontSize-xl: 100px;
+$sectionTitleFontSize-lg: 80px;
+$sectionTitleFontSize-md: 60px;
+$sectionTitleFontSize-sm: 50px;
+$sectionTitleFontSize-xsm: 40px;
+$sectionTitleFontSize-xxsm: 35px;
