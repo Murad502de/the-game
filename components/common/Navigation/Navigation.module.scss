@@ -1,167 +1,127 @@
 @import "../../../styles/vars";
+@import "./styles/vars";
 @import "../../../styles/mixins";
 
 .navigation {
-  .navigationInner {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Inter";
-    color: #fff;
-    padding: 0 60px;
-  }
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: $navFontSize-xxl;
+  line-height: 150%;
+  color: #FFFFFF;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 
   .navigationLogo {
-    padding-top: 40px;
-  }
-
-  .flexMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 65px;
+    flex: 1;
+    width: $navigationLogoWidth-xxl;
+    height: $navigationLogoHeight-xxl;
   }
 
   .navigationLinks {
+    flex: 33%;
     display: flex;
-    column-gap: 50px;
-    font-size: 25px;
-    padding-top: 129px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    &__link {
-      cursor: pointer;
-      line-height: 27px;
-    }
+    &Right {
+      justify-content: flex-end;
 
-    .navigationMenu {
-      position: relative;
-
-      &__linkWithIcon {
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        cursor: pointer;
+      &_md {
+        display: none;
       }
     }
   }
-}
 
-.navigationLogo__xsm,
-.navigationLogo__xxsm {
-  display: none;
-}
+  .navigationLink {
+    margin-left: 50px;
+    cursor: pointer;
 
-@media screen and (max-width: 1220px) {
-  .navigation {
-    .navigationInner {
-      padding: 0;
-    }
-    .navigationLinks {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: $screen-xxl) {
-  .navigation {
-    .container {
-      @include container;
-    }
-  }
-}
-
-@media screen and (max-width: $screen-lg) {
-  .navigation {
-    .container {
-      @include container-lg;
-    }
-    .navigationLinks {
-      font-size: 18px;
+    &:first-child {
+      margin-left: 0;
     }
 
-    .navigationLinks {
-      .navigationMenu__linkWithIcon {
-        img {
-          width: 11px;
-          height: 5px;
+    &WithIcon {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      &Arrow {
+        span {
+          margin-left: 10px;
+        }
+      }
+
+      &Burger {
+        span {
+          margin-right: 10px;
         }
       }
     }
   }
-}
 
-@media screen and (max-width: $screen-md) {
-  .navigation {
-    .container {
-      @include container-md;
-    }
+  .navigationMenu {
+    position: relative;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    font-size: $navFontSize-lg;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    font-size: $navFontSize-md;
 
     .navigationLinks {
       flex-direction: column;
-      align-items: flex-end;
-      row-gap: 30px;
-      padding-top: 46px;
 
-      .linkUpOrder {
-        order: 2;
-      }
-
-      .linkBookOrder {
-        order: 3;
-      }
-
-      .linkMenuOrder {
-        order: 1;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $screen-sm) {
-  .navigation {
-    .container {
-      @include container-sm;
-    }
-  }
-}
-
-@media screen and (max-width: $screen-xsm) {
-  .navigation {
-    .container {
-      @include container-xsm;
-    }
-    .navigationInner {
-      .navigationLogo {
+      &Right {
         display: none;
+
+        &_md {
+          display: flex;
+          align-items: flex-end;
+        }
       }
-      .navigationLogo__xsm {
-        display: block;
-        padding-top: 50px;
+    }
+
+    .navigationLink {
+      margin-left: 0;
+
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
       }
     }
   }
-}
 
-@media screen and (max-width: $screen-xxsm) {
-  .navigation {
-    .container {
-      @include container-xxsm;
+  @media screen and (max-width: $screen-sm) {
+    font-size: $navFontSize-sm;
+  }
+
+  @media screen and (max-width: $screen-xsm) {
+    font-size: $navFontSize-xsm;
+
+    .navigationLogo {
+      width: $navigationLogoWidth-xsm;
+      height: $navigationLogoHeight-xsm;
     }
+  }
 
-    .navigationInner {
-      .navigationLogo,
-      .navigationLogo__xsm {
-        display: none;
-      }
+  @media screen and (max-width: $screen-xxsm) {
+    font-size: $navFontSize-xxsm;
 
-      .navigationLogo__xxsm {
-        display: inline-block;
-        padding-top: 58px;
-      }
-
-      .navigationLinks {
-        padding-top: 30px;
-      }
+    .navigationLogo {
+      width: $navigationLogoWidth-xxsm;
+      height: $navigationLogoHeight-xxsm;
     }
   }
 }

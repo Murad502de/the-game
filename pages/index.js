@@ -36,18 +36,18 @@ const Index = () => {
         loungeSectionRef={loungeSectionRef}
         cinemaSectionRef={cinemaSectionRef}
       />
-      <GamingSection ref={gamingSectionRef} />
-      <GamingSwiper />
-      <LoungeSection ref={loungeSectionRef} />
-      <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} />
-      <SpacesAndPackages ref={sapSectionRef} />
-      <StarsSection ref={starSectionRef} />
+      {/* <GamingSection ref={gamingSectionRef} /> */}
+      {/* <GamingSwiper /> */}
+      {/* <LoungeSection ref={loungeSectionRef} /> */}
+      {/* <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} /> */}
+      {/* <SpacesAndPackages ref={sapSectionRef} /> */}
+      {/* <StarsSection ref={starSectionRef} /> */}
       {/* <GoogleMaps /> */}
-      <ContactSection
+      {/* <ContactSection
         lounge={loungeSectionRef}
         cinema={cinemaSectionRef}
         sap={sapSectionRef}
-      />
+      /> */}
     </div>
   );
 };

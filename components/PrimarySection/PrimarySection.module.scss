@@ -1,52 +1,225 @@
 @import "../../styles/vars";
+@import "./styles/vars";
+@import "../../styles/mixins";
 
-.primarySectionWrapper {
-  background-image: url("../../public/images/first_page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1400px;
+.primarySection {
+  position: relative;
+  height: $primarySectionHeight-xxl;
   overflow: hidden;
-  z-index: 0;
-  transition: all 0.5s ease-in-out;
-  transform: scale(1.04);
-}
 
-@media (max-width: $screen-xl) and (min-width: $screen-lg) {
-  .primarySectionWrapper {
-    height: 1010px;
+  &Background {
+    position: absolute;
+    top: $primarySectionContainerTopOffset-xxl;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+
+    &_xl,
+    &_lg,
+    &_md,
+    &_sm,
+    &_xsm,
+    &_xxsm {
+      display: none;
+    }
+
+    @media screen and (max-width: $screen-xl) {
+      top: $primarySectionContainerTopOffset-xl;
+
+      &_xxl,
+      &_lg,
+      &_md,
+      &_sm,
+      &_xsm,
+      &_xxsm {
+        display: none;
+      }
+
+      &_xl {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      top: $primarySectionContainerTopOffset-lg;
+
+      &_xxl,
+      &_xl,
+      &_md,
+      &_sm,
+      &_xsm,
+      &_xxsm {
+        display: none;
+      }
+
+      &_lg {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $screen-md) {
+      top: $primarySectionContainerTopOffset-md;
+
+      &_xxl,
+      &_xl,
+      &_lg,
+      &_sm,
+      &_xsm,
+      &_xxsm {
+        display: none;
+      }
+
+      &_md {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      top: $primarySectionContainerTopOffset-sm;
+
+      &_xxl,
+      &_xl,
+      &_lg,
+      &_md,
+      &_sm,
+      &_xsm,
+      &_xxsm {
+        display: none;
+      }
+
+      &_sm {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $screen-xsm) {
+      top: $primarySectionContainerTopOffset-xsm;
+
+      &_xxl,
+      &_xl,
+      &_lg,
+      &_md,
+      &_sm,
+      &_xxsm {
+        display: none;
+      }
+
+      &_xsm {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $screen-xxsm) {
+      top: $primarySectionContainerTopOffset-xxsm;
+
+      &_xxl,
+      &_xl,
+      &_lg,
+      &_md,
+      &_sm,
+      &_xsm {
+        display: none;
+      }
+
+      &_xxsm {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-xl) {
+    height: $primarySectionHeight-xl;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    height: $primarySectionHeight-lg;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    height: $primarySectionHeight-md;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    height: $primarySectionHeight-sm;
+  }
+
+  @media screen and (max-width: $screen-xsm) {
+    height: $primarySectionHeight-xsm;
+  }
+
+  @media screen and (max-width: $screen-xxsm) {
+    height: $primarySectionHeight-xxsm;
   }
 }
 
-@media (max-width: $screen-lg) and (min-width: $screen-sm) {
-  .primarySectionWrapper {
-    background-image: url("../../public/images/bg-screen-lg.png");
-    height: 1150px;
-  }
-}
+// @media (max-width: $screen-xl) and (min-width: $screen-lg) {
+//   .primarySection {
+//     height: 1010px;
+//   }
+// }
 
-@media (max-width: $screen-sm) and (min-width: $screen-xsm) {
-  .primarySectionWrapper {
-    background-image: url("../../public/images/bg-primary-sm.png");
-    background-position: 0 60px;
-    background-repeat: no-repeat;
-    height: 871px;
-  }
-}
+// @media (max-width: $screen-lg) and (min-width: $screen-sm) {
+//   .primarySection {
+//     background-image: url("../../public/images/bg-screen-lg.png");
+//     height: 1150px;
+//   }
+// }
 
-@media (max-width: $screen-xsm) and (min-width: $screen-xxsm) {
-  .primarySectionWrapper {
-    background-image: url("../../public/images/bg-primary-xsm.png");
-    background-position: 0 64px;
-    background-repeat: no-repeat;
-    height: 871px;
-  }
-}
+// @media (max-width: $screen-sm) and (min-width: $screen-xsm) {
+//   .primarySection {
+//     background-image: url("../../public/images/bg-primary-sm.png");
+//     background-position: 0 60px;
+//     background-repeat: no-repeat;
+//     height: 946px;
+//   }
+// }
 
-@media (max-width: $screen-xxsm) {
-  .primarySectionWrapper {
-    background-image: url("../../public/images/bg-primary-xxsm.png");
-    background-position: 0 14px;
-    background-repeat: no-repeat;
-    height: 871px;
+// @media (max-width: $screen-xsm) and (min-width: $screen-xxsm) {
+//   .primarySection {
+//     background-image: url("../../public/images/bg-primary-xsm.png");
+//     background-position: 0 64px;
+//     background-repeat: no-repeat;
+//     height: 871px;
+//   }
+// }
+
+// @media (max-width: $screen-xxsm) {
+//   .primarySection {
+//     background-image: url("../../public/images/bg-primary-xxsm.png");
+//     background-position: 0 14px;
+//     background-repeat: no-repeat;
+//     height: 871px;
+//   }
+// }
+
+.primarySectionContainer {
+  box-sizing: border-box;
+  padding-top: $primarySectionContainerTopOffset-xxl;
+
+  @include container;
+
+  @media screen and (max-width: $screen-lg) {
+    @include container-lg;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    @include container-md;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    @include container-sm;
+  }
+
+  @media screen and (max-width: $screen-xsm) {
+    @include container-xsm;
+
+    padding-top: $primarySectionContainerTopOffset-xsm;
+  }
+
+  @media screen and (max-width: $screen-xxsm) {
+    @include container-xxsm;
+
+    padding-top: $primarySectionContainerTopOffset-xxsm;
   }
 }
