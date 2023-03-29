@@ -1,7 +1,7 @@
 import styles from "./CyberButton.module.scss";
 import classNames from "classnames";
 
-const CyberButton = ({children, color, btnClassName, ...props}) => {
+const CyberButton = ({ children, color, btnClassName, ...props }) => {
     return (
         <button className={classNames(styles.cyberBtn, btnClassName, {
             [styles.primary]: color === 'primary',

@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 export const useScrollAnimation = () => {
   const wrap = useRef();
@@ -6,27 +8,50 @@ export const useScrollAnimation = () => {
   const scroll = useRef();
   const spaces = useRef();
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
-    // let difference = computers.current.offsetWidth - spaces.current.offsetWidth;
+    const pin = gsap.fromTo(scroll.current, {
+      translateX: 0,
+    }, {
+      translateX: -scroll.current.offsetWidth,
+      ease: 'none',
+      duration: 1,
+      scrollTrigger: {
+        trigger: scroll.current,
+        start: 'top-=24px top',
+        end: 'bottom',
+        scrub: 0.6,
+        pin: true,
+      }
+    });
 
-    // function getTween(b, e, i) {
-    //   return b + (i / 99) * (e - b);
-    // }
+    return () => {
+      pin.kill();
+    };
+  }, []);
 
-    // let tick;
+  // useEffect(() => {
+  //   let difference = computers.current.offsetWidth - spaces.current.offsetWidth;
 
-    // window.addEventListener("scroll", () => {
-    //   tick = wrap.current.offsetTop;
+  //   function getTween(b, e, i) {
+  //     return b + (i / 99) * (e - b);
+  //   }
 
-    //   let currentPos = (tick * 99) / (scroll.current.offsetHeight - wrap.current.offsetHeight);
+  //   let tick;
 
-    //   computers.current.style.left = `-${getTween(
-    //     0,
-    //     difference,
-    //     currentPos
-    //   )}px`;
-    // });
-  }, [wrap, computers, scroll, spaces]);
+  //   window.addEventListener("scroll", () => {
+  //     tick = wrap.current.offsetTop;
+
+  //     let currentPos = (tick * 99) / (scroll.current.offsetHeight - wrap.current.offsetHeight);
+
+  //     computers.current.style.left = `-${getTween(
+  //       0,
+  //       difference,
+  //       currentPos
+  //     )}px`;
+  //   });
+  // }, [wrap, computers, scroll, spaces]);
 
   return {
     wrap,

@@ -35,10 +35,53 @@
 
   .footer {}
 
+  .booking {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $bookingFontSize-xxl;
+    line-height: 160%;
+    color: #FFFFFF;
+
+    &__btn {
+      max-width: 360px;
+      font-size: $bookingBtnFontSize-xxl;
+    }
+
+    &__options {
+      &_title {}
+    }
+
+    &__option {
+      display: grid;
+      grid-template-columns: 5% 95%;
+      gap: 25px;
+
+      &__logo {
+        min-width: 28px;
+        text-align: center;
+      }
+    }
+  }
+
   @media screen and (max-width: $screen-xxl) {
     .header {
       &__title {
         font-size: $sectionTitleFontSize-xxl;
+      }
+    }
+
+    .booking {
+      font-size: $bookingFontSize-xxl;
+
+      &__btn {
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-xxl;
       }
     }
   }
@@ -47,6 +90,15 @@
     .header {
       &__title {
         font-size: $sectionTitleFontSize-xl;
+      }
+    }
+
+    .booking {
+      font-size: $bookingFontSize-xl;
+
+      &__btn {
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-xl;
       }
     }
   }
@@ -65,6 +117,16 @@
     .main {
       padding: $mainPadding-lg;
     }
+
+    .booking {
+      font-size: $bookingFontSize-lg;
+
+      &__btn {
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-lg;
+        height: 110px;
+      }
+    }
   }
 
   @media screen and (max-width: $screen-md) {
@@ -80,6 +142,21 @@
 
     .main {
       padding: $mainPadding-md;
+    }
+
+    .booking {
+      flex-direction: column-reverse;
+      font-size: $bookingFontSize-md;
+
+      &__btn {
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-md;
+        margin-top: 30px;
+
+        &::before {
+          border-radius: 10px;
+        }
+      }
     }
   }
 
@@ -97,6 +174,15 @@
     .main {
       padding: $mainPadding-sm;
     }
+
+    .booking {
+      font-size: $bookingFontSize-sm;
+
+      &__btn {
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-sm;
+      }
+    }
   }
 
   @media screen and (max-width: $screen-xsm) {
@@ -113,6 +199,15 @@
     .main {
       padding: $mainPadding-xsm;
     }
+
+    .booking {
+      font-size: $bookingFontSize-xsm;
+
+      &__btn {
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-xsm;
+      }
+    }
   }
 
   @media screen and (max-width: $screen-xxsm) {
@@ -128,6 +223,15 @@
 
     .main {
       padding: $mainPadding-xxsm;
+    }
+
+    .booking {
+      font-size: $bookingFontSize-xxsm;
+
+      &__btn {
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-xxsm;
+      }
     }
   }
 }

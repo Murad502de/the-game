@@ -11,34 +11,9 @@ import counter from "../../store/index";
 import Image from "next/image";
 import React from "react";
 import { useEffect } from "react";
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 const SpacesAndPackages = React.forwardRef((props, ref) => {
   const { wrap, computers, scroll, spaces } = useScrollAnimation();
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    const pin = gsap.fromTo(scroll.current, {
-      translateX: 0,
-    }, {
-      translateX: -scroll.current.offsetWidth,
-      ease: 'none',
-      duration: 1,
-      scrollTrigger: {
-        trigger: scroll.current,
-        start: 'top-=24px top',
-        end: 'bottom',
-        scrub: 0.6,
-        pin: true,
-      }
-    });
-
-    return () => {
-      pin.kill();
-    };
-  }, []);
 
   return (
     <section ref={ref} className={`spaces-and-packages ${styles.SpacesAndPackages}`}>
@@ -53,7 +28,67 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
           <BootcampCard className="fact" />
           <VipCard className="fact" />
         </div>
-        <div className={styles.footer}>footer</div>
+        <div className={styles.footer}>
+          <div className={styles.booking}>
+            <CyberButton btnClassName={styles.booking__btn} color="primary-2">
+              Book Your Seat
+            </CyberButton>
+
+            <div className={styles.booking__options}>
+              <div className={styles.booking__options_title}>
+                Each option is equipped with the best peripherals:
+              </div>
+
+              <div className={styles.booking__option}>
+                <div className={styles.booking__option__logo}>
+                  <Image
+                    onLoad={() => counter.increment()}
+                    className={styles.booking__option__logo_img}
+                    src={keyboard}
+                    alt="keyboard"
+                    priority
+                  />
+                </div>
+
+                <div className={styles.booking__option__desc}>
+                  ROG Strix Scope RX TKL Wireless Deluxe
+                </div>
+              </div>
+
+              <div className={styles.booking__option}>
+                <div className={styles.booking__option__logo}>
+                  <Image
+                    onLoad={() => counter.increment()}
+                    className={styles.booking__option__logo_img}
+                    src={mouse}
+                    alt="mouse"
+                    priority
+                  />
+                </div>
+
+                <div className={styles.booking__option__desc}>
+                  ROG Keris Wireless AimPoint
+                </div>
+              </div>
+
+              <div className={styles.booking__option}>
+                <div className={styles.booking__option__logo}>
+                  <Image
+                    onLoad={() => counter.increment()}
+                    className={styles.booking__option__logo_img}
+                    src={micro}
+                    alt="micro"
+                    priority
+                  />
+                </div>
+
+                <div className={styles.booking__option__desc}>
+                  ROG Fusion II 300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
