@@ -1,9 +1,11 @@
+@import "../../styles/vars";
+@import "./styles/vars";
 @import "../../styles/mixins";
+@import "./styles/mixins";
 
-.mapsWrapper {
+.googleMaps {
     width: 100%;
     height: 100vh;
-    padding-top: 150px;
 
     & img[alt="Google"] {
         display: none;
@@ -12,35 +14,189 @@
     & div[class="gmnoprint"] {
         display: none;
     }
+
     & div[class="gmnoprint gm-style-cc"] {
         display: none;
     }
-}
 
-.wrapper {
-    font-family: "Montserrat";
-    font-size: 60px;
-    line-height: 90px;
-    letter-spacing: 30%;
-    color: #fff;
-    position: relative;
-    z-index: 100;
-    left: 123px;
-    max-width: 400px;
+    &__wrapper {
+        @include wrapper-padding-xxl;
 
-    .text1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        font-family: "Montserrat";
+        font-size: $titleFontSize-xxl;
+        line-height: $titleLineHeight-xxl;
+        color: #fff;
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        max-width: $containerMaxWidth-xxl;
+        margin: 0 auto;
+    }
+
+    &__title {
         font-weight: 700;
-        width: 380px;
+        letter-spacing: 0.3em;
     }
 
-    .text2 {
+    &__subTitle {
         font-weight: 400;
-        width: 380px;
-
-        margin-bottom: 35px;
     }
 
-    .btn {
-        width: 445px;
+    &__btn {
+        height: 100px;
+        width: $btnWidth-xxl;
+        font-size: $btnTitleFontSize-xxl;
+        margin-top: 34px;
+
+        &::before {
+            border-radius: 10px;
+        }
+    }
+
+    @media screen and (max-width: 1290px) {
+        &__wrapper {
+            @include wrapper-padding-xl;
+        }
+
+        &__container {
+            font-size: $titleFontSize-xl;
+            line-height: $titleLineHeight-xl;
+            max-width: $containerMaxWidth-xl;
+        }
+
+        &__btn {
+            width: $btnWidth-xl;
+            font-size: $btnTitleFontSize-xl;
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: $screen-xl) {
+        &__wrapper {
+            @include wrapper-padding-xl;
+        }
+
+        &__container {
+            font-size: $titleFontSize-xl;
+            line-height: $titleLineHeight-xl;
+            max-width: $containerMaxWidth-xl;
+        }
+
+        &__btn {
+            width: $btnWidth-xl;
+            font-size: $btnTitleFontSize-xl;
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: $screen-lg) {
+        &__wrapper {
+            @include wrapper-padding-lg;
+        }
+
+        &__container {
+            font-size: $titleFontSize-lg;
+            line-height: $titleLineHeight-lg;
+            max-width: $containerMaxWidth-lg;
+        }
+
+        &__btn {
+            width: $btnWidth-lg;
+            font-size: $btnTitleFontSize-lg;
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: $screen-md) {
+        &__wrapper {
+            @include wrapper-padding-md;
+        }
+
+        &__container {
+            font-size: $titleFontSize-md;
+            line-height: $titleLineHeight-md;
+            max-width: $containerMaxWidth-md;
+        }
+
+        &__btn {
+            width: $btnWidth-md;
+            font-size: $btnTitleFontSize-md;
+            margin-top: 12px;
+        }
+    }
+
+    @media screen and (max-width: $screen-sm) {
+        &__wrapper {
+            @include wrapper-padding-sm;
+        }
+
+        &__container {
+            font-size: $titleFontSize-sm;
+            line-height: $titleLineHeight-sm;
+            max-width: $containerMaxWidth-sm;
+        }
+
+        &__btn {
+            width: $btnWidth-sm;
+            font-size: $btnTitleFontSize-sm;
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: $screen-xsm) {
+        &__wrapper {
+            @include wrapper-padding-xsm;
+        }
+
+        &__container {
+            font-size: $titleFontSize-xsm;
+            line-height: $titleLineHeight-xsm;
+            max-width: $containerMaxWidth-xsm;
+        }
+
+        &__btn {
+            width: $btnWidth-xsm;
+            font-size: $btnTitleFontSize-xsm;
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: $screen-xxsm) {
+        &__wrapper {
+            @include wrapper-padding-xxsm;
+        }
+
+        &__container,
+        &__main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        &__container {
+            font-size: $titleFontSize-xxsm;
+            line-height: $titleLineHeight-xxsm;
+            max-width: $containerMaxWidth-xxsm;
+            justify-content: space-between;
+        }
+
+        &__btn {
+            width: $btnWidth-xxsm;
+            font-size: $btnTitleFontSize-xxsm;
+            margin-top: 0;
+        }
     }
 }

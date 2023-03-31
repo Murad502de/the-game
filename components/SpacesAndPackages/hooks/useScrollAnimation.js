@@ -14,7 +14,7 @@ export const useScrollAnimation = () => {
     const pin = gsap.fromTo(scroll.current, {
       translateX: 0,
     }, {
-      translateX: -scroll.current.offsetWidth,
+      translateX: -scroll.current.offsetWidth + window.innerWidth - window.innerWidth / 4,
       ease: 'none',
       duration: 1,
       scrollTrigger: {

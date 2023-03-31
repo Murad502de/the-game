@@ -45,18 +45,21 @@ const GoogleMaps = () => {
     <GoogleMap
       zoom={12}
       center={center}
-      mapContainerClassName={styles.mapsWrapper}
+      mapContainerClassName={styles.googleMaps}
       options={defaultOptions}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
       <Marker position={center} icon="https://drive.google.com/uc?export=view&id=1PFlqvWjJdL57NyBN9ueu0pS7aUlJzZ20" />
 
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          <div className={styles.text1}>DUBAI</div>
-          <div className={styles.text2}>JBR, Bahar 2</div>
-          <CyberButton btnClassName={styles.btn} color="simple">
+      <div className={styles.googleMaps__wrapper}>
+        <div className={styles.googleMaps__container}>
+          <div className={styles.googleMaps__main}>
+            <div className={styles.googleMaps__title}>DUBAI</div>
+            <div className={styles.googleMaps__subTitle}>JBR, Bahar 2</div>
+          </div>
+
+          <CyberButton btnClassName={styles.googleMaps__btn} color="simple">
             Open in Google Maps
           </CyberButton>
         </div>
