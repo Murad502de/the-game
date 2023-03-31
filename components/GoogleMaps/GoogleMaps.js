@@ -24,7 +24,7 @@ const center = { lat: 25.077097631716903, lng: 55.13445435061175 };
 
 const GoogleMaps = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBGqJqbeNEbz-E95Y3fhSzeACToSWiZ9B8",
+    googleMapsApiKey: "AIzaSyAR7FCdbNgCKIoTKl1ZFzf4WYKpdfp5aFE",
   });
 
   const mapRef = useRef(null);
@@ -50,7 +50,7 @@ const GoogleMaps = () => {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      <Marker position={center} icon={customMarker} />
+      <Marker position={center} icon="https://drive.google.com/uc?export=view&id=1PFlqvWjJdL57NyBN9ueu0pS7aUlJzZ20" />
 
       <div className={styles.wrapper}>
         <div className={styles.container}>

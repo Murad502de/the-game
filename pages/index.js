@@ -42,7 +42,7 @@ const Index = () => {
       <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} />
       <SpacesAndPackages ref={sapSectionRef} />
       <StarsSection ref={starSectionRef} />
-      {/* <GoogleMaps /> */}
+      <GoogleMaps />
       <ContactSection
         lounge={loungeSectionRef}
         cinema={cinemaSectionRef}

@@ -38,12 +38,12 @@ export const run = () => {
       height: window.innerHeight,
     };
     (height = window.innerHeight),
-      (width = window.innerHeight),
-      (camera.aspect = width / height),
-      camera.updateProjectionMatrix(),
-      camera.updateMatrixWorld(),
-      camera.updateWorldMatrix(),
-      renderer.setSize(Math.min(window.innerWidth / 0.7, width), Math.min(window.innerWidth / 0.7, height));
+    (width = window.innerHeight),
+    (camera.aspect = width / height),
+    camera.updateProjectionMatrix(),
+    camera.updateMatrixWorld(),
+    camera.updateWorldMatrix(),
+    renderer.setSize(Math.min(window.innerWidth / 0.7, width), Math.min(window.innerWidth / 0.7, height));
   }
 
   function init() {
@@ -99,7 +99,7 @@ export const run = () => {
 
     renderer.setSize(width, height);
     window.addEventListener("resize", () => {
-      resize();
+        resize();
     });
     resize()
   }
@@ -118,19 +118,19 @@ export const run = () => {
     (canvas.style.zIndex = 5),
       (uniforms.uTime.value = 0.5),
       gsap &&
-      gsap.to(camera.position, {
-        duration: 0.4,
-        delay: 0.1,
-        z: 1.15,
-        ease: "power3.inOut",
-        onComplete: () => {
-          document.querySelector("#first").style.display = "none";
-          let second = document.querySelector("#second");
-          document.body.classList.remove("preview");
-          second.style.transform = "scale(1)";
-          second.scrollIntoView({ behavior: "smooth", block: "center" });
-        },
-      });
+        gsap.to(camera.position, {
+          duration: 0.4,
+          delay: 0.1,
+          z: 1.15,
+          ease: "power3.inOut",
+          onComplete: () => {
+            document.querySelector("#first").style.display = "none";
+            let second = document.querySelector("#second");
+            document.body.classList.remove("preview");
+            second.style.transform = "scale(1)";
+            second.scrollIntoView({ behavior: "smooth", block: "center" });
+          },
+        });
   }
 
   function stopableEventListener(e, t, r) {
@@ -147,8 +147,8 @@ export const run = () => {
   }
 
   const wheel = stopableEventListener(document, "wheel", () => {
-    sphereZoom(), wheel();
-  }),
+      sphereZoom(), wheel();
+    }),
     touch = stopableEventListener(document, "touchend", (e) => {
       let t;
       "scroll-to-book" === e.target.id && (t = "#about"),

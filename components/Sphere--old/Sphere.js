@@ -82,7 +82,7 @@ const Sphere = () => {
             <canvas id="canvas" className={styles.cnv}></canvas>
           </div>
 
-          {/* <footer className={styles.sphereFooter}>
+          <footer className={styles.sphereFooter}>
             <Image
               onLoad={() => counter.increment()}
               src={mouse}
@@ -90,18 +90,18 @@ const Sphere = () => {
               priority
             />
             <div className={styles.sphereFooter__text}>Scroll to Start</div>
-          </footer> */}
+          </footer>
         </div>
-        {/* <div className={styles.sandElement}>
-          <div className={styles.textWrapper}>
-            <div className={styles.textWrapper__text}>
-              Let’s find another <br /> place
+        <div className={styles.sandElement}>
+            <div className={styles.textWrapper}>
+              <div className={styles.textWrapper__text}>
+                Let’s find another <br /> place
+              </div>
+              <div className={styles.textWrapper__text}>
+                Place for <br /> relaxed pastime
+              </div>
             </div>
-            <div className={styles.textWrapper__text}>
-              Place for <br /> relaxed pastime
-            </div>
-          </div>
-        </div> */}
+        </div>
         {/* <Image
           onLoad={() => counter.increment()}
           className={styles.sandElement}
