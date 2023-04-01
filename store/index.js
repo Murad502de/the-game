@@ -10,6 +10,10 @@ class Counter {
     makeAutoObservable(this);
   }
 
+  setIsLoading(value) {
+    this.isLoading = value;
+  }
+
   increment() {
     this.count = this.count + 1;
     this.percentage = (this.count / this.maxCount) * 100;

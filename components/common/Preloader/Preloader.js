@@ -2,8 +2,16 @@ import styles from "./Preloader.module.scss";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
 import counter from "../../../store/index";
+import { useEffect } from "react";
+
 
 const Preloader = observer(() => {
+  useEffect(() => {
+    setTimeout(() => {
+      counter.setIsLoading(false);
+    }, 10000);
+  });
+
   return (
     <div className={styles.wrapper}>
       <div className={classNames(styles.loader)}>
