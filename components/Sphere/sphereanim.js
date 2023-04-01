@@ -115,18 +115,24 @@ export const run = () => {
   loop();
 
   function sphereZoom(e) {
+    document.querySelector('#sphere_wrapper').style.zIndex = 2;
+
     (canvas.style.zIndex = 5),
       (uniforms.uTime.value = 0.5),
       gsap &&
-      gsap.to(camera.position, {
+      gsap.to('#canvas', {
         duration: 0.4,
         delay: 0.1,
-        z: 1.15,
+        // z: 1.15,
+        scale: '5',
         ease: "power3.inOut",
         onComplete: () => {
-          document.querySelector("#first").style.display = "none";
+          document.querySelector("#first").style.display = "none"; //TODO
+
           let second = document.querySelector("#second");
-          document.body.classList.remove("preview");
+
+          document.body.classList.remove("preview"); //TODO
+
           second.style.transform = "scale(1)";
           second.scrollIntoView({ behavior: "smooth", block: "center" });
         },
@@ -148,18 +154,20 @@ export const run = () => {
 
   const wheel = stopableEventListener(document, "wheel", () => {
     sphereZoom(), wheel();
-  }),
-    touch = stopableEventListener(document, "touchend", (e) => {
-      let t;
-      "scroll-to-book" === e.target.id && (t = "#about"),
-        sphereZoom(t),
-        touch();
-    }),
-    click = stopableEventListener(
-      document.querySelector("#scroll-to-book"),
-      "click",
-      () => {
-        sphereZoom("#about"), click();
-      }
-    );
+  });
+
+  const touch = stopableEventListener(document, "touchend", (e) => {
+    let t;
+    "scroll-to-book" === e.target.id && (t = "#about"),
+      sphereZoom(t),
+      touch();
+  });
+
+  // const click = stopableEventListener(
+  //   document.querySelector("#scroll-to-book"),
+  //   "click",
+  //   () => {
+  //     sphereZoom("#about"), click();
+  //   }
+  // );
 };
