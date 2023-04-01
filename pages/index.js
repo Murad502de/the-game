@@ -29,7 +29,7 @@ const Index = () => {
 
   return (
     <div>
-      {/* {counter.isLoading && <Preloader />} */}
+      {counter.isLoading && <Preloader />}
       {/* <Sphere /> */}
       <PrimarySection
         gamingSectionRef={gamingSectionRef}

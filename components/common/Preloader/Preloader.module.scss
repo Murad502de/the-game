@@ -8,6 +8,12 @@
   right: 0;
   background-color: #000;
   z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .preloaderWrapper {
@@ -19,37 +25,39 @@
 }
 
 .loader .loaderInner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // width: 100px;
+  // height: 100px;
+  // transform: translate(-50%, -50%);
+
+  box-sizing: border-box;
+  width: 92px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.loader span {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  border-radius: 50%;
+.loader svg {
   animation: loading 2s ease infinite;
-  border: 5px solid $preloaderBorder-color;
   background: transparent;
 
   &:nth-child(2) {
-    transform: translate(80px, 0);
     transition-delay: 0.5s;
     animation: loading2 2s ease infinite;
   }
 
   &:nth-child(3) {
-    transform: translate(80px, 80px);
     transition-delay: 2s;
     animation: loading3 2s ease infinite;
   }
 
   &:nth-child(4) {
-    transform: translate(0px, 80px);
     transition-delay: 4s;
     animation: loading4 2s ease infinite;
   }
@@ -60,10 +68,12 @@
   width: 120px;
   height: 5px;
   border-radius: 50px;
-  position: absolute;
-  top: calc(50% + 120px);
-  left: calc(50% + 10px);
-  transform: translateX(-50%);
+  position: relative;
+  margin-top: 60px;
+
+  // top: calc(50% + 120px);
+  // left: calc(50% + 10px);
+  // transform: translateX(-50%);
 }
 
 .progressLine {
@@ -75,78 +85,82 @@
 }
 
 @keyframes loading4 {
+
   0%,
   100% {
-    transform: translate(0px, 80px);
+    transform: translate(0, 0);
   }
 
   25% {
-    transform: translate(0px, 0px);
+    transform: translate(-56px, 0);
   }
 
   50% {
-    transform: translate(80px, 0px);
+    transform: translate(-56px, -56px);
   }
 
   75% {
-    transform: translate(80px, 80px);
+    transform: translate(0, -56px);
   }
 }
 
 @keyframes loading3 {
+
   0%,
   100% {
-    transform: translate(80px, 80px);
+    transform: translate(0, 0);
   }
 
   25% {
-    transform: translate(0px, 80px);
+    transform: translate(0, -56px);
   }
 
   50% {
-    transform: translate(0px, 0px);
+    transform: translate(56px, -56px);
   }
 
   75% {
-    transform: translate(80px, 0px);
+    transform: translate(56px, 0);
   }
 }
 
 @keyframes loading2 {
+
   0%,
   100% {
-    transform: translate(80px, 0);
+    transform: translate(0, 0);
   }
 
   25% {
-    transform: translate(80px, 80px);
+    transform: translate(0, 56px);
   }
 
   50% {
-    transform: translate(0px, 80px);
+    transform: translate(-56px, 56px);
   }
 
   75% {
-    transform: translate(0px, 0px);
+    transform: translate(-56px, 0);
   }
 }
 
 @keyframes loading {
+
   0%,
   100% {
     transform: translate(0);
   }
 
   25% {
-    transform: translate(80px);
+    transform: translate(56px);
   }
 
   50% {
-    transform: translate(80px, 80px);
+    transform: translate(56px, 56px);
   }
 
   75% {
-    transform: translate(0, 80px);
+    transform: translate(0, 56px);
   }
 }
 
