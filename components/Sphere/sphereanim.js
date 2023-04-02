@@ -115,7 +115,7 @@ export const run = () => {
   loop();
 
   function sphereZoom(e) {
-    document.querySelector('#sphere_wrapper').style.zIndex = 2;
+    document.querySelector('#sphere_wrapper').style.zIndex = 4;
 
     (canvas.style.zIndex = 5),
       (uniforms.uTime.value = 0.5),
@@ -156,7 +156,7 @@ export const run = () => {
     sphereZoom(), wheel();
   });
 
-  const touch = stopableEventListener(document, "touchend", (e) => {
+  const touch = stopableEventListener(document, "touchmove", (e) => {
     let t;
     "scroll-to-book" === e.target.id && (t = "#about"),
       sphereZoom(t),

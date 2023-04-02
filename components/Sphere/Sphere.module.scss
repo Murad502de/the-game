@@ -1,11 +1,6 @@
 @import "../../styles/mixins";
+@import "./styles/mixins";
 @import "../../styles/vars";
-
-.cnv {
-  outline: none;
-  position: relative;
-  z-index: -1;
-}
 
 .sphere {
   box-sizing: border-box;
@@ -14,9 +9,14 @@
   width: 100%;
   height: 100vh;
 
-  // background-image: url("../../public/images/firstPlan-bg.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  .cnv {
+    outline: none;
+    position: relative;
+    z-index: -1;
+
+    width: 1200px !important;
+    height: 1200px !important;
+  }
 
   .sphereWrapper {
     position: relative;
@@ -25,7 +25,97 @@
     z-index: 1;
   }
 
-  .sphereContainer {}
+  .sphereContainer {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+  }
+
+  .sphereTopbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    max-width: 1860px;
+    margin: 0 auto;
+
+    &Logo {
+      flex: 1;
+    }
+
+    .sphereTopbarTitle {
+      flex: 30%;
+      cursor: pointer;
+
+      &First {
+        &Mobile {
+          display: none;
+        }
+      }
+
+      &Second {
+        text-align: right;
+      }
+    }
+  }
+
+  .sphereMain {
+    @include container-padding--xxl;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .sphereScroll {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .sphereInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+
+    max-width: 1860px;
+  }
+
+  .sphereTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.35);
+
+    font-size: 120px;
+    line-height: 120%;
+  }
 
   .sphereCanvasContainer {
     box-sizing: border-box;
@@ -60,5 +150,290 @@
     z-index: 1;
     object-fit: cover;
     width: 100%;
+  }
+
+  @media screen and (min-width: $screen-xxsm) {
+    .cnv {
+      width: 500px !important;
+      height: 500px !important;
+    }
+
+    .sphereContainer {
+      padding: 28px 22px 0;
+    }
+
+    .sphereTitle {
+      font-size: 25px;
+      line-height: 120%;
+    }
+
+    .sphereScroll {
+      font-size: 18px;
+    }
+
+    .sphereScroll {
+      bottom: 32px;
+    }
+
+    .sphereTopbarTitle {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #574137;
+
+      &Second {
+        position: relative;
+
+        &IconMenu {
+          width: 11px;
+          height: 5px;
+          margin-bottom: 4px;
+          margin-left: 10px;
+
+          &Fill {
+            fill: #574137;
+          }
+        }
+      }
+
+      &Second {
+        &IconMenu {
+          width: 11px;
+          height: 5px;
+        }
+      }
+    }
+
+    .sphereTopbarLogo {
+      width: 118px;
+      height: 94px;
+    }
+  }
+
+  @media screen and (min-width: $screen-xsm) {
+    .cnv {
+      width: 700px !important;
+      height: 700px !important;
+    }
+
+    .sphereContainer {
+      // padding: 32px 22px 0;
+    }
+
+    .sphereTitle {
+      font-size: 40px;
+      line-height: 120%;
+    }
+
+    .sphereScroll {
+      bottom: 49px;
+    }
+
+    .sphereTopbarLogo {
+      width: 160px;
+      height: 128px;
+    }
+
+    .sphereTopbarTitle {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    // .cnv {
+    //   width: 900px !important;
+    //   height: 900px !important;
+    // }
+
+    .sphereTitle {
+      font-size: 40px;
+      line-height: 120%;
+    }
+
+    .sphereScroll {
+      font-size: 22px;
+    }
+
+    .sphereTopbarTitle {
+      font-size: 22px;
+
+      &Second {
+        &IconMenu {
+          width: 14px;
+          height: 7px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+    .cnv {
+      width: 400px !important;
+      height: 400px !important;
+    }
+
+    .sphereContainer {
+      padding: 26px 26px 0;
+    }
+
+    .sphereTitle {
+      font-size: 40px;
+      line-height: 120%;
+    }
+
+    .sphereInfo__mobile {
+      display: none;
+    }
+
+    .sphereScroll {
+      font-size: 18px;
+    }
+
+    .sphereTopbarLogo {
+      width: 150px;
+      height: 120px;
+    }
+
+    .sphereTopbarTitle {
+      font-size: 18px;
+      color: #FFFFFF;
+
+      &Second {
+        &IconMenu {
+          width: 11px;
+          height: 5px;
+
+          &Fill {
+            fill: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    .cnv {
+      width: 600px !important;
+      height: 600px !important;
+    }
+
+    .sphereContainer {
+      padding: 26px 60px 0;
+    }
+
+    .sphereTitle {
+      font-size: 50px;
+      line-height: 120%;
+    }
+
+    .sphereTopbarLogo {
+      width: 1220px;
+      height: 98px;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    .cnv {
+      width: 700px !important;
+      height: 700px !important;
+    }
+
+    .sphereContainer {
+      padding: 40px 60px 0;
+    }
+
+    .sphereTitle {
+      font-size: 70px;
+      line-height: 120%;
+    }
+
+    .sphereScroll {
+      font-size: 25px;
+      bottom: 61px;
+    }
+
+    .sphereTopbarLogo {
+      width: 188px;
+      height: 150px;
+    }
+
+    .sphereTopbarTitle {
+      font-size: 25px;
+
+      &Second {
+        &IconMenu {
+          width: 21px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-xxl) {
+    .cnv {
+      width: 900px !important;
+      height: 900px !important;
+    }
+
+    .sphereTopbarLogo {
+      width: 222px;
+      height: 178px;
+    }
+  }
+
+  @media screen and (min-width: 1860px) {
+    .sphereTitle {
+      font-size: 120px;
+      line-height: 120%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .sphereInfo {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    .sphereMain {
+      padding: 21px;
+      display: block;
+    }
+
+    .sphereTitle {
+      width: 100%;
+    }
+
+    .sphereTitleTwo {
+      text-align: right;
+    }
+
+    .sphereInfo__mobile {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+      padding-bottom: 70px;
+    }
+
+    .sphereTopbarTitle {
+      &First {
+        display: none;
+
+        &Mobile {
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-xsm) {
+    .sphereInfo__mobile {
+      padding-bottom: 140px;
+    }
   }
 }
