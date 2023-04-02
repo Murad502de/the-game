@@ -150,6 +150,7 @@
     z-index: 1;
     object-fit: cover;
     width: 100%;
+    // height: 100%;
   }
 
   @media screen and (min-width: $screen-xxsm) {
@@ -270,8 +271,8 @@
 
   @media screen and (min-width: $screen-md) {
     .cnv {
-      width: 400px !important;
-      height: 400px !important;
+      width: 600px !important;
+      height: 600px !important;
     }
 
     .sphereContainer {
@@ -315,8 +316,8 @@
 
   @media screen and (min-width: $screen-lg) {
     .cnv {
-      width: 600px !important;
-      height: 600px !important;
+      width: 700px !important;
+      height: 700px !important;
     }
 
     .sphereContainer {
@@ -336,8 +337,8 @@
 
   @media screen and (min-width: $screen-xl) {
     .cnv {
-      width: 600px !important;
-      height: 600px !important;
+      width: 800px !important;
+      height: 800px !important;
     }
 
     .sphereContainer {
@@ -354,10 +355,10 @@
       bottom: 61px;
     }
 
-    .sphereTopbarLogo {
-      width: 188px;
-      height: 150px;
-    }
+    // .sphereTopbarLogo {
+    //   width: 188px;
+    //   height: 150px;
+    // }
 
     .sphereTopbarTitle {
       font-size: 25px;
@@ -373,14 +374,14 @@
 
   @media screen and (min-width: $screen-xxl) {
     .cnv {
-      width: 550px !important;
-      height: 550px !important;
+      width: 900px !important;
+      height: 900px !important;
     }
 
-    .sphereTopbarLogo {
-      width: 222px;
-      height: 178px;
-    }
+    // .sphereTopbarLogo {
+    //   width: 222px;
+    //   height: 178px;
+    // }
   }
 
   @media screen and (min-width: 1860px) {

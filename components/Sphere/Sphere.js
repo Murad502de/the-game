@@ -57,8 +57,8 @@ const Sphere = () => {
             priority
           />
 
-          <div ref={menuPopupRef} className={classNames(styles.sphereTopbarTitle, styles.sphereTopbarTitleSecond, styles.navigationLink, styles.navigationMenu, styles.linkMenuOrder)}>
-            <div onClick={toggleMenuVisibility} className={classNames(styles.navigationLinkWithIcon, styles.navigationLinkWithIconBurger)}>
+          <div className={classNames(styles.sphereTopbarTitle, styles.navigationLink, styles.navigationMenu, styles.linkMenuOrder)}>
+            <div ref={menuPopupRef} onClick={toggleMenuVisibility} className={classNames(styles.sphereTopbarTitleSecond, styles.navigationLinkWithIcon, styles.navigationLinkWithIconBurger)}>
               <span>Menu</span>
 
               <svg className={classNames(styles.sphereTopbarTitleSecondIconMenu)} width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,8 +67,8 @@ const Sphere = () => {
                 <path d="M0 0H21V2.72727H0V0Z" fill="white" />
                 <path className={styles.sphereTopbarTitleSecondIconMenuFill} d="M0 0H21V2.72727H0V0Z" fill="white" />
               </svg>
-
             </div>
+
             <MenuPopup isVisible={isVisible} />
           </div>
         </div>
