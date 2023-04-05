@@ -10,7 +10,15 @@ import gameZone_xxsm from "../../public/images/gameXxsm.png";
 import counter from "../../store/index";
 import Image from "next/image";
 
-const GamingSection = React.forwardRef((props, ref) => {
+const GamingSection = React.forwardRef((props, ref, sap) => {
+  const scrollToSap = () => {
+    window.scrollTo({
+      top: props.sap.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div ref={ref} className={styles.gamingWrapper}>
       <div className={styles.container}>
@@ -53,8 +61,8 @@ const GamingSection = React.forwardRef((props, ref) => {
           priority
         />{" "}
         {/* для расширения 576 */}
-        <GamingContent />
-        <GamingContentMd />
+        <GamingContent scrollToSap={scrollToSap} />
+        <GamingContentMd scrollToSap={scrollToSap} />
       </div>
     </div>
   );

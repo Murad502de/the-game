@@ -1,7 +1,7 @@
 import CyberButton from "../../../../UI/CyberButton/CyberButton";
 import styles from "./GamingContentMd.module.scss";
 
-const GamingContentMd = () => {
+const GamingContentMd = ({scrollToSap}) => {
     return (
         <div className={styles.gamingInner}>
             <div className={styles.gamingInner__title}>Gaming</div>
@@ -14,7 +14,7 @@ const GamingContentMd = () => {
                 </div>
                 <div className={styles.rightColumn}>
                     <CyberButton color="primary" btnClassName={styles.rightColumn__btn}>Book Your Seat</CyberButton>
-                    <CyberButton color="primary" btnClassName={styles.rightColumn__btn}>Computers Specifications</CyberButton>
+                    <CyberButton onClick={scrollToSap} color="primary" btnClassName={styles.rightColumn__btn}>Computers Specifications</CyberButton>
                 </div>
             </div>
         </div>

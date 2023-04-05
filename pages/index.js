@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import GamingSwiper from "../components/GamingSwiper/GamingSwiper";
 import GamingSection from "../components/GamingSection/GamingSection";
 import PrimarySection from "../components/PrimarySection/PrimarySection";
@@ -23,6 +23,8 @@ const Index = () => {
     sapSectionRef,
   } = useHome();
 
+  const [viewResetState, setViewResetState] = useState(false);
+
   useEffect(() => {
     document.body.classList.add("preview");
   }, []);
@@ -30,13 +32,15 @@ const Index = () => {
   return (
     <div>
       {counter.isLoading && <Preloader />}
-      <Sphere />
+      <Sphere reload={viewResetState} afterRreload={setViewResetState} />
       <PrimarySection
         gamingSectionRef={gamingSectionRef}
         loungeSectionRef={loungeSectionRef}
         cinemaSectionRef={cinemaSectionRef}
+        onUpClick={() => setViewResetState(true)}
+        onLogoClick={() => setViewResetState(true)}
       />
-      <GamingSection ref={gamingSectionRef} />
+      <GamingSection ref={gamingSectionRef} sap={sapSectionRef} />
       <GamingSwiper />
       <LoungeSection ref={loungeSectionRef} />
       <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} />
@@ -44,6 +48,7 @@ const Index = () => {
       <StarsSection ref={starSectionRef} />
       <GoogleMaps />
       <ContactSection
+        gaming={gamingSectionRef}
         lounge={loungeSectionRef}
         cinema={cinemaSectionRef}
         sap={sapSectionRef}

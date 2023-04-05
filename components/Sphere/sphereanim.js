@@ -113,6 +113,7 @@ export const run = () => {
 
   init();
   loop();
+  sphereZoomReset();
 
   function sphereZoom(e) {
     document.querySelector('#sphere_wrapper').style.zIndex = 4;
@@ -123,18 +124,54 @@ export const run = () => {
       gsap.to('#canvas', {
         duration: 0.4,
         delay: 0.1,
-        // z: 1.15,
         scale: '5',
         ease: "power3.inOut",
         onComplete: () => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            // behavior: "smooth",
+          });
+          
           document.querySelector("#first").style.display = "none"; //TODO
 
           let second = document.querySelector("#second");
 
-          document.body.classList.remove("preview"); //TODO
-
+          // document.body.classList.remove("preview"); //TODO
           second.style.transform = "scale(1)";
+
           second.scrollIntoView({ behavior: "smooth", block: "center" });
+        },
+      });
+  }
+
+  function sphereZoomReset(e) {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      // behavior: "smooth",
+    });
+
+    (canvas.style.zIndex = 5),
+      (uniforms.uTime.value = 0.5),
+      gsap &&
+      gsap.to('#canvas', {
+        duration: 0,
+        delay: 0.1,
+        scale: '1',
+        ease: "power3.inOut",
+        onComplete: () => {
+          // document.querySelector("#first").style.display = "none"; //TODO
+
+          // let second = document.querySelector("#second");
+
+          // document.body.classList.remove("preview"); //TODO
+          // second.style.transform = "scale(1)"; //TODO
+
+          // second.scrollIntoView({ behavior: "smooth", block: "center" });
+
+          document.querySelector('#sphere_wrapper').style.zIndex = 1;
+          document.querySelector("#first").style.display = "block";
         },
       });
   }

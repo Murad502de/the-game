@@ -11,8 +11,11 @@ import Image from "next/image";
 import counter from "../../../store/index";
 
 const MenuPopup = ({ isVisible }) => {
+  const mapsUrl = 'https://www.google.com/maps/place/The+Game+-+(Premium+Lounge)/@25.0771504,55.1316332,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f159f14ace101:0x649faf546b5a79cc!8m2!3d25.0771456!4d55.1338219?coh=164777&entry=tt';
+
   return (
     <div
+      id="menu"
       className={classNames(styles.menuPopupWrapper, {
         [styles.toVisiblePopupWrapper]: isVisible,
       })}
@@ -62,7 +65,7 @@ const MenuPopup = ({ isVisible }) => {
             alt="maps"
             priority
           />
-          <div>Maps</div>
+          <div onClick={() => { console.log('vdfhjbsnkjbvj'); window.open(mapsUrl, '_blank').focus() }}>Maps</div>
         </div>
       </div>
 

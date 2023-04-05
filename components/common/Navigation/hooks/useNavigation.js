@@ -3,12 +3,18 @@ import { useClickOutside } from "../../../../hooks/useClickOutside";
 
 export const useNavigation = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const [isMenuVisibleMd, setIsMenuVisibleMd] = useState(false);
 
     const menuPopupRef = useClickOutside(() => {
         setIsMenuVisible(false);
-    })
-    
-    const toggleMenuVisibility = () =>  setIsMenuVisible(prev => !prev);
+    });
+
+    const menuPopupRefMd = useClickOutside(() => {
+        setIsMenuVisibleMd(false);
+    });
+
+    const toggleMenuVisibility = () => setIsMenuVisible(prev => !prev);
+    const toggleMenuVisibilityMd = () => setIsMenuVisibleMd(prev => !prev);
 
     const scrollToSection = (section) => {
         window.scrollTo({
@@ -20,8 +26,11 @@ export const useNavigation = () => {
 
     return {
         isMenuVisible,
+        isMenuVisibleMd,
         toggleMenuVisibility,
+        toggleMenuVisibilityMd,
         menuPopupRef,
-        scrollToSection
+        menuPopupRefMd,
+        scrollToSection,
     }
 }

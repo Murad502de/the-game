@@ -14,11 +14,11 @@ import classNames from "classnames";
 import Background from "../../public/images/firstPlan-bg.png";
 import Sand from "../../public/images/first_plan_element.png";
 
-const Sphere = () => {
+const Sphere = ({ reload, afterRreload }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  const menuPopupRef = useClickOutside(() => { //TODO
+  const menuPopupRef = useClickOutside(() => {
     setIsVisible(false);
   });
 
@@ -34,6 +34,19 @@ const Sphere = () => {
 
     run();
   }, [loaded]);
+
+  useEffect(() => {
+    // window.scrollTo({
+    //   top: 0,
+    //   left: 0,
+    // });
+
+    if (reload) {
+      run();
+
+      afterRreload(false);
+    }
+  }, [reload]);
 
   const toggleMenuVisibility = () => setIsVisible((prev) => !prev); //TODO
 
@@ -57,8 +70,8 @@ const Sphere = () => {
             priority
           />
 
-          <div className={classNames(styles.sphereTopbarTitle, styles.navigationLink, styles.navigationMenu, styles.linkMenuOrder)}>
-            <div ref={menuPopupRef} onClick={toggleMenuVisibility} className={classNames(styles.sphereTopbarTitleSecond, styles.navigationLinkWithIcon, styles.navigationLinkWithIconBurger)}>
+          <div ref={menuPopupRef} className={classNames(styles.sphereTopbarTitle, styles.navigationLink, styles.navigationMenu, styles.linkMenuOrder)}>
+            <div onClick={toggleMenuVisibility} className={classNames(styles.sphereTopbarTitleSecond, styles.navigationLinkWithIcon, styles.navigationLinkWithIconBurger)}>
               <span>Menu</span>
 
               <svg className={classNames(styles.sphereTopbarTitleSecondIconMenu)} width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">

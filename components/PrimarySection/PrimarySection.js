@@ -15,6 +15,8 @@ const PrimarySection = ({
   gamingSectionRef,
   loungeSectionRef,
   cinemaSectionRef,
+  onUpClick,
+  onLogoClick,
 }) => {
   return (
     <section id="second" className={styles.primarySection}>
@@ -23,6 +25,8 @@ const PrimarySection = ({
           gamingSectionRef={gamingSectionRef}
           loungeSectionRef={loungeSectionRef}
           cinemaSectionRef={cinemaSectionRef}
+          onUpClick={() => { if (onUpClick) onUpClick(); }}
+          onLogoClick={() => { if (onUpClick) onLogoClick(); }}
         />
       </div>
 

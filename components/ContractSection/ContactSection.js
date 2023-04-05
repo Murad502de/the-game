@@ -9,10 +9,10 @@ import FooterXxsm from "../common/Footer/Footer-xxsm";
 import counter from "../../store/index";
 import Image from "next/image";
 
-const ContactSection = ({ lounge, cinema, sap }) => {
+const ContactSection = ({ gaming, lounge, cinema, sap }) => {
   const scrollToTop = () =>
     window.scrollTo({
-      top: 0,
+      top: gaming.current.offsetTop,
       left: 0,
       behavior: "smooth",
     });
