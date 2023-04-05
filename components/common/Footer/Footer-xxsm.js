@@ -10,6 +10,8 @@ const FooterXxsm = ({
   scrollToLounge,
   scrollToCinema,
   scrollToSap,
+  openInMaps,
+  openTgWithAcorn,
 }) => {
   return (
     <footer className={styles.xxsmFooter}>
@@ -28,7 +30,7 @@ const FooterXxsm = ({
             alt="maps"
             priority
           />
-          <div className={styles.xxsmMaps__text}>Open in maps</div>
+          <div className={styles.xxsmMaps__text} onClick={() => openInMaps()}>Open in maps</div>
         </div>
         <div className={styles.footerXxsmData}>
           <div className={styles.leftColumn}>
@@ -57,7 +59,7 @@ const FooterXxsm = ({
               <div className={styles.rightColumnInst__text}>Instagram</div>
             </div>
             <div className={styles.xxsmDesigned}>
-              Website design and development by <span>Acorn</span>
+              Website design and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
             </div>
             <div className={styles.xxsmPolicy__leftText}>Privacy Policy</div>
             <div className={styles.xxsmPolicy__rightText}>© 2023</div>

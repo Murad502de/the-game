@@ -10,6 +10,8 @@ const Footer = ({
   scrollToLounge,
   scrollToCinema,
   scrollToSap,
+  openInMaps,
+  openTgWithAcorn,
 }) => {
   return (
     <footer className={styles.footer}>
@@ -69,11 +71,11 @@ const Footer = ({
                   alt="maps"
                   priority
                 />
-                <div className={styles.maps__text}>Open in maps</div>
+                <div className={styles.maps__text} onClick={() => openInMaps()}>Open in maps</div>
               </div>
             </div>
             <div className={styles.secondBottomColumn}>
-              Website design and development by <span>Acorn</span>
+              Website design and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
             </div>
             <div className={styles.privacy}>
               <div className={styles.privacy__text}>Privacy Policy</div>

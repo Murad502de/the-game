@@ -65,7 +65,7 @@ const MenuPopup = ({ isVisible }) => {
             alt="maps"
             priority
           />
-          <div onClick={() => { console.log('vdfhjbsnkjbvj'); window.open(mapsUrl, '_blank').focus() }}>Maps</div>
+          <div onClick={() => { window.open(mapsUrl, '_blank').focus() }}>Maps</div>
         </div>
       </div>
 

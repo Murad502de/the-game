@@ -5,10 +5,6 @@ export const useClickOutside = (handler) => {
 
     useEffect(() => {
         const clickOutsideHandler = (event) => {
-            console.debug('clickOutsideHandler/is_contains', domNode.current.contains(event.target)); //DELETE
-            console.debug('clickOutsideHandler/target', event.target); //DELETE
-            console.debug('clickOutsideHandler/domNode', domNode.current); //DELETE
-
             if (!domNode.current.contains(event.target)) {
                 handler();
             }

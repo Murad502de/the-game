@@ -39,6 +39,19 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
       behavior: "smooth",
     });
   };
+
+  const openInMaps = () => { //FIXME make one shared service
+    const mapsUrl = 'https://www.google.com/maps/place/The+Game+-+(Premium+Lounge)/@25.0771504,55.1316332,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f159f14ace101:0x649faf546b5a79cc!8m2!3d25.0771456!4d55.1338219?coh=164777&entry=tt';
+
+    window.open(mapsUrl, '_blank').focus();
+  };
+
+  const openTgWithAcorn = () => { //FIXME make one shared service
+    const url = "https://t.me/povetev";
+
+    window.open(url, '_blank').focus();
+  };
+
   return (
     <section className={styles.contactWrapper}>
       <Image
@@ -83,24 +96,32 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
           scrollToLounge={scrollToLounge}
           scrollToCinema={scrollToCinema}
           scrollToSap={scrollToSap}
+          openInMaps={openInMaps}
+          openTgWithAcorn={openTgWithAcorn}
         />
         <FooterMobile
           scrollToTop={scrollToTop}
           scrollToLounge={scrollToLounge}
           scrollToCinema={scrollToCinema}
           scrollToSap={scrollToSap}
+          openInMaps={openInMaps}
+          openTgWithAcorn={openTgWithAcorn}
         />
         <FooterSm
           scrollToTop={scrollToTop}
           scrollToLounge={scrollToLounge}
           scrollToCinema={scrollToCinema}
           scrollToSap={scrollToSap}
+          openInMaps={openInMaps}
+          openTgWithAcorn={openTgWithAcorn}
         />
         <FooterXxsm
           scrollToTop={scrollToTop}
           scrollToLounge={scrollToLounge}
           scrollToCinema={scrollToCinema}
           scrollToSap={scrollToSap}
+          openInMaps={openInMaps}
+          openTgWithAcorn={openTgWithAcorn}
         />
       </div>
     </section>

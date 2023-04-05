@@ -23,8 +23,10 @@ const defaultOptions = {
 const center = { lat: 25.077097631716903, lng: 55.13445435061175 };
 
 const GoogleMaps = () => {
+  const mapsUrl = 'https://www.google.com/maps/place/The+Game+-+(Premium+Lounge)/@25.0771504,55.1316332,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f159f14ace101:0x649faf546b5a79cc!8m2!3d25.0771456!4d55.1338219?coh=164777&entry=tt'; //FIXME set to .env
+
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAR7FCdbNgCKIoTKl1ZFzf4WYKpdfp5aFE",
+    googleMapsApiKey: "AIzaSyAR7FCdbNgCKIoTKl1ZFzf4WYKpdfp5aFE", //FIXME set to .env
   });
 
   const mapRef = useRef(null);
@@ -59,7 +61,7 @@ const GoogleMaps = () => {
             <div className={styles.googleMaps__subTitle}>JBR, Bahar 2</div>
           </div>
 
-          <CyberButton btnClassName={styles.googleMaps__btn} color="simple">
+          <CyberButton onClick={() => { window.open(mapsUrl, '_blank').focus() }} btnClassName={styles.googleMaps__btn} color="simple">
             Open in Google Maps
           </CyberButton>
         </div>

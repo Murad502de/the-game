@@ -10,6 +10,8 @@ const FooterSm = ({
   scrollToLounge,
   scrollToCinema,
   scrollToSap,
+  openInMaps,
+  openTgWithAcorn,
 }) => {
   return (
     <footer className={styles.smFooter}>
@@ -32,7 +34,7 @@ const FooterSm = ({
               alt="maps"
               priority
             />
-            <div className={styles.smMaps__text}>Open in maps</div>
+            <div className={styles.smMaps__text} onClick={() => openInMaps()}>Open in maps</div>
           </div>
         </div>
 
@@ -64,11 +66,11 @@ const FooterSm = ({
         </div>
 
         <div className={styles.smDesigned}>
-          Website design and development by <span>Acorn</span>
+          Website design and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
         </div>
 
         <div className={styles.smDesigned2}>
-          Website design <br /> and development by <span>Acorn</span>
+          Website design <br /> and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
         </div>
 
         <div className={styles.smPolicy}>

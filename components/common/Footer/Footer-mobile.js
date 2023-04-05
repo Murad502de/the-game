@@ -10,6 +10,8 @@ const FooterMobile = ({
   scrollToLounge,
   scrollToCinema,
   scrollToSap,
+  openInMaps,
+  openTgWithAcorn,
 }) => {
   return (
     <footer className={styles.footerMobile}>
@@ -45,7 +47,7 @@ const FooterMobile = ({
                 alt="maps"
                 priority
               />
-              <div className={styles.exploreLeftMaps__text}>Open in maps</div>
+              <div className={styles.exploreLeftMaps__text} onClick={() => openInMaps()}>Open in maps</div>
             </div>
           </div>
           <div className={styles.exploreRightColumn}>
@@ -69,7 +71,7 @@ const FooterMobile = ({
 
         <div className={styles.footerMobileRoots}>
           <div className={styles.rootsLeftColumn}>
-            Website design <br /> and development by <span>Acorn</span>
+            Website design <br /> and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
           </div>
           <div className={styles.rootsRightColumn}>
             <div className={styles.policy}>Privacy Policy</div>

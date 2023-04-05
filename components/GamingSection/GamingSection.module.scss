@@ -9,6 +9,14 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  &__image,
+  &__imageMd,
+  &__imageSm,
+  &__imageXsm,
+  &__imageXxsm {
+    pointer-events: none;
+  }
+
   &__image {
     position: absolute;
     top: -52.5%;
@@ -75,6 +83,7 @@
 @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
   .gamingWrapper {
     padding-top: 295px;
+
     .container {
       @include container-md;
     }
