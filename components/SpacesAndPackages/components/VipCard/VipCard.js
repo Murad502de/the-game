@@ -34,9 +34,9 @@ const VipCard = () => {
                             <div className={styles.costRightTopRow__item}>5</div>
                         </div>
                         <div className={styles.costRightBottomRow}>
-                            <div className={styles.costRightBottomRow__item}>49</div>
-                            <div className={styles.costRightBottomRow__item}>119</div>
-                            <div className={styles.costRightBottomRow__item}>169</div>
+                            <div className={styles.costRightBottomRow__item}>89</div>
+                            <div className={styles.costRightBottomRow__item}>199</div>
+                            <div className={styles.costRightBottomRow__item}>299</div>
                         </div>
                     </div>
                 </div>
@@ -60,9 +60,9 @@ const VipCard = () => {
                         <div className={styles.costValuesTopRow__item}>5</div>
                     </div>
                     <div className={styles.costValuesBottomRow}>
-                        <div className={styles.costValuesBottomRow__item}>59</div>
-                        <div className={styles.costValuesBottomRow__item}>149</div>
-                        <div className={styles.costValuesBottomRow__item}>199</div>
+                        <div className={styles.costValuesBottomRow__item}>99</div>
+                        <div className={styles.costValuesBottomRow__item}>233</div>
+                        <div className={styles.costValuesBottomRow__item}>333</div>
                     </div>
                 </div>
             </div>

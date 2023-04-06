@@ -85,7 +85,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                   <div className={styles.costValuesBottomRow}>
                     <div className={styles.costValuesBottomRow__item}>249</div>
                     <div className={styles.costValuesBottomRow__item}>599</div>
-                    <div className={styles.costValuesBottomRow__item}>899</div>
+                    <div className={styles.costValuesBottomRow__item}>799</div>
                   </div>
                 </div>
 
@@ -112,8 +112,8 @@ const StarsSection = React.forwardRef((props, ref) => {
                     </div>
                     <div className={styles.costRightBottomRow}>
                       <div className={styles.costRightBottomRow__item}>249</div>
-                      <div className={styles.costRightBottomRow__item}>899</div>
                       <div className={styles.costRightBottomRow__item}>599</div>
+                      <div className={styles.costRightBottomRow__item}>799</div>
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                   <div className={styles.rightColumn}>
                     <div className={styles.rightColumn__item}>249</div>
                     <div className={styles.rightColumn__item}>599</div>
-                    <div className={styles.rightColumn__item}>899</div>
+                    <div className={styles.rightColumn__item}>799</div>
                   </div>
                 </div>
               </div>

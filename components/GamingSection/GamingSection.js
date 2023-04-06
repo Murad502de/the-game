@@ -40,7 +40,7 @@ const GamingSection = React.forwardRef((props, ref, sap) => {
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_sm}
-          alt="gameZone_md"
+          alt="gameZone_xm"
           className={styles.gamingWrapper__imageSm}
           priority
         />{" "}
@@ -48,7 +48,7 @@ const GamingSection = React.forwardRef((props, ref, sap) => {
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_xsm}
-          alt="gameZone_md"
+          alt="gameZone_xsm"
           className={styles.gamingWrapper__imageXsm}
           priority
         />{" "}
@@ -56,7 +56,7 @@ const GamingSection = React.forwardRef((props, ref, sap) => {
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_xxsm}
-          alt="gameZone_md"
+          alt="gameZone_xxsm"
           className={styles.gamingWrapper__imageXxsm}
           priority
         />{" "}

@@ -35,9 +35,9 @@ const BootcampCard = () => {
                             <div className={styles.costRightTopRow__item}>5</div>
                         </div>
                         <div className={styles.costRightBottomRow}>
-                            <div className={styles.costRightBottomRow__item}>29</div>
-                            <div className={styles.costRightBottomRow__item}>69</div>
-                            <div className={styles.costRightBottomRow__item}>99</div>
+                            <div className={styles.costRightBottomRow__item}>49</div>
+                            <div className={styles.costRightBottomRow__item}>119</div>
+                            <div className={styles.costRightBottomRow__item}>169</div>
                         </div>
                     </div>
                 </div>
