@@ -12,6 +12,7 @@ import getVertexShader from "./vertexShader.js";
 import getFragmentShader from "./fragmentShader.js";
 import gsap from "gsap";
 import photo from "./sphere/images/first_page.png";
+import counter from "../../store/index";
 
 export const run = () => {
   const canvas = document.querySelector("#canvas");
@@ -59,7 +60,15 @@ export const run = () => {
     camera = new PerspectiveCamera(75, width / height, 0.1, 100);
     scene.add(camera);
     textureLoader = new TextureLoader();
-    texture = textureLoader.load("/images/first_page.png");
+    texture = textureLoader.load("/images/first_page.png", () => {
+      if (document.readyState === "complete") {
+        counter.setIsLoading(false);
+      } else {
+        window.onload = () => {
+          counter.setIsLoading(false);
+        };
+      }
+    });
     textureLoader.setCrossOrigin("anonymous");
     geometry = new SphereGeometry(1, 280, 280);
     uniforms = {
@@ -98,6 +107,7 @@ export const run = () => {
     renderer = new WebGLRenderer({ canvas: canvas, alpha: !0, antialias: !0 });
 
     renderer.setSize(width, height);
+
     window.addEventListener("resize", () => {
       resize();
     });
@@ -132,7 +142,7 @@ export const run = () => {
             left: 0,
             // behavior: "smooth",
           });
-          
+
           document.querySelector("#first").style.display = "none"; //TODO
 
           let second = document.querySelector("#second");

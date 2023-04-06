@@ -7,9 +7,9 @@ import { useEffect } from "react";
 
 const Preloader = observer(() => {
   useEffect(() => {
-    setTimeout(() => {
-      counter.setIsLoading(false);
-    }, 10000);
+    // setTimeout(() => {
+    //   counter.setIsLoading(false);
+    // }, 10000);
   });
 
   return (

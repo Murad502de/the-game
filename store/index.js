@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Counter {
   count = 0;
-  maxCount = 53;
+  maxCount = 62;
   percentage = 0;
   isLoading = true;
 
