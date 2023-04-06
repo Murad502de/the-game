@@ -35,32 +35,29 @@ const GamingSection = React.forwardRef((props, ref, sap) => {
           alt="gameZone_md"
           className={styles.gamingWrapper__imageMd}
           priority
-        />{" "}
-        {/* для расширения 768 */}
+        />
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_sm}
           alt="gameZone_xm"
           className={styles.gamingWrapper__imageSm}
           priority
-        />{" "}
-        {/* для расширения 576 */}
+        />
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_xsm}
           alt="gameZone_xsm"
           className={styles.gamingWrapper__imageXsm}
           priority
-        />{" "}
-        {/* для расширения 576 */}
+        />
         <Image
           onLoad={() => counter.increment()}
           src={gameZone_xxsm}
           alt="gameZone_xxsm"
           className={styles.gamingWrapper__imageXxsm}
           priority
-        />{" "}
-        {/* для расширения 576 */}
+        />
+
         <GamingContent scrollToSap={scrollToSap} />
         <GamingContentMd scrollToSap={scrollToSap} />
       </div>
