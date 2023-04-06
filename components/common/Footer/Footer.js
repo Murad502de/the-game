@@ -25,37 +25,41 @@ const Footer = ({
               alt="footerLogo"
               priority
             />
-            <div className={styles.explore}>
-              <div className={styles.explore__text}>Explore</div>
-              <ul className={styles.exploreList}>
-                <li onClick={scrollToTop} className={styles.exploreList__item}>
-                  Gaming
-                </li>
-                <li
-                  onClick={scrollToLounge}
-                  className={styles.exploreList__item}
-                >
-                  Lounge
-                </li>
-                <li
-                  onClick={scrollToCinema}
-                  className={styles.exploreList__item}
-                >
-                  Cinema
-                </li>
-                <li onClick={scrollToSap} className={styles.exploreList__item}>
-                  Prices
-                </li>
-              </ul>
-            </div>
-            <div className={styles.instagram}>
-              <Image
-                onLoad={() => counter.increment()}
-                src={instagram}
-                alt="instagram"
-                priority
-              />
-              <div className={styles.instagram__text}>Instagram</div>
+
+            <div className={styles.footerTopRowRight}>
+              <div className={styles.explore}>
+                <div className={styles.explore__text}>Explore</div>
+                <ul className={styles.exploreList}>
+                  <li onClick={scrollToTop} className={styles.exploreList__item}>
+                    Gaming
+                  </li>
+                  <li
+                    onClick={scrollToLounge}
+                    className={styles.exploreList__item}
+                  >
+                    Lounge
+                  </li>
+                  <li
+                    onClick={scrollToCinema}
+                    className={styles.exploreList__item}
+                  >
+                    Cinema
+                  </li>
+                  <li onClick={scrollToSap} className={styles.exploreList__item}>
+                    Prices
+                  </li>
+                </ul>
+              </div>
+
+              <div className={styles.instagram}>
+                <Image
+                  onLoad={() => counter.increment()}
+                  src={instagram}
+                  alt="instagram"
+                  priority
+                />
+                <div className={styles.instagram__text}>Instagram</div>
+              </div>
             </div>
           </div>
 
@@ -74,12 +78,20 @@ const Footer = ({
                 <div className={styles.maps__text} onClick={() => openInMaps()}>Open in maps</div>
               </div>
             </div>
-            <div className={styles.secondBottomColumn}>
-              Website design and development by <span onClick={() => openTgWithAcorn()}>Acorn</span>
-            </div>
-            <div className={styles.privacy}>
-              <div className={styles.privacy__text}>Privacy Policy</div>
-              <div className={styles.privacy__year}>© 2023</div>
+
+            <div className={styles.footerBottomRowRight}>
+              <div className={styles.secondBottomColumn}>
+                <div>Website design</div>
+                <div>
+                  <span>and development by&nbsp;</span>
+                  <span onClick={() => openTgWithAcorn()}>Acorn</span>
+                </div>
+              </div>
+
+              <div className={styles.privacy}>
+                <div className={styles.privacy__text}>Privacy Policy</div>
+                <div className={styles.privacy__year}>© 2023</div>
+              </div>
             </div>
           </div>
         </div>
