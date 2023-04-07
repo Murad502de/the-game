@@ -6,7 +6,7 @@
   overflow: hidden;
 
   .container {
-    @include container;
+    @include container-xxsm;
   }
 
   .header {
@@ -14,7 +14,7 @@
       font-family: "Montserrat";
       color: transparent;
       background-image: $titleSecondaryGradient-color;
-      font-size: $sectionTitleFontSize-xxl;
+      font-size: $sectionTitleFontSize-xxsm;
       -webkit-background-clip: text;
       background-clip: text;
       font-weight: 700;
@@ -28,7 +28,7 @@
     background: $secondaryBgGradient-color;
     backdrop-filter: blur(7.49853px);
     border-radius: 10px;
-    padding: $mainPadding-xxl;
+    padding: $mainPadding-xxsm;
     display: flex;
     column-gap: 30px;
   }
@@ -37,24 +37,36 @@
 
   .booking {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: nowrap;
     justify-content: space-between;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: $bookingFontSize-xxl;
+    font-size: $bookingFontSize-xxsm;
     line-height: 160%;
     color: #FFFFFF;
 
     &__btn {
       max-width: 360px;
-      font-size: $bookingBtnFontSize-xxl;
+      font-size: $bookingBtnFontSize-xxsm;
+      height: 110px;
+      margin-top: 30px;
+
+      &::before {
+        border-radius: 10px;
+      }
     }
 
     &__options {
-      &_title {}
+      &_title {
+        margin-bottom: 10px;
+
+        &_sm {
+          display: none;
+        }
+      }
     }
 
     &__option {
@@ -69,67 +81,71 @@
     }
   }
 
-  @media screen and (max-width: $screen-xxl) {
-    .header {
-      &__title {
-        font-size: $sectionTitleFontSize-xxl;
-      }
-    }
-
-    .booking {
-      font-size: $bookingFontSize-xxl;
-
-      &__btn {
-        max-width: 360px;
-        font-size: $bookingBtnFontSize-xxl;
-      }
-    }
-  }
-
-  @media screen and (max-width: $screen-xl) {
-    .header {
-      &__title {
-        font-size: $sectionTitleFontSize-xl;
-      }
-    }
-
-    .booking {
-      font-size: $bookingFontSize-xl;
-
-      &__btn {
-        max-width: 360px;
-        font-size: $bookingBtnFontSize-xl;
-      }
-    }
-  }
-
-  @media screen and (max-width: $screen-lg) {
+  @media screen and (min-width: $screen-xsm) {
     .container {
-      @include container-lg;
+      @include container-xsm;
     }
 
     .header {
       &__title {
-        font-size: $sectionTitleFontSize-lg;
+        font-size: $sectionTitleFontSize-xsm;
       }
     }
 
     .main {
-      padding: $mainPadding-lg;
+      padding: $mainPadding-xsm;
     }
 
     .booking {
-      font-size: $bookingFontSize-lg;
+      font-size: $bookingFontSize-xsm;
 
       &__btn {
-        max-width: 360px;
-        font-size: $bookingBtnFontSize-lg;
-        height: 110px;
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-xsm;
       }
     }
   }
 
-  @media screen and (max-width: $screen-md) {
+  @media screen and (min-width: $screen-sm) {
+    .container {
+      @include container-sm;
+    }
+
+    .header {
+      &__title {
+        font-size: $sectionTitleFontSize-sm;
+      }
+    }
+
+    .main {
+      padding: $mainPadding-sm;
+    }
+
+    .booking {
+      font-size: $bookingFontSize-sm;
+
+      &__options {
+        &_title {
+          margin-bottom: 10px;
+
+          &_sm {
+            display: block;
+          }
+
+          &_xxsm {
+            display: none;
+          }
+        }
+      }
+
+      &__btn {
+        max-width: 100%;
+        font-size: $bookingBtnFontSize-sm;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
     .container {
       @include container-md;
     }
@@ -160,77 +176,72 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (min-width: $screen-lg) {
     .container {
-      @include container-sm;
+      @include container-lg;
     }
 
     .header {
       &__title {
-        font-size: $sectionTitleFontSize-sm;
+        font-size: $sectionTitleFontSize-lg;
       }
     }
 
     .main {
-      padding: $mainPadding-sm;
+      padding: $mainPadding-lg;
     }
 
     .booking {
-      font-size: $bookingFontSize-sm;
+      flex-direction: row;
+      font-size: $bookingFontSize-lg;
 
       &__btn {
-        max-width: 100%;
-        font-size: $bookingBtnFontSize-sm;
+        margin: 0;
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-lg;
+        height: 110px;
       }
     }
   }
 
-  @media screen and (max-width: $screen-xsm) {
+  @media screen and (min-width: $screen-xl) {
     .container {
-      @include container-xsm;
+      @include container;
     }
 
     .header {
       &__title {
-        font-size: $sectionTitleFontSize-xsm;
+        font-size: $sectionTitleFontSize-xl;
       }
     }
 
     .main {
-      padding: $mainPadding-xsm;
+      padding: $mainPadding-xl;
     }
 
     .booking {
-      font-size: $bookingFontSize-xsm;
+      font-size: $bookingFontSize-xl;
 
       &__btn {
-        max-width: 100%;
-        font-size: $bookingBtnFontSize-xsm;
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-xl;
       }
     }
   }
 
-  @media screen and (max-width: $screen-xxsm) {
-    .container {
-      @include container-xxsm;
-    }
-
+  @media screen and (min-width: $screen-xxl) {
     .header {
       &__title {
-        font-size: $sectionTitleFontSize-xxsm;
+        font-size: $sectionTitleFontSize-xxl;
       }
     }
 
-    .main {
-      padding: $mainPadding-xxsm;
-    }
-
     .booking {
-      font-size: $bookingFontSize-xxsm;
+      font-size: $bookingFontSize-xxl;
 
       &__btn {
-        max-width: 100%;
-        font-size: $bookingBtnFontSize-xxsm;
+        max-width: 360px;
+        font-size: $bookingBtnFontSize-xxl;
       }
     }
   }

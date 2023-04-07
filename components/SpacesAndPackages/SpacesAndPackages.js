@@ -11,6 +11,7 @@ import counter from "../../store/index";
 import Image from "next/image";
 import React from "react";
 import { useEffect } from "react";
+import classNames from "classnames";
 
 const SpacesAndPackages = React.forwardRef((props, ref) => {
   const { wrap, computers, scroll, spaces } = useScrollAnimation();
@@ -23,11 +24,13 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
             Spaces <br /> and Packages
           </div>
         </div>
+
         <div ref={scroll} className={`spaces-and-packages__main ${styles.main}`}>
           <PremiumCard className="fact" />
           <BootcampCard className="fact" />
           <VipCard className="fact" />
         </div>
+
         <div className={styles.footer}>
           <div className={styles.booking}>
             <CyberButton btnClassName={styles.booking__btn} color="primary-2">
@@ -35,8 +38,12 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
             </CyberButton>
 
             <div className={styles.booking__options}>
-              <div className={styles.booking__options_title}>
+              <div className={classNames(styles.booking__options_title, styles.booking__options_title_sm)}>
                 Each option is equipped with the best peripherals:
+              </div>
+
+              <div className={classNames(styles.booking__options_title, styles.booking__options_title_xxsm)}>
+                Each option is equipped <br /> with the best peripherals:
               </div>
 
               <div className={styles.booking__option}>
