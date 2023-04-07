@@ -13,6 +13,7 @@ import { run } from "./sphereanim";
 import classNames from "classnames";
 import Background from "../../public/images/firstPlan-bg.png";
 import Sand from "../../public/images/first_plan_element.png";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const Sphere = ({ reload, afterRreload }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,11 +37,6 @@ const Sphere = ({ reload, afterRreload }) => {
   }, [loaded]);
 
   useEffect(() => {
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    // });
-
     if (reload) {
       run();
 
@@ -116,7 +112,15 @@ const Sphere = ({ reload, afterRreload }) => {
       </div>
 
       <div className={styles.sphereScroll}>
-        Scroll to Start
+        <Image
+          className={classNames(styles.sphereScrollIcon, styles.sphereScrollIconMouse)}
+          onLoad={() => counter.increment()}
+          src={mouse}
+          alt="logo"
+          priority
+        />
+        <AiOutlineArrowUp className={classNames(styles.sphereScrollIcon, styles.sphereScrollIconArrow)} />
+        <span className={styles.sphereScrollTitle}>Scroll to Start</span>
       </div>
 
       <Image

@@ -91,6 +91,22 @@
     line-height: 150%;
     text-align: center;
     color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &Title {}
+
+    &Icon {
+      &Mouse {}
+
+      &Arrow {
+        display: none;
+      }
+    }
   }
 
   .sphereInfo {
@@ -434,7 +450,21 @@
 
   @media screen and (max-width: $screen-xsm) {
     .sphereInfo__mobile {
-      padding-bottom: 140px;
+      padding-bottom: 80px;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    .sphereScroll {
+      &Icon {
+        &Mouse {
+          display: none;
+        }
+
+        &Arrow {
+          display: inline-block;
+        }
+      }
     }
   }
 }

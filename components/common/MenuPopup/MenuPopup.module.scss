@@ -5,9 +5,9 @@
     position: absolute;
     // top: 120%;
     right: 26px;
-    width: 361px;
+    width: 251px;
     border-radius: 20px;
-    padding: 50px;
+    padding: 30px;
     background-color: $primaryBg-color;
     opacity: 0;
     transform: translateX(50px);
@@ -35,6 +35,11 @@
             color: #fff;
 
         }
+    }
+
+    @media screen and (min-width: $screen-xsm) {
+        width: 361px;
+        padding: 50px;
     }
 }
 
