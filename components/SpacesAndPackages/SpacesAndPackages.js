@@ -18,7 +18,7 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
 
   return (
     <section ref={ref} className={`spaces-and-packages ${styles.SpacesAndPackages}`}>
-      <div ref={spaces} className={styles.container}>
+      <div id="sap_container" ref={spaces} className={styles.container}>
         <div className={styles.header}>
           <div className={styles.header__title}>
             Spaces <br /> and Packages
