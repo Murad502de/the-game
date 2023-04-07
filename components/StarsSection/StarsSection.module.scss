@@ -7,9 +7,12 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  margin-top: 48px;
+
   .container {
     @include container;
   }
+
   .starsInner {
     width: 100%;
     padding: 74px;
@@ -49,6 +52,7 @@
             color: #fff;
             line-height: 1.4;
           }
+
           &__subTitle {
             @include subTitle-card;
             margin-bottom: 50px;
@@ -133,6 +137,7 @@
               display: flex;
               column-gap: 65px;
             }
+
             .costValuesBottomRow {
               display: flex;
               column-gap: 30px;
@@ -223,6 +228,7 @@
 .mobileCostValues {
   display: none;
   column-gap: 89px;
+
   .leftColumn,
   .rightColumn {
     display: flex;
@@ -262,6 +268,7 @@
               line-height: 35px;
               margin-bottom: 5px;
             }
+
             &__subTitle {
               @include subTitle-card;
               margin-bottom: 30px;
@@ -375,7 +382,7 @@
   }
 }
 
-@media screen and (max-width: $screen-sm) {
+@media screen and (max-width: $screen-md) {
   .starsWrapper {
     .container {
       @include container-sm;
@@ -384,11 +391,14 @@
     .starsInner {
       .infoBlock {
         padding: 30px;
+
         .topInfoBlock {
+
           .mobileCardCost,
           .mobileCostValues {
             display: flex;
           }
+
           column-gap: 20px;
 
           .infoCard {
@@ -428,6 +438,7 @@
         .cinemasEquipment {
           .equipmentItem {
             flex-direction: row;
+
             .equipmentItem {
               &__title {
                 width: 150px;
@@ -448,6 +459,7 @@
 
     .starsInner {
       padding: 10px;
+
       .infoBlock {
         .topInfoBlock {
           flex-direction: column !important;
@@ -455,6 +467,7 @@
 
           .infoCard {
             width: 100%;
+
             &__subTitle {
               height: auto;
               margin-bottom: 30px;
@@ -494,6 +507,7 @@
         .cinemasEquipment {
           .equipmentItem {
             column-gap: 5px;
+
             &__title {
               width: 90px !important;
             }
@@ -528,9 +542,11 @@
 
             .cardCost {
               column-gap: 10px;
+
               .costLeftColumn {
                 &__item {
                   width: 80px;
+
                   span {
                     display: none;
                   }
@@ -540,12 +556,15 @@
               .costRightColumn {
                 .costRightTopRow {
                   column-gap: 10px;
+
                   &__item {
                     width: 36px;
                   }
                 }
+
                 .costRightBottomRow {
                   column-gap: 10px;
+
                   &__item {
                     width: 36px;
                   }
@@ -556,5 +575,17 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .starsWrapper {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: $screen-xxl) {
+  .starsWrapper {
+    margin-top: 200px;
   }
 }

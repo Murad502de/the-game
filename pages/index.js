@@ -31,28 +31,28 @@ const Index = () => {
 
   return (
     <div>
-      {/* {counter.isLoading && <Preloader />} */}
-      {/* <Sphere reload={viewResetState} afterRreload={setViewResetState} /> */}
-      {/* <PrimarySection
+      {counter.isLoading && <Preloader />}
+      <Sphere reload={viewResetState} afterRreload={setViewResetState} />
+      <PrimarySection
         gamingSectionRef={gamingSectionRef}
         loungeSectionRef={loungeSectionRef}
         cinemaSectionRef={cinemaSectionRef}
         onUpClick={() => setViewResetState(true)}
         onLogoClick={() => setViewResetState(true)}
-      /> */}
-      {/* <GamingSection ref={gamingSectionRef} sap={sapSectionRef} /> */}
-      {/* <GamingSwiper /> */}
-      {/* <LoungeSection ref={loungeSectionRef} /> */}
+      />
+      <GamingSection ref={gamingSectionRef} sap={sapSectionRef} />
+      <GamingSwiper />
+      <LoungeSection ref={loungeSectionRef} />
       <CinemaSection ref={cinemaSectionRef} starSectionRef={starSectionRef} />
-      {/* <SpacesAndPackages ref={sapSectionRef} /> */}
-      {/* <StarsSection ref={starSectionRef} /> */}
-      {/* <GoogleMaps /> */}
-      {/* <ContactSection
+      <SpacesAndPackages ref={sapSectionRef} />
+      <StarsSection ref={starSectionRef} />
+      <GoogleMaps />
+      <ContactSection
         gaming={gamingSectionRef}
         lounge={loungeSectionRef}
         cinema={cinemaSectionRef}
         sap={sapSectionRef}
-      /> */}
+      />
     </div>
   );
 };
