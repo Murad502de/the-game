@@ -11,14 +11,18 @@ const GamingSwiper = () => {
     <div className={styles.swiperWrapper}>
       <div ref={scrollableElementsRef} className={styles.scrollElements}>
         {swiperImages.map((swiper) => (
-          <Image
-            onLoad={() => counter.increment()}
-            key={swiper.id}
-            draggable={false}
-            src={swiper.url}
-            alt={swiper.alt}
-            priority
-          />
+          <div className={styles.scrollElement}>
+            <span className={styles.scrollElementTitle}>{swiper.title}</span>
+            <Image
+              className={styles.scrollElementImg}
+              onLoad={() => counter.increment()}
+              key={swiper.id}
+              draggable={false}
+              src={swiper.url}
+              alt={swiper.alt}
+              priority
+            />
+          </div>
         ))}
       </div>
     </div>

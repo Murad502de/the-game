@@ -10,6 +10,23 @@
     flex-wrap: nowrap;
     column-gap: 30px;
   }
+
+  .scrollElement {
+    position: relative;
+
+    &Title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 160%;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
+    &Img {}
+  }
 }
 
 @media screen and (max-width: $screen-lg) {
@@ -18,6 +35,12 @@
       img {
         width: 450px;
         height: 650px;
+      }
+    }
+
+    .scrollElement {
+      &Title {
+        font-size: 32px;
       }
     }
   }
@@ -31,6 +54,24 @@
         height: 450px;
       }
     }
+
+    .scrollElement {
+      &Title {
+        font-size: 18px;
+        top: 30px;
+        left: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .swiperWrapper {
+    .scrollElement {
+      &Title {
+        font-size: 22px;
+      }
+    }
   }
 }
 
@@ -40,6 +81,12 @@
       img {
         width: 260px;
         height: 410px;
+      }
+    }
+
+    .scrollElement {
+      &Title {
+        font-size: 18px;
       }
     }
   }
