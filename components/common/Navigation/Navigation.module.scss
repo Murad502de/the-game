@@ -6,7 +6,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: $navFontSize-xxl;
+  font-size: $navFontSize-xxsm;
   line-height: 150%;
   color: #FFFFFF;
 
@@ -18,20 +18,21 @@
 
   .navigationLogo {
     flex: 1;
-    width: $navigationLogoWidth-xxl;
-    height: $navigationLogoHeight-xxl;
+    width: $navigationLogoWidth-xxsm;
+    height: $navigationLogoHeight-xxsm;
   }
 
   .navigationLinks {
     flex: 33%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
 
     &Right {
       justify-content: flex-end;
+      align-items: flex-end;
 
       &_md {
         display: none;
@@ -40,11 +41,12 @@
   }
 
   .navigationLink {
-    margin-left: 50px;
     cursor: pointer;
 
+    margin-top: 30px;
+
     &:first-child {
-      margin-left: 0;
+      margin-top: 0;
     }
 
     &WithIcon {
@@ -72,42 +74,7 @@
     position: relative;
   }
 
-  @media screen and (max-width: $screen-lg) {
-    font-size: $navFontSize-lg;
-  }
-
-  @media screen and (max-width: $screen-md) {
-    font-size: $navFontSize-md;
-
-    .navigationLinks {
-      flex-direction: column;
-
-      &Right {
-        display: none;
-
-        &_md {
-          display: flex;
-          align-items: flex-end;
-        }
-      }
-    }
-
-    .navigationLink {
-      margin-left: 0;
-
-      margin-top: 30px;
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width: $screen-sm) {
-    font-size: $navFontSize-sm;
-  }
-
-  @media screen and (max-width: $screen-xsm) {
+  @media screen and (min-width: $screen-xsm) {
     font-size: $navFontSize-xsm;
 
     .navigationLogo {
@@ -116,12 +83,69 @@
     }
   }
 
-  @media screen and (max-width: $screen-xxsm) {
-    font-size: $navFontSize-xxsm;
+  @media screen and (min-width: $screen-sm) {
+    font-size: $navFontSize-sm;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    font-size: $navFontSize-md;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    font-size: $navFontSize-lg;
+
+    .navigationLinks {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &Right {
+        justify-content: flex-end;
+
+        &_md {
+          display: none;
+        }
+      }
+    }
+
+      .navigationLink {
+        margin-top: 0;
+        margin-left: 50px;
+        cursor: pointer;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &WithIcon {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+
+          &Arrow {
+            span {
+              margin-left: 10px;
+            }
+          }
+
+          &Burger {
+            span {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    font-size: $navFontSize-xxl;
 
     .navigationLogo {
-      width: $navigationLogoWidth-xxsm;
-      height: $navigationLogoHeight-xxsm;
+      width: $navigationLogoWidth-xxl;
+      height: $navigationLogoHeight-xxl;
     }
   }
 }

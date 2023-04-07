@@ -153,73 +153,34 @@
   }
 }
 
-// @media (max-width: $screen-xl) and (min-width: $screen-lg) {
-//   .primarySection {
-//     height: 1010px;
-//   }
-// }
-
-// @media (max-width: $screen-lg) and (min-width: $screen-sm) {
-//   .primarySection {
-//     background-image: url("../../public/images/bg-screen-lg.png");
-//     height: 1150px;
-//   }
-// }
-
-// @media (max-width: $screen-sm) and (min-width: $screen-xsm) {
-//   .primarySection {
-//     background-image: url("../../public/images/bg-primary-sm.png");
-//     background-position: 0 60px;
-//     background-repeat: no-repeat;
-//     height: 946px;
-//   }
-// }
-
-// @media (max-width: $screen-xsm) and (min-width: $screen-xxsm) {
-//   .primarySection {
-//     background-image: url("../../public/images/bg-primary-xsm.png");
-//     background-position: 0 64px;
-//     background-repeat: no-repeat;
-//     height: 871px;
-//   }
-// }
-
-// @media (max-width: $screen-xxsm) {
-//   .primarySection {
-//     background-image: url("../../public/images/bg-primary-xxsm.png");
-//     background-position: 0 14px;
-//     background-repeat: no-repeat;
-//     height: 871px;
-//   }
-// }
-
 .primarySectionContainer {
   box-sizing: border-box;
-  padding-top: $primarySectionContainerTopOffset-xxl;
 
-  @include container;
+  @include container-xxsm;
 
-  @media screen and (max-width: $screen-lg) {
-    @include container-lg;
-  }
+  padding-top: $primarySectionContainerTopOffset-xxsm;
 
-  @media screen and (max-width: $screen-md) {
-    @include container-md;
-  }
-
-  @media screen and (max-width: $screen-sm) {
-    @include container-sm;
-  }
-
-  @media screen and (max-width: $screen-xsm) {
+  @media screen and (min-width: $screen-xsm) {
     @include container-xsm;
 
     padding-top: $primarySectionContainerTopOffset-xsm;
   }
 
-  @media screen and (max-width: $screen-xxsm) {
-    @include container-xxsm;
+  @media screen and (min-width: $screen-sm) {
+    @include container-sm;
+  }
 
-    padding-top: $primarySectionContainerTopOffset-xxsm;
+  @media screen and (min-width: $screen-md) {
+    @include container-md;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    @include container-lg;
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    @include container;
+
+    padding-top: 40px;
   }
 }
