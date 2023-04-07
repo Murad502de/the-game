@@ -4,8 +4,6 @@ import { useIntersection } from "../../hooks/useIntersection";
 import classNames from "classnames";
 import first_grid from "../../public/images/first_grid.png";
 import second_grid from "../../public/images/second_grid.png";
-import first_grid_md from "../../public/images/first_grid_md.png";
-import second_grid_md from "../../public/images/second_grid_md.png";
 import third_grid from "../../public/images/third_grid.png";
 import grid_md from "../../public/images/grid3.png";
 import CyberButton from "../../UI/CyberButton/CyberButton";
@@ -76,21 +74,6 @@ const CinemaSection = React.forwardRef(({ starSectionRef }, ref) => {
                 <Image
                   className={styles.placesLeftColumn__img}
                   src={second_grid}
-                  alt="second_grid"
-                  onLoad={() => counter.increment()}
-                  priority
-                />
-
-                <Image
-                  className={styles.placesLeftColumn__img_md}
-                  src={first_grid_md}
-                  alt="first_grid"
-                  onLoad={() => counter.increment()}
-                  priority
-                />
-                <Image
-                  className={styles.placesLeftColumn__img_md}
-                  src={second_grid_md}
                   alt="second_grid"
                   onLoad={() => counter.increment()}
                   priority

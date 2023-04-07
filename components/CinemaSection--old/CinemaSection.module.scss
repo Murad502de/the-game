@@ -51,10 +51,6 @@
     transform: translateY(-30px);
 
     .meetingPlacesInner {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: center;
       .placesPictures {
         display: flex;
         column-gap: 15px;
@@ -111,27 +107,15 @@
   display: none;
 }
 
-.grid3_md {
-  max-width: unset !important;
-}
-
 .placesLeftColumn__img_md {
   display: none;
-  width: 346px;
-  height: 590px;
-
-  margin-left: 20px;
-
-  &:first-child {
-    margin-left: 0;
-  }
 }
 
 @media screen and (min-width: $screen-lg) and (max-width: 1220px) {
   .cinemaWrapper {
     img {
       max-width: 450px;
-      // width: 100%;
+      width: 100%;
     }
     .container {
       @include container;
@@ -176,7 +160,7 @@
         .meetingPlacesInner {
           .placesPictures {
             .placesLeftColumn {
-              flex-direction: row-reverse;
+              flex-direction: row;
               justify-content: space-between;
               max-width: 100%;
             }
@@ -234,7 +218,7 @@
       .meetingPlacesInner {
         .placesPictures {
           .placesLeftColumn {
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-between;
             width: 100%;
             &__img {
@@ -262,7 +246,6 @@
       }
       .grid3_md {
         display: inline-block;
-
       }
     }
   }
@@ -307,7 +290,7 @@
         .placesPictures {
           .placesLeftColumn {
             column-gap: 27px;
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-between;
             max-width: 100%;
             &__img_md {
@@ -335,26 +318,13 @@
   .third_grid {
     display: none;
   }
-
-  .grid3_md {
-    width: 535px !important;
-  }
-}
-
-@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
-  .grid3_md {
-    width: 575px !important;
-  }
 }
 
 @media screen and (min-width: $screen-xsm) and (max-width: $screen-sm) {
   .cinemaWrapper {
     img {
-      // width: 254px;
-      // height: 282px;
-
-      width: 48%;
-      height: auto;
+      width: 183px;
+      height: 203px;
     }
     &__title {
       margin-bottom: 0;
@@ -388,7 +358,7 @@
         .placesPictures {
           .placesLeftColumn {
             column-gap: 20px;
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-between;
             max-width: 100%;
             &__img_md {
@@ -451,7 +421,7 @@
           margin-bottom: 15px;
           .placesLeftColumn {
             column-gap: 15px;
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-between;
             max-width: 100%;
             &__img {
