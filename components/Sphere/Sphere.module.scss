@@ -400,6 +400,13 @@
     // }
   }
 
+  @media screen and (min-width: 1700px) {
+    .sphereTopbarLogo {
+      width: 222px;
+      height: 178px;
+    }
+  }
+
   @media screen and (min-width: 1860px) {
     .sphereTitle {
       font-size: 120px;
