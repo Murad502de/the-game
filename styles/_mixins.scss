@@ -23,6 +23,18 @@
     width: 100%;
 }
 
+@mixin container-xl {
+    max-width: 1218px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin container-xxl {
+    max-width: 1218px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 @mixin container-lg {
     max-width: 930px;
     margin: 0 auto;
