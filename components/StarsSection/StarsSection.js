@@ -163,6 +163,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                 <div className={styles.cinemasEquipmentDesc}>
                   <span>Netflix Premium</span><br/>
                   <span>YouTube Premium</span><br/>
+                  <span>Amazon Prime</span><br/>
                   <span>Disney+</span><br/>
                   <span>MEGOGO</span>
                 </div>
@@ -173,6 +174,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                 <div className={styles.cinemasEquipmentDesc}>
                   <span>Netflix Premium</span><br/>
                   <span>YouTube Premium</span><br/>
+                  <span>Amazon Prime</span><br/>
                   <span>Disney+</span><br/>
                   <span>MEGOGO</span>
                 </div>
@@ -192,7 +194,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                 <div className={styles.cinemasEquipmentDesc}>
                   <span>PS5 with many games</span><br/>
                   <span>PS VR2</span><br/>
-                  <span>DualSense for 4 playes</span>
+                  <span>DualSense for 4 players</span>
                 </div>
               </div>
             </div>
