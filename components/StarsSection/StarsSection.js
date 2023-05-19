@@ -198,7 +198,7 @@ const StarsSection = React.forwardRef((props, ref) => {
             </div>
           </div>
 
-          <CyberButton btnClassName={styles.starsInner__btn} color="primary">
+          <CyberButton btnClassName={styles.btn} color="primary">
             Book Your Seat
           </CyberButton>
         </div>
