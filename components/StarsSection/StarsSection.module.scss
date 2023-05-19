@@ -58,6 +58,7 @@
     &Description {
       margin-top: 14px;
       color: #C2C7FF;
+      max-width: 345px
     }
 
     &CinemaMax {
@@ -109,6 +110,106 @@
           }
         }
       }
+
+      &Var2 {
+        display: none;
+        margin-top: 30px;
+
+        &Row {
+          margin-top: 30px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        &Capacity {
+          display: flex;
+          width: 100%;
+          column-gap: 30px;
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+          &Four,
+          &Eight {
+            flex: 50%;
+          }
+        }
+
+        &Hours {
+          display: flex;
+          width: 100%;
+          column-gap: 30px;
+
+          &Left,
+          &Right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 34px;
+          }
+
+          &Left {
+            flex: 50%;
+          }
+
+          &Right {
+            flex: 50%;
+
+            &Column {
+              &Tit {
+                color: transparent;
+              }
+            }
+          }
+        }
+      }
+
+      &Var3 {
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 30px;
+        margin-top: 30px;
+
+        &Column {
+
+          &Tit,
+          &Val {
+            margin-top: 16px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            &:nth-child(2) {
+              margin-top: 30px;
+            }
+          }
+
+          &Val {
+            &Bold {
+              font-weight: bold;
+            }
+          }
+
+          &Tit {
+            color: #C4C9FF;
+          }
+
+          &Left,
+          &Right {
+            flex: 50%;
+          }
+
+          &Left {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 40px;
+          }
+        }
+      }
     }
   }
 
@@ -157,6 +258,16 @@
       &CinemaMax {
         margin-top: 0;
       }
+
+      &Dtls {
+        &Var1 {
+          display: none;
+        }
+
+        &Var2 {
+          display: block;
+        }
+      }
     }
   }
 
@@ -168,11 +279,36 @@
     .infoBlock {
       padding: 45px;
     }
+
+    .cinemas {
+      &Dtls {
+
+        &Var1,
+        &Var2 {
+          display: none;
+        }
+
+        &Var3 {
+          display: flex;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: $screen-lg) {
     .container {
       @include container-lg;
+    }
+
+    .cinemas {
+      column-gap: 70px;
+
+      &Dtls {
+        &Var3 {
+          display: flex;
+          column-gap: 70px;
+        }
+      }
     }
   }
 
@@ -183,6 +319,46 @@
 
     .starsInner {
       padding: 74px;
+    }
+
+    .infoBlock {
+      font-size: 16px;
+
+      &Tit {
+        font-size: 40px;
+      }
+    }
+
+    .cinemas {
+      column-gap: 200px;
+
+      &Dtls {
+        &Var3 {
+          column-gap: 200px;
+          font-size: 24px;
+
+          margin-top: 50px;
+
+          &Column {
+            &Left {
+              column-gap: 70px;
+            }
+
+            &Tit,
+            &Val {
+              margin-top: 16px;
+
+              &:first-child {
+                margin-top: 0;
+              }
+
+              &:nth-child(2) {
+                margin-top: 50px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
