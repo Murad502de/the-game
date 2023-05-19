@@ -137,6 +137,65 @@ const StarsSection = React.forwardRef((props, ref) => {
           </div>
 
           <div className={styles.infoBlock}>
+            <div className={styles.infoBlockTit}>Cinemas equipment</div>
+            <div className={styles.cinemasEquipments}>
+              <div className={styles.cinemasEquipment}>
+                <div className={styles.cinemasEquipmentTit}>TV</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>QLED 4K Ultra HD</span><br/>
+                  <span>IMAX Enhanced</span><br/>
+                  <span>Dolby Vision IQ · Atmos</span><br/>
+                  <span>120Hz MEMC</span>
+                </div>
+              </div>
+
+              <div className={classNames(styles.cinemasEquipment, styles.cinemasEquipmentToMd)}>
+                <div className={styles.cinemasEquipmentTit}>Sound</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>3D Dolby Atmos / DTS:X</span><br/>
+                  <span>True 11.1.4ch Sound</span><br/>
+                  <span>22 Speakers</span>
+                </div>
+              </div>
+
+              <div className={classNames(styles.cinemasEquipment, styles.cinemasEquipmentFromMd)}>
+                <div className={styles.cinemasEquipmentTit}>Services</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>Netflix Premium</span><br/>
+                  <span>YouTube Premium</span><br/>
+                  <span>Disney+</span><br/>
+                  <span>MEGOGO</span>
+                </div>
+              </div>
+
+              <div className={classNames(styles.cinemasEquipment, styles.cinemasEquipmentToMd)}>
+                <div className={styles.cinemasEquipmentTit}>Services</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>Netflix Premium</span><br/>
+                  <span>YouTube Premium</span><br/>
+                  <span>Disney+</span><br/>
+                  <span>MEGOGO</span>
+                </div>
+              </div>
+
+              <div className={classNames(styles.cinemasEquipment, styles.cinemasEquipmentFromMd)}>
+                <div className={styles.cinemasEquipmentTit}>Sound</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>3D Dolby Atmos / DTS:X</span><br/>
+                  <span>True 11.1.4ch Sound</span><br/>
+                  <span>22 Speakers</span>
+                </div>
+              </div>
+
+              <div className={styles.cinemasEquipment}>
+                <div className={styles.cinemasEquipmentTit}>Console</div>
+                <div className={styles.cinemasEquipmentDesc}>
+                  <span>PS5 with many games</span><br/>
+                  <span>PS VR2</span><br/>
+                  <span>DualSense for 4 playes</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <CyberButton btnClassName={styles.starsInner__btn} color="primary">

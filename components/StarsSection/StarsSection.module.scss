@@ -211,6 +211,38 @@
         }
       }
     }
+
+    &Equipments {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    &Equipment {
+      margin-top: 30px;
+      font-size: 16px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &Tit {
+        color: #BBBEFF;
+      }
+
+      &Desc {
+        // margin-top: 10px;
+
+        span {
+          margin-top: 8px;
+        }
+      }
+
+      &FromMd {
+        display: none;
+      }
+    }
   }
 
   .cinemasEquipment {}
@@ -232,6 +264,19 @@
               }
             }
           }
+        }
+      }
+
+      &Equipment {
+        display: flex;
+        font-size: 18px;
+
+        &Tit {
+          flex: 30%;
+        }
+
+        &Desc {
+          flex: 70%;
         }
       }
     }
@@ -268,6 +313,16 @@
           display: block;
         }
       }
+
+      &Equipment {
+        &Tit {
+          flex: 45%;
+        }
+
+        &Desc {
+          flex: 55%;
+        }
+      }
     }
   }
 
@@ -292,6 +347,33 @@
           display: flex;
         }
       }
+
+      &Equipments {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 5%;
+      }
+
+      &Equipment {
+        flex: 45%;
+        flex-direction: column;
+        margin-top: 0;
+
+        &Tit,
+        &Desc {
+          flex: unset;
+        }
+
+        &FromMd {
+          display: flex;
+        }
+
+        &ToMd {
+          display: none;
+        }
+      }
     }
   }
 
@@ -307,6 +389,24 @@
         &Var3 {
           display: flex;
           column-gap: 70px;
+        }
+      }
+
+      &Equipments {
+        row-gap: 20px;
+        column-gap: 8%;
+      }
+
+      &Equipment {
+        flex: 42%;
+        flex-direction: row;
+
+        &Tit {
+          flex: 30%;
+        }
+
+        &Desc {
+          flex: 70%;
         }
       }
     }
@@ -357,6 +457,19 @@
               }
             }
           }
+        }
+      }
+
+      &Equipments {
+        column-gap: 20%;
+      }
+
+      &Equipment {
+        flex: 30%;
+        font-size: 24px;
+
+        &Desc {
+          line-height: 40px;
         }
       }
     }
