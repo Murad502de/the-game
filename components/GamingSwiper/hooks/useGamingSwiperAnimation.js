@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
-export const useScrollAnimation = () => {
+export const useGamingSwiperAnimation = () => {
   const wrap = useRef();
   const computers = useRef();
   const scroll = useRef();
@@ -10,11 +10,11 @@ export const useScrollAnimation = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
+  useEffect(() => {    
     const pin = gsap.fromTo(scroll.current, {
       translateX: 0,
     }, {
-      translateX: -scroll.current.offsetWidth + document.querySelector('#sap_container').offsetWidth,
+      translateX: -scroll.current.offsetWidth + document.querySelector('#gameswiper_container').offsetWidth,
       ease: 'none',
       duration: 1,
       scrollTrigger: {

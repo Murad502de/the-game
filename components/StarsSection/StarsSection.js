@@ -25,9 +25,9 @@ const StarsSection = React.forwardRef((props, ref) => {
 
                 <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar1)}>
                   <div className={styles.cinemasDtlsVar1ColumnLeft}>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Capacity</div>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Hours</div>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>AED</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Capacity</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Hours</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>AED</div>
                   </div>
                   <div className={styles.cinemasDtlsVar1ColumnRight}>
                     <div className={styles.cinemasDtlsVar1ColumnRightRow}>
@@ -52,9 +52,9 @@ const StarsSection = React.forwardRef((props, ref) => {
 
                 <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar1)}>
                   <div className={styles.cinemasDtlsVar1ColumnLeft}>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Capacity</div>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Hours</div>
-                    <div class={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>AED</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Capacity</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>Hours</div>
+                    <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar1Tit)}>AED</div>
                   </div>
                   <div className={styles.cinemasDtlsVar1ColumnRight}>
                     <div className={styles.cinemasDtlsVar1ColumnRightRow}>
@@ -73,7 +73,7 @@ const StarsSection = React.forwardRef((props, ref) => {
 
             <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar2)}>
               <div className={styles.cinemasDtlsVar2Row}>
-                <div class={classNames(styles.cinemasDtlsTit)}>Capacity</div>
+                <div className={classNames(styles.cinemasDtlsTit)}>Capacity</div>
 
                 <div className={styles.cinemasDtlsVar2Capacity}>
                   <div className={styles.cinemasDtlsVar2CapacityFour}>up to 4</div>

@@ -1,14 +1,46 @@
 @import "../../styles/vars";
+@import "../../styles/mixins";
 
-.swiperWrapper {
+.gamingSwiper {
+  box-sizing: border-box;
+
+  &Container {
+    box-sizing: border-box;
+    @include container;
+
+    @media screen and (max-width: $screen-lg) {
+      @include container-lg;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      @include container-md;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      @include container-sm;
+    }
+
+    @media screen and (max-width: $screen-xsm) {
+      @include container-xsm;
+    }
+
+    @media screen and (max-width: $screen-xxsm) {
+      @include container-xxsm;
+    }
+  }
+}
+
+.gamingSwiperWrapper {
   color: #fff;
   margin-bottom: 50px;
   overflow-x: hidden;
 
   .scrollElements {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
     column-gap: 30px;
+    width: max-content;
   }
 
   .scrollElement {
@@ -30,7 +62,7 @@
 }
 
 @media screen and (max-width: $screen-lg) {
-  .swiperWrapper {
+  .gamingSwiperWrapper {
     .scrollElements {
       img {
         width: 450px;
@@ -47,7 +79,7 @@
 }
 
 @media screen and (max-width: $screen-md) {
-  .swiperWrapper {
+  .gamingSwiperWrapper {
     .scrollElements {
       img {
         width: 300px;
@@ -66,7 +98,7 @@
 }
 
 @media screen and (max-width: $screen-sm) {
-  .swiperWrapper {
+  .gamingSwiperWrapper {
     .scrollElement {
       &Title {
         font-size: 22px;
@@ -76,7 +108,7 @@
 }
 
 @media screen and (max-width: $screen-xsm) {
-  .swiperWrapper {
+  .gamingSwiperWrapper {
     .scrollElements {
       img {
         width: 260px;
@@ -93,7 +125,7 @@
 }
 
 @media screen and (max-width: $screen-xxsm) {
-  .swiperWrapper {
+  .gamingSwiperWrapper {
     .scrollElements {
       img {
         width: 190px;

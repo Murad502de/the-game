@@ -10,15 +10,14 @@ import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import counter from "../../store/index";
 import Image from "next/image";
 import React from "react";
-import { useEffect } from "react";
 import classNames from "classnames";
 
 const SpacesAndPackages = React.forwardRef((props, ref) => {
-  const { wrap, computers, scroll, spaces } = useScrollAnimation();
+  const { scroll } = useScrollAnimation();
 
   return (
     <section ref={ref} className={`spaces-and-packages ${styles.SpacesAndPackages}`}>
-      <div id="sap_container" ref={spaces} className={styles.container}>
+      <div id="sap_container" className={styles.container}>
         <div className={styles.header}>
           <div className={styles.header__title}>
             Spaces <br /> and Packages
