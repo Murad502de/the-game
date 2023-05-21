@@ -12,6 +12,7 @@ const Footer = ({
   scrollToSap,
   openInMaps,
   openTgWithAcorn,
+  openInInstagram,
 }) => {
   return (
     <footer className={styles.footer}>
@@ -58,7 +59,7 @@ const Footer = ({
                   alt="instagram"
                   priority
                 />
-                <div className={styles.instagram__text}>Instagram</div>
+                <div className={styles.instagram__text} onClick={openInInstagram}>Instagram</div>
               </div>
             </div>
           </div>

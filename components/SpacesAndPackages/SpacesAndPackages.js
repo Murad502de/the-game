@@ -11,6 +11,7 @@ import counter from "../../store/index";
 import Image from "next/image";
 import React from "react";
 import classNames from "classnames";
+import { bookSeat } from '../../services/bookingService';
 
 const SpacesAndPackages = React.forwardRef((props, ref) => {
   const { scroll } = useScrollAnimation();
@@ -32,7 +33,7 @@ const SpacesAndPackages = React.forwardRef((props, ref) => {
 
         <div className={styles.footer}>
           <div className={styles.booking}>
-            <CyberButton btnClassName={styles.booking__btn} color="primary-2">
+            <CyberButton btnClassName={styles.booking__btn} color="primary-2" onClick={bookSeat}>
               Book Your Seat
             </CyberButton>
 

@@ -12,6 +12,7 @@ const FooterXxsm = ({
   scrollToSap,
   openInMaps,
   openTgWithAcorn,
+  openInInstagram,
 }) => {
   return (
     <footer className={styles.xxsmFooter}>
@@ -68,7 +69,7 @@ const FooterXxsm = ({
                 priority
               />
 
-              <div className={styles.rightColumnInst__text}>Instagram</div>
+              <div className={styles.rightColumnInst__text} onClick={openInInstagram}>Instagram</div>
             </div>
 
             <div className={styles.xxsmDesigned}>

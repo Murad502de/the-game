@@ -12,6 +12,7 @@ import CyberButton from "../../UI/CyberButton/CyberButton";
 import counter from "../../store/index";
 import { observer } from "mobx-react-lite";
 import Image from "next/image";
+import { bookSeat } from '../../services/bookingService';
 
 const CinemaSection = React.forwardRef(({ starSectionRef }, ref) => {
   const { isIntersecting, nodeRef } = useIntersection();
@@ -41,7 +42,7 @@ const CinemaSection = React.forwardRef(({ starSectionRef }, ref) => {
           >
             Сinemas Specifications
           </div>
-          <div className={styles.cinemaContent__subTitle}>Reserve</div>
+          <div className={styles.cinemaContent__subTitle} onClick={bookSeat}>Reserve</div>
           <div className={`${styles.cinemaContent__text} ${styles.hidetext}`}>
             The entire cinema is at your service. Whether it's a date for two or
             inviting a large group, any movie will be even more comfortable in
@@ -56,7 +57,7 @@ const CinemaSection = React.forwardRef(({ starSectionRef }, ref) => {
           inviting a large group, any movie will be even more comfortable in our
           state-of-the-art cinema.
         </div>
-        <CyberButton btnClassName={styles.redBookSeat} color="red">
+        <CyberButton btnClassName={styles.redBookSeat} color="red" onClick={bookSeat}>
           Book Your Seat
         </CyberButton>
       </div>

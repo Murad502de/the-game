@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { starsAnimation } from "../../utils/starsAnimation";
 import { Canvas } from "@react-three/fiber";
 import classNames from "classnames";
+import { bookSeat } from '../../services/bookingService';
 
 const StarsSection = React.forwardRef((props, ref) => {
   useEffect(() => {
@@ -200,7 +201,7 @@ const StarsSection = React.forwardRef((props, ref) => {
             </div>
           </div>
 
-          <CyberButton btnClassName={styles.btn} color="primary">
+          <CyberButton btnClassName={styles.btn} color="primary" onClick={bookSeat}>
             Book Your Seat
           </CyberButton>
         </div>

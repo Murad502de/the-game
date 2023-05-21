@@ -1,5 +1,6 @@
 import styles from "./GamingContent.module.scss";
 import CyberButton from "../../../../UI/CyberButton/CyberButton";
+import { bookSeat } from '../../../../services/bookingService';
 
 const GamingContent = ({scrollToSap}) => {
     return (
@@ -8,7 +9,7 @@ const GamingContent = ({scrollToSap}) => {
             <div className={styles.gamingContent}>
                 <div className={styles.leftColumnContent}>
                     <div className={styles.leftColumnContent__title}>Place for You</div>
-                    <CyberButton color="primary">Book Your Seat</CyberButton>
+                    <CyberButton color="primary" onClick={bookSeat}>Book Your Seat</CyberButton>
                     <CyberButton onClick={scrollToSap} color="primary">Computers Specifications</CyberButton>
                 </div>
                 <div className={styles.rightColumnContent}>

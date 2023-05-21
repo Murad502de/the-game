@@ -9,6 +9,7 @@ import classNames from "classnames";
 import counter from "../../../store/index";
 import Image from "next/image";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { bookSeat } from '../../../services/bookingService';
 
 const Navigation = ({
   gamingSectionRef,
@@ -58,7 +59,7 @@ const Navigation = ({
           <span>Up</span>
         </li>
 
-        <li className={classNames(styles.navigationLink, styles.linkBookOrder)}>
+        <li className={classNames(styles.navigationLink, styles.linkBookOrder)} onClick={bookSeat}>
           Book
         </li>
 
@@ -87,7 +88,7 @@ const Navigation = ({
           <span>Up</span>
         </li>
 
-        <li className={classNames(styles.navigationLink, styles.linkBookOrder)}>
+        <li className={classNames(styles.navigationLink, styles.linkBookOrder)} onClick={bookSeat}>
           Book
         </li>
       </ul>

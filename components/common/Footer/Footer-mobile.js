@@ -12,6 +12,7 @@ const FooterMobile = ({
   scrollToSap,
   openInMaps,
   openTgWithAcorn,
+  openInInstagram,
 }) => {
   return (
     <footer className={styles.footerMobile}>
@@ -31,7 +32,7 @@ const FooterMobile = ({
               alt="insta"
               priority
             />
-            <div className={styles.logoInstagram__text}>Instagram</div>
+            <div className={styles.logoInstagram__text} style={{ marginLeft: '12px' }} onClick={openInInstagram}>Instagram</div>
           </div>
         </div>
 
@@ -47,7 +48,7 @@ const FooterMobile = ({
                 alt="maps"
                 priority
               />
-              <div className={styles.exploreLeftMaps__text} onClick={() => openInMaps()}>Open in maps</div>
+              <div className={styles.exploreLeftMaps__text} onClick={() => openInMaps()} style={{ marginLeft: '12px' }}>Open in maps</div>
             </div>
           </div>
           <div className={styles.exploreRightColumn}>
@@ -75,7 +76,7 @@ const FooterMobile = ({
           </div>
           <div className={styles.rootsRightColumn}>
             <div className={styles.policy}>Privacy Policy</div>
-            <div className={styles.year}>© 2023</div>
+            <div className={styles.year} style={{ marginLeft: '30px' }}>© 2023</div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import CyberButton from "../../../../UI/CyberButton/CyberButton";
 import styles from "./GamingContentMd.module.scss";
+import { bookSeat } from '../../../../services/bookingService';
 
 const GamingContentMd = ({scrollToSap}) => {
     return (
@@ -13,7 +14,7 @@ const GamingContentMd = ({scrollToSap}) => {
                     A nice place to relax or have a good time. Play games on the world's most powerful gaming computer or stream live from the Streaming Room.
                 </div>
                 <div className={styles.rightColumn}>
-                    <CyberButton color="primary" btnClassName={styles.rightColumn__btn}>Book Your Seat</CyberButton>
+                    <CyberButton color="primary" btnClassName={styles.rightColumn__btn} onClick={bookSeat}>Book Your Seat</CyberButton>
                     <CyberButton onClick={scrollToSap} color="primary" btnClassName={styles.rightColumn__btn}>Computers Specifications</CyberButton>
                 </div>
             </div>

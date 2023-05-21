@@ -12,6 +12,7 @@ const FooterSm = ({
   scrollToSap,
   openInMaps,
   openTgWithAcorn,
+  openInInstagram,
 }) => {
   return (
     <footer className={styles.smFooter}>
@@ -62,7 +63,7 @@ const FooterSm = ({
             alt="instagram"
             priority
           />
-          <div className={styles.smInst__text}>Instagram</div>
+          <div className={styles.smInst__text} onClick={openInInstagram}>Instagram</div>
         </div>
 
         <div className={styles.smDesigned}>

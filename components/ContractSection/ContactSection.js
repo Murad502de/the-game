@@ -9,6 +9,13 @@ import FooterXxsm from "../common/Footer/Footer-xxsm";
 import counter from "../../store/index";
 import Image from "next/image";
 import classNames from "classnames";
+import { bookSeat } from '../../services/bookingService';
+import { callPhone } from '../../services/phoneService';
+import {
+  goToInstagram,
+  goToTelegram,
+  goToWhatsapp,
+} from '../../services/socialsService';
 
 const ContactSection = ({ gaming, lounge, cinema, sap }) => {
   const scrollToTop = () => {
@@ -76,7 +83,7 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
           </div>
 
           <div className={styles.contactSectionContainerMain}>
-            <CyberButton color="primary2" btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionBooking)}>
+            <CyberButton color="primary2" btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionBooking)} onClick={bookSeat}>
               Book your PC
             </CyberButton>
 
@@ -89,11 +96,11 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
             </div>
 
             <div className={styles.contactSectionContacts}>
-              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple">
+              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple" onClick={callPhone}>
                 Phone
               </CyberButton>
-              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple">Telegram</CyberButton>
-              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple">WhatsApp</CyberButton>
+              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple" onClick={goToTelegram}>Telegram</CyberButton>
+              <CyberButton btnClassName={classNames(styles.contactSectionBtn, styles.contactSectionContact)} color="simple" onClick={goToWhatsapp}>WhatsApp</CyberButton>
             </div>
           </div>
         </div>
@@ -106,6 +113,7 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
             scrollToSap={scrollToSap}
             openInMaps={openInMaps}
             openTgWithAcorn={openTgWithAcorn}
+            openInInstagram={goToInstagram}
           />
           <FooterMobile
             scrollToTop={scrollToTop}
@@ -114,6 +122,7 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
             scrollToSap={scrollToSap}
             openInMaps={openInMaps}
             openTgWithAcorn={openTgWithAcorn}
+            openInInstagram={goToInstagram}
           />
           <FooterSm
             scrollToTop={scrollToTop}
@@ -122,6 +131,7 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
             scrollToSap={scrollToSap}
             openInMaps={openInMaps}
             openTgWithAcorn={openTgWithAcorn}
+            openInInstagram={goToInstagram}
           />
           <FooterXxsm
             scrollToTop={scrollToTop}
@@ -130,6 +140,7 @@ const ContactSection = ({ gaming, lounge, cinema, sap }) => {
             scrollToSap={scrollToSap}
             openInMaps={openInMaps}
             openTgWithAcorn={openTgWithAcorn}
+            openInInstagram={goToInstagram}
           />
         </div>
       </div>

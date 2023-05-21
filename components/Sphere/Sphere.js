@@ -7,13 +7,12 @@ import mouse from "../../public/icons/mouse-white.svg";
 import MenuPopup from "../common/MenuPopup/MenuPopup";
 import counter from "../../store/index";
 import Image from "next/image";
-// import Experience from "./three/Experience";
 import { run } from "./sphereanim";
-
 import classNames from "classnames";
 import Background from "../../public/images/firstPlan-bg.png";
 import Sand from "../../public/images/first_plan_element.png";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { bookSeat } from '../../services/bookingService';
 
 const Sphere = ({ reload, afterRreload }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +49,7 @@ const Sphere = ({ reload, afterRreload }) => {
     <section id="first" className={styles.sphere}>
       <div className={styles.sphereContainer}>
         <div className={styles.sphereTopbar}>
-          <div className={classNames(styles.sphereTopbarTitle, styles.sphereTopbarTitleFirst)}>
+          <div className={classNames(styles.sphereTopbarTitle, styles.sphereTopbarTitleFirst)} onClick={bookSeat}>
             Book Your Seat
           </div>
 
