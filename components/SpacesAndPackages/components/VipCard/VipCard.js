@@ -36,7 +36,7 @@ const VipCard = () => {
                                 <SaleBadge>-22%</SaleBadge>
                             </div>
                             <div className={styles.costRightTopRow__item}>
-                                <span>3</span>
+                                <span>5</span>
                                 <SaleBadge>-33%</SaleBadge>
                             </div>
                         </div>
