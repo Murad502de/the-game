@@ -1,8 +1,9 @@
 import styles from "../card.module.scss";
+import SaleBadge from '../../../../UI/SaleBadge/SaleBadge';
 
 const PremiumCard = () => {
     return (
-        <div style={{width: 960}} className={styles.cardWrapper}>
+        <div style={{ width: 960 }} className={styles.cardWrapper}>
             <div className={styles.cardInner}>
                 <div className={styles.cardInner__title}>Premium</div>
                 <div className={styles.cardInner__subTitle}>for 10 persons</div>
@@ -26,17 +27,23 @@ const PremiumCard = () => {
                         <div className={styles.costLeftColumn__item}>Hours</div>
                         <div className={styles.costLeftColumn__item}>Price <span>AED</span></div>
                     </div>
-                    
+
                     <div className={styles.costRightColumn}>
                         <div className={styles.costRightTopRow}>
                             <div className={styles.costRightTopRow__item}>1</div>
-                            <div className={styles.costRightTopRow__item}>3</div>
-                            <div className={styles.costRightTopRow__item}>5</div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>3</span>
+                                <SaleBadge>-22%</SaleBadge>
+                            </div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>5</span>
+                                <SaleBadge>-33%</SaleBadge>
+                            </div>
                         </div>
                         <div className={styles.costRightBottomRow}>
-                            <div className={styles.costRightBottomRow__item}>29</div>
+                            <div className={styles.costRightBottomRow__item}>19</div>
+                            <div className={styles.costRightBottomRow__item}>49</div>
                             <div className={styles.costRightBottomRow__item}>69</div>
-                            <div className={styles.costRightBottomRow__item}>99</div>
                         </div>
                     </div>
                 </div>
@@ -46,7 +53,7 @@ const PremiumCard = () => {
                 <div className={styles.cardInner__title}>Premium +</div>
                 <div className={styles.cardInner__subTitle}>for 10 persons</div>
                 <div className={styles.cardInner__room}>Room 1</div>
-                <div className={styles.cardInner__descriptionRoom}>All the same as the Premium, with 32" monitors with action game hardware</div>
+                <div className={styles.cardInner__descriptionRoom}>All the same as the Premium, with 32" monitors with action game hardware</div>
                 <div className={styles.metricsValues}>
                     <div className={styles.metricsValues__value}>13600KF</div>
                     <div className={styles.metricsValues__value}>6750XT</div>
@@ -56,13 +63,19 @@ const PremiumCard = () => {
                 <div className={styles.costValues}>
                     <div className={styles.costValuesTopRow}>
                         <div className={styles.costValuesTopRow__item}>1</div>
-                        <div className={styles.costValuesTopRow__item}>3</div>
-                        <div className={styles.costValuesTopRow__item}>5</div>
+                        <div className={styles.costValuesTopRow__item}>
+                            <span>3</span>
+                            <SaleBadge>-22%</SaleBadge>
+                        </div>
+                        <div className={styles.costValuesTopRow__item}>
+                            <span>5</span>
+                            <SaleBadge>-33%</SaleBadge>
+                        </div>
                     </div>
                     <div className={styles.costValuesBottomRow}>
-                        <div className={styles.costValuesBottomRow__item}>39</div>
-                        <div className={styles.costValuesBottomRow__item}>99</div>
-                        <div className={styles.costValuesBottomRow__item}>133</div>
+                        <div className={styles.costValuesBottomRow__item}>24</div>
+                        <div className={styles.costValuesBottomRow__item}>59</div>
+                        <div className={styles.costValuesBottomRow__item}>79</div>
                     </div>
                 </div>
             </div>

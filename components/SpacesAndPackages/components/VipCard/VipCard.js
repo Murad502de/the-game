@@ -1,8 +1,9 @@
 import styles from "../card.module.scss";
+import SaleBadge from '../../../../UI/SaleBadge/SaleBadge';
 
 const VipCard = () => {
     return (
-        <div style={{width: 960}} className={styles.cardWrapper}>
+        <div style={{ width: 960 }} className={styles.cardWrapper}>
             <div className={styles.cardInner}>
                 <div className={styles.cardInner__title}>Vip</div>
                 <div className={styles.cardInner__subTitle}>for 1 person</div>
@@ -26,17 +27,23 @@ const VipCard = () => {
                         <div className={styles.costLeftColumn__item}>Hours</div>
                         <div className={styles.costLeftColumn__item}>Price <span id={styles.extraSpan}>AED</span></div>
                     </div>
-                    
+
                     <div className={styles.costRightColumn}>
                         <div className={styles.costRightTopRow}>
                             <div className={styles.costRightTopRow__item}>1</div>
-                            <div className={styles.costRightTopRow__item}>3</div>
-                            <div className={styles.costRightTopRow__item}>5</div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>3</span>
+                                <SaleBadge>-22%</SaleBadge>
+                            </div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>3</span>
+                                <SaleBadge>-33%</SaleBadge>
+                            </div>
                         </div>
                         <div className={styles.costRightBottomRow}>
-                            <div className={styles.costRightBottomRow__item}>89</div>
-                            <div className={styles.costRightBottomRow__item}>199</div>
-                            <div className={styles.costRightBottomRow__item}>299</div>
+                            <div className={styles.costRightBottomRow__item}>49</div>
+                            <div className={styles.costRightBottomRow__item}>119</div>
+                            <div className={styles.costRightBottomRow__item}>169</div>
                         </div>
                     </div>
                 </div>
@@ -56,13 +63,19 @@ const VipCard = () => {
                 <div className={styles.costValues}>
                     <div className={styles.costValuesTopRow}>
                         <div className={styles.costValuesTopRow__item}>1</div>
-                        <div className={styles.costValuesTopRow__item}>3</div>
-                        <div className={styles.costValuesTopRow__item}>5</div>
+                        <div className={styles.costValuesTopRow__item}>
+                            <span>3</span>
+                            <SaleBadge>-22%</SaleBadge>
+                        </div>
+                        <div className={styles.costValuesTopRow__item}>
+                            <span>5</span>
+                            <SaleBadge>-33%</SaleBadge>
+                        </div>
                     </div>
                     <div className={styles.costValuesBottomRow}>
-                        <div className={styles.costValuesBottomRow__item}>99</div>
-                        <div className={styles.costValuesBottomRow__item}>233</div>
-                        <div className={styles.costValuesBottomRow__item}>333</div>
+                        <div className={styles.costValuesBottomRow__item}>59</div>
+                        <div className={styles.costValuesBottomRow__item}>149</div>
+                        <div className={styles.costValuesBottomRow__item}>199</div>
                     </div>
                 </div>
             </div>

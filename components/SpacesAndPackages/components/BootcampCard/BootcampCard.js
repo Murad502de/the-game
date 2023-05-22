@@ -1,8 +1,9 @@
 import styles from "../card.module.scss";
+import SaleBadge from '../../../../UI/SaleBadge/SaleBadge';
 
 const BootcampCard = () => {
     return (
-        <div style={{width: 660}} className={styles.cardWrapper}>
+        <div style={{ width: 660 }} className={styles.cardWrapper}>
             <div className={styles.cardInner}>
                 <div className={styles.cardInner__title}>Bootcamp</div>
                 <div className={styles.cardInner__subTitle}>for 5 persons</div>
@@ -27,17 +28,23 @@ const BootcampCard = () => {
                         <div className={styles.costLeftColumn__item}>Hours</div>
                         <div className={styles.costLeftColumn__item}>Price <span>AED</span></div>
                     </div>
-                    
+
                     <div className={styles.costRightColumn}>
                         <div className={styles.costRightTopRow}>
                             <div className={styles.costRightTopRow__item}>1</div>
-                            <div className={styles.costRightTopRow__item}>3</div>
-                            <div className={styles.costRightTopRow__item}>5</div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>3</span>
+                                <SaleBadge>-22%</SaleBadge>
+                            </div>
+                            <div className={styles.costRightTopRow__item}>
+                                <span>5</span>
+                                <SaleBadge>-33%</SaleBadge>
+                            </div>
                         </div>
                         <div className={styles.costRightBottomRow}>
-                            <div className={styles.costRightBottomRow__item}>49</div>
-                            <div className={styles.costRightBottomRow__item}>119</div>
-                            <div className={styles.costRightBottomRow__item}>169</div>
+                            <div className={styles.costRightBottomRow__item}>29</div>
+                            <div className={styles.costRightBottomRow__item}>69</div>
+                            <div className={styles.costRightBottomRow__item}>99</div>
                         </div>
                     </div>
                 </div>

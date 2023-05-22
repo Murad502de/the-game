@@ -32,6 +32,7 @@
       color: #fff;
       line-height: 1.6;
     }
+
     &__descriptionRoom {
       font-family: "Inter";
       font-size: 25px;
@@ -124,6 +125,10 @@
         .costRightTopRow {
           display: flex;
           column-gap: 46px;
+
+          &__item {
+            position: relative;
+          }
         }
 
         .costRightBottomRow {
@@ -144,7 +149,12 @@
       .costValuesTopRow {
         display: flex;
         column-gap: 46px;
+
+        &__item {
+          position: relative;
+        }
       }
+
       .costValuesBottomRow {
         display: flex;
         column-gap: 30px;
@@ -156,6 +166,7 @@
 @media screen and (max-width: $screen-lg) {
   .cardWrapper {
     .cardInner {
+
       &__subTitle,
       &__room,
       &__descriptionRoom,
@@ -184,11 +195,13 @@
       .cardCost {
         .costLeftColumn {
           white-space: nowrap;
+
           &__item {
             font-size: 18px;
             line-height: 28.8px;
           }
         }
+
         .costRightColumn {
           font-size: 18px;
           line-height: 28.8px;
