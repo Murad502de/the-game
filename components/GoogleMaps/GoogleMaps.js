@@ -4,6 +4,7 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import customMarker from "../../public/images/marker.png";
 import { mapStyles } from "./theme";
 import CyberButton from "../../UI/CyberButton/CyberButton";
+import { openInGoogleMaps } from '../../services/mapsService';
 
 const defaultOptions = {
   panControl: false,
@@ -23,8 +24,6 @@ const defaultOptions = {
 const center = { lat: 25.077097631716903, lng: 55.13445435061175 };
 
 const GoogleMaps = () => {
-  const mapsUrl = 'https://www.google.com/maps/place/The+Game+-+(Premium+Lounge)/@25.0771504,55.1316332,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f159f14ace101:0x649faf546b5a79cc!8m2!3d25.0771456!4d55.1338219?coh=164777&entry=tt'; //FIXME set to .env
-
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAR7FCdbNgCKIoTKl1ZFzf4WYKpdfp5aFE", //FIXME set to .env
   });
@@ -58,10 +57,10 @@ const GoogleMaps = () => {
         <div className={styles.googleMaps__container}>
           <div className={styles.googleMaps__main}>
             <div className={styles.googleMaps__title}>DUBAI</div>
-            <div className={styles.googleMaps__subTitle}>JBR, Bahar 2</div>
+            <div className={styles.googleMaps__subTitle}>JBR, Rimal 9 (Plaza Level)</div>
           </div>
 
-          <CyberButton onClick={() => { window.open(mapsUrl, '_blank').focus() }} btnClassName={styles.googleMaps__btn} color="simple">
+          <CyberButton onClick={openInGoogleMaps} btnClassName={styles.googleMaps__btn} color="simple">
             Open in Google Maps
           </CyberButton>
         </div>
