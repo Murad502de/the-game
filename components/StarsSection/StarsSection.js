@@ -38,7 +38,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                       <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>1</div>
                     </div>
                     <div className={styles.cinemasDtlsVar1ColumnRightRow}>
-                      <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>199</div>
+                      <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>299</div>
                     </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                       <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>1</div>
                     </div>
                     <div className={styles.cinemasDtlsVar1ColumnRightRow}>
-                      <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>299</div>
+                      <div className={styles.cinemasDtlsVar1ColumnRightRowItem}>499</div>
                     </div>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                     </div>
                     <div className={styles.cinemasDtlsVar2HoursLeftColumnSecond}>
                       <div className={classNames(styles.cinemasDtlsTit, styles.cinemasDtlsVar2HoursLeftColumnTit)}>AED</div>
-                      <div className={styles.cinemasDtlsVar2HoursLeftColumnVal}>199</div>
+                      <div className={styles.cinemasDtlsVar2HoursLeftColumnVal}>299</div>
                     </div>
                   </div>
 
@@ -102,7 +102,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                     </div>
                     <div className={styles.cinemasDtlsVar2HoursRightColumnSecond}>
                       <div className={styles.cinemasDtlsVar2HoursRightColumnTit}>AED</div>
-                      <div className={styles.cinemasDtlsVar2HoursRightColumnVal}>299</div>
+                      <div className={styles.cinemasDtlsVar2HoursRightColumnVal}>499</div>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                 <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVals)}>
                   <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>up to 4 people</div>
                   <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>1</div>
-                  <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>199</div>
+                  <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>299</div>
                 </div>
               </div>
 
@@ -131,7 +131,7 @@ const StarsSection = React.forwardRef((props, ref) => {
                 <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVals)}>
                   <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal, styles.cinemasDtlsVar3ColumnValBold)}>up to 8 people</div>
                   <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>1</div>
-                  <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>299</div>
+                  <div className={classNames(styles.cinemasDtls, styles.cinemasDtlsVar3ColumnVal)}>499</div>
                 </div>
               </div>
             </div>
